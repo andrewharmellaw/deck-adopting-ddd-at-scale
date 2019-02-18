@@ -35,9 +35,12 @@ We have first hand experience of seeing what failed DDD looks like on a very lar
 ---
 
 ## Kill misconceptions:
+* Domain experts don't know best
+* Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
 * There is only one model (that there is only one of anything is a risky view in DDD)
 * There is a blessed team responsible for modelling and "the domain model"
 * The model doesn't need to be explicit in the code
+* The model doesn't need to change once you "find" it
 
 Also
 * Models have to be in UML (the real one is in the code).
