@@ -23,23 +23,26 @@ Whether you're doing Microservices, or a Modular Monolith
 
 ## Our Story
 
-MoJ
-(And some other bits before and after)
+MoJ (and some other bits before and after)
+
+We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
 ---
 
-# Part 1: ...
+# Part 1: Failure States
 
 ---
 
-Kill misconceptions:
+## Kill misconceptions:
 * There is only one model (that there is only one of anything is a risky view in DDD)
 * There is a blessed team responsible for "the domain model"
-* 
+* All the (DDD) things!
+* Are layers a bad thing
 
 ---
 
 ## It's in the frikkin' book
+
 * Work with the teams
 * Work with the domain experts
 * Work with the code
@@ -47,7 +50,12 @@ Kill misconceptions:
 
 ---
 
+# Part 2: The Journey Towards Success
+
+---
+
 ## Everyone get modelling
+
 We're _all_ doing design
 Draw pictures!
 C4 is good for this (Simon Brown has training for Developers too)
@@ -56,11 +64,13 @@ Find champions (junior folks can actually be good for this)
 ---
 
 ## Find the model in the code
+
 FEEL the code
 
 ---
 
 ## It's not your model, it's everyone's
+
 Use tools to generate your models that everyone can use to edit
 N.b. folks need to be confident in these tools, not just have access to them.
 You need to over-communicate and over-share
@@ -69,22 +79,27 @@ You need to work with others to find it
 ---
 
 ## Find the Bounded Contexts
+
 Event Storming is good for this, 
 But Conway's Law is also a good bet
 
 ---
 
-# Part 2: ...
-
----
-
 ## Context Map
+
 (I used to think yiou found this via doing models)
 (Now I've seen Event Storming at scale I realise there are other ways)
 
 ---
 
+## Strategic Patterns
+
+Start to point out the Strategic Patterns (teams succeeding might already be doing this)
+
+---
+
 ### End-to-End Flows
+
 Do Event Storming
 It's in the ThoughtWorks Tech Radar
 It's great for the obvious reasons
@@ -102,12 +117,9 @@ And _everyone_ is modelling
 ---
 
 ### Pick your battles
+
 Don't spread yourself too thin
 Don't waste time trying to convince everyone - some folks will come round to the idea, especially when they see it working
-
----
-
-## Strategic Patterns
 
 ---
 
@@ -116,6 +128,7 @@ Don't waste time trying to convince everyone - some folks will come round to the
 ---
 
 ## It's in the frikkin' book
+
 * Work with the teams
 * Work with the domain experts
 * Work with the code
@@ -123,7 +136,7 @@ Don't waste time trying to convince everyone - some folks will come round to the
 
 ---
 
-# Stage 3: ...
+# Stage 3: Applications in Other DDD-Derived Areas (E.g. CQRS)
 
 ---
 
@@ -145,6 +158,7 @@ Lose some battles
 ---
 
 ## It's in the frikkin' book
+
 * Work with the teams
 * Work with the domain experts
 * Work with the code
