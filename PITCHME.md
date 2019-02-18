@@ -71,6 +71,18 @@ and trying to get as many people understanding and working on the problem as pos
 
 # Part 2: The Journey Towards Success
 
+
+---
+
+## Process
+Design Retro - speak to K and G and ... team (first implementers)
+
+---
+
+## Tools
+Draw out the entire architecture - showing all the BCs and microservices - Context map
+(WARNING: Don't make the context map do too much! - Use layers on top if it you need this)
+
 ---
 
 ## Everyone get modelling
