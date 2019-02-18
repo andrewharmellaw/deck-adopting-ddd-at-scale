@@ -86,6 +86,10 @@ and trying to get as many people understanding and working on the problem as pos
 
 NOTE: LOTS OF THIS IS THE SOLUTION BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
 
+* Discovering boundaries - this was a very process-intensive environment, where things (cases) _seemed_ to pass through a lot of organisations and hands.
+
+* The "domain" was co-owned (courts and prosecutor)  The PROCESS spanned multiple organisations
+
 * Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost.
 
 * The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc.  Find something which ties all this together (-> DOMAIN VISION))
