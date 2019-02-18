@@ -4,7 +4,7 @@
 
 ---
 
-# Hello
+# Hi
 (Who we are)
 
 ---
@@ -34,17 +34,12 @@ There was a LOT of Tech (Design) Debt.
 ## Our Goal
 
 Prioritize what areas we were focussing to those which maximising value for the business AND developers
-
 Make teams independent (as opposed to tightly coupled) so they could build and release independently.
 
 ---
 
-# Part 1: Failure States
+# Part 1: Failure States / Challenges
 (Patterns?)
-
-Note: 
-
-* this is a test
 
 ---
 
