@@ -41,12 +41,16 @@ We have first hand experience of seeing what failed DDD looks like on a very lar
 
 ---
 
-## It's in the frikkin' book
+## It's in the frikkin' Blue book
 
 * Work with the teams
 * Work with the domain experts
 * Work with the code
 * Iterate
+
+---
+
+### The "Blue Book" and the "Red Book"
 
 ---
 
