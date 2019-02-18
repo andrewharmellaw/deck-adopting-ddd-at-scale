@@ -234,6 +234,8 @@ Lose some battles
 
 # Conclusion
 
+* We didn't fix everything - this isn't a fairy story.  
+
 * Don't get waylaid
 * Have confidence - you're finding and iterating, and training
 * You're the guide to the DDD Theme Park
