@@ -27,6 +27,16 @@ Our project together (and some other bits before and after)
 
 We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
+There was a LOT of Tech (Design) Debt.  
+
+---
+
+## Our Goal
+
+Prioritize what areas we were focussing to those which maximising value for the business AND developers
+
+Make teams independent (as opposed to tightly coupled) so they could build and release independently.
+
 ---
 
 # Part 1: Failure States
@@ -46,7 +56,6 @@ Also
 * Models have to be in UML (the real one is in the code).
 
 ---
-
 
 ## It's in the frikkin' Blue book
 
@@ -69,8 +78,24 @@ and trying to get as many people understanding and working on the problem as pos
 
 ---
 
-# Part 2: The Journey Towards Success
+## Challenges
 
+NOTE: LOTS OF THIS IS THE SOLUTION BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
+
+* Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost.
+
+* The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc.  Find something which ties all this together (-> DOMAIN VISION))
+
+* Embrace change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD)
+
+* Constant desire to "future-proof" - this is not the same as building on a supple model.
+
+* Cost - the cost of lots of people is _enourmous_, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert".  SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.)
+
+* (Not allowed to "train" the folks)
+---
+
+# Part 2: The Journey Towards Success
 
 ---
 
