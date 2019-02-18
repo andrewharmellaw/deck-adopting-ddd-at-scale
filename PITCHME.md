@@ -105,6 +105,8 @@ NOTE: LOTS OF THIS IS THE SOLUTION BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS L
 
 # Part 2: The Journey Towards Success
 
+There is an order to do things...
+
 ---
 
 ## Process
