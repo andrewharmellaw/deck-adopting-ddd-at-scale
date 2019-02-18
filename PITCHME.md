@@ -35,13 +35,19 @@ We have first hand experience of seeing what failed DDD looks like on a very lar
 
 ## Kill misconceptions:
 * There is only one model (that there is only one of anything is a risky view in DDD)
-* There is a blessed team responsible for "the domain model"
-* All the (DDD) things!
-* Are layers a bad thing
+* There is a blessed team responsible for modelling and "the domain model"
+* The model doesn't need to be explicit in the code
+
+Also
+* Models have to be in UML (the real one is in the code).
 
 ---
 
+
 ## It's in the frikkin' Blue book
+
+* All the (DDD) things! Also known
+* Are layers a bad thing?
 
 * Work with the teams
 * Work with the domain experts
@@ -51,6 +57,11 @@ We have first hand experience of seeing what failed DDD looks like on a very lar
 ---
 
 ### The "Blue Book" and the "Red Book"
+
+---
+
+You're just trying to split your hard problem, into smaller problems, 
+and trying to get as many people understanding and working on the problem as possible
 
 ---
 
