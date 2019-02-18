@@ -42,6 +42,10 @@ Make teams independent (as opposed to tightly coupled) so they could build and r
 # Part 1: Failure States
 (Patterns?)
 
+Note: 
+
+* this is a test
+
 ---
 
 ## Kill misconceptions:
