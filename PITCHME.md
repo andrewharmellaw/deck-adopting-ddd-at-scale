@@ -101,6 +101,9 @@ NOTE: LOTS OF THIS IS THE SOLUTION BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS L
 * Cost - the cost of lots of people is _enourmous_, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert".  SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.)
 
 * (Not allowed to "train" the folks)
+
+* Finding the icebergs - how big / important is something?
+
 ---
 
 # Part 2: The Journey Towards Success
