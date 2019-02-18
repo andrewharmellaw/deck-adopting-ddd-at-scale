@@ -23,7 +23,7 @@ Whether you're doing Microservices, or a Modular Monolith
 
 ## Our Story
 
-MoJ (and some other bits before and after)
+Our project together (and some other bits before and after)
 
 We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
