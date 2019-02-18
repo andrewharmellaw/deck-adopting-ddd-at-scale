@@ -30,6 +30,7 @@ We have first hand experience of seeing what failed DDD looks like on a very lar
 ---
 
 # Part 1: Failure States
+(Patterns?)
 
 ---
 
