@@ -49,6 +49,7 @@ Do we need to explain what a near enemy is?
 
 ## Kill misconceptions:
 * Lots of people just think it's "names".
+* Near Enemy: And grasping the theory is easy, but putting it into practice is harder.
 * Domain experts don't know best
 * Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
 * There is only one model (that there is only one of anything is a risky view in DDD)
