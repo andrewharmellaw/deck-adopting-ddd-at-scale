@@ -22,7 +22,7 @@
 ## The Challenge
 
 * People _still_ don't get DDD
-* But its the best way that we know of to get large teams around large codebases
+* But it's _still_ the best way that we know of to get large teams around large codebases
 * Whether you're doing microservices, or a modular monolith
 
 ---
