@@ -44,6 +44,7 @@ Make teams independent (as opposed to tightly coupled) so they could build and r
 ---
 
 ## Kill misconceptions:
+* Lots of people just think it's "names".
 * Domain experts don't know best
 * Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
 * There is only one model (that there is only one of anything is a risky view in DDD)
