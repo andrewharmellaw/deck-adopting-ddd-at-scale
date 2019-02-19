@@ -21,6 +21,8 @@
 
 ## The Challenge
 
+PROBLEM: WE USE "THE CHALLENGE" IN TOO MAY PLACES
+
 * People _still_ don't get DDD
 * But it's _still_ the best way that we know of to get large teams around large codebases
 * Whether you're doing microservices, or a modular monolith
@@ -114,7 +116,7 @@ Work with the teams, work with the domain experts, work with the code. Iterate
 
 ## Our Challenges
 
-NOTE: LOTS OF THIS IS THE SOLUTION RATHER THAN THE CHALLENGE, BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
+NB: LOTS OF THIS IS THE SOLUTION RATHER THAN THE CHALLENGE, BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
 
 Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands.
 
