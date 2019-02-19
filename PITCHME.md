@@ -43,6 +43,10 @@ Make teams independent (as opposed to tightly coupled) so they could build and r
 
 ---
 
+Do we need to explain what a near enemy is?
+
+---
+
 ## Kill misconceptions:
 * Lots of people just think it's "names".
 * Domain experts don't know best
