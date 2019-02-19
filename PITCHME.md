@@ -38,12 +38,24 @@ Make teams independent (as opposed to tightly coupled) so they could build and r
 
 ---
 
+Do we need to explain what a near enemy is?
+
+---
+
 # Part 1: Failure States / Challenges
 (Patterns?)
 
 ---
 
-Do we need to explain what a near enemy is?
+## Discovery
+
+TBC @andrewharmellaw
+
+---
+
+## Delivery
+
+TBC @gaythu-rajan
 
 ---
 
@@ -112,6 +124,18 @@ NOTE: LOTS OF THIS IS THE SOLUTION BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS L
 Action: Decide what our three big topics for "Journey" are.
 
 There is an order to do things...
+
+---
+
+## Discovery
+
+TBC @andrewharmellaw
+
+---
+
+## Delivery
+
+TBC @gaythu-rajan
 
 ---
 
@@ -209,6 +233,18 @@ Don't waste time trying to convince everyone - some folks will come round to the
 ---
 
 # Stage 3: Applications in Other DDD-Derived Areas (E.g. CQRS)
+
+---
+
+## Discovery
+
+TBC @andrewharmellaw
+
+---
+
+## Delivery
+
+TBC @gaythu-rajan
 
 ---
 
