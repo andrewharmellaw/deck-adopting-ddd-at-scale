@@ -65,39 +65,64 @@ TBC @gaythu-rajan
 
 ---
 
-## Kill misconceptions:
-* Lots of people just think it's "names".
-* Near Enemy: And grasping the theory is easy, but putting it into practice is harder.
-* Domain experts don't know best
-* Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
-* There is only one model (that there is only one of anything is a risky view in DDD)
-* There is a blessed team responsible for modelling and "the domain model"
-* The model doesn't need to be explicit in the code
-* The model doesn't need to change once you "find" it
-
-Also
-* Models have to be in UML (the real one is in the code).
-
----
-
-## It's in the frikkin' Blue book
-
-* All the (DDD) things! Also known
-* Are layers a bad thing?
-
-* Work with the teams
-* Work with the domain experts
-* Work with the code
-* Iterate
-
----
-
-### The "Blue Book" and the "Red Book"
-
----
-
 You're just trying to split your hard problem, into smaller problems, 
 and trying to get as many people understanding and working on the problem as possible
+
+---
+
+## Our Constraints
+
+The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
+
+The "domain" was co-owned (courts and prosecutor) The PROCESS spanned multiple organisations
+
+We were not allowed to "train" folks
+
+Things were already up and running - some ideas had already become entrenched
+
+Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder
+
+---
+
+## Existing Failure Patterns
+
+Lots of people just think DDD is "just names"
+
+Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory
+
+Domain experts don't know best
+
+Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
+
+There is only one model (that there is only one of anything is a risky view in DDD)
+
+There is a blessed team responsible for modelling and "the domain model"
+
+The model doesn't need to be explicit in the code
+
+The model doesn't need to change once you "find" it
+
+Models have to be in UML or some other "arhcitect-only" notation (the real one is in the code).
+
+Constant desire to "future-proof" - this is not the same as building on a supple model.
+
+Red Book and not the Blue Book
+
+Work with the teams, work with the domain experts, work with the code. Iterate
+
+---
+
+## Our Challenges
+
+NOTE: LOTS OF THIS IS THE SOLUTION RATHER THAN THE CHALLENGE, BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
+
+Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands.
+
+Embrace change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD)
+
+Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.)
+
+Finding the icebergs - how big / important is something?
 
 ---
 
