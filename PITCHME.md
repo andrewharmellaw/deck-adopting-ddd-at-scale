@@ -39,8 +39,8 @@ There was a LOT of Tech (Design) Debt.
 
 ## Our Goal
 
-Prioritize what areas we were focussing to those which maximising value for the business AND developers
-Make teams independent (as opposed to tightly coupled) so they could build and release independently.
+* Prioritize what areas we were focussing to those which maximising value for the business AND developers
+* Make teams independent (as opposed to tightly coupled) so they could build and release independently.
 
 ---
 
@@ -48,7 +48,7 @@ Do we need to explain what a near enemy is?
 
 ---
 
-# Part 1: Failure States / Challenges
+# Part 1: Where we Started / Failure States / Our Challenges
 (Patterns?)
 
 ---
