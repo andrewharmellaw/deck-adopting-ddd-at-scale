@@ -9,7 +9,7 @@
 
 * Andrew Harmel-Law ([@al94781](https://twitter.com/al94781))
   * Tech Principal @ ThoughtWorks
-  * Seen Microservices, CQRS, CI/CD, and cloud-native computing _at scale_.
+  * Worked on Microservices, CQRS, continuous delivery, and cloud-native computing _at scale_.
 * Gayathri Thiyagarajan
   * TBD (@gaythu-rajan)
 
