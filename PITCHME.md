@@ -295,3 +295,9 @@ Lose some battles
 * Don't get waylaid
 * Have confidence - you're finding and iterating, and training
 * You're the guide to the DDD Theme Park
+
+---
+
+# Appendixes
+
+https://twitter.com/ntcoding/status/1097139309642158080
