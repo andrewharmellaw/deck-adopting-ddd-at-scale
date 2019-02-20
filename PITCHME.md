@@ -19,9 +19,7 @@
 
 ---
 
-## The Challenge
-
-PROBLEM: WE USE "THE CHALLENGE" IN TOO MAY PLACES
+## Where We Find Ourselves
 
 * People _still_ don't get DDD
 * But it's _still_ the best way that we know of to get large teams around large codebases
