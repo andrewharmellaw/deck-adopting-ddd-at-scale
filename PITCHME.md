@@ -54,19 +54,8 @@ and trying to get as many people understanding and working on those problems as 
 ---
 
 # Part 1: Where we Started / Failure States / Our Challenges
+
 (Patterns?)
-
----
-
-## Discovery
-
-TBC @andrewharmellaw
-
----
-
-## Delivery
-
-TBC @gaythu-rajan
 
 ---
 
@@ -88,31 +77,41 @@ Complex Architectural choices - devs getting drowned by them. It was almost alwa
 
 ---
 
+## Discovery
+
+TBC @andrewharmellaw
+
+---
+
+## Delivery
+
+TBC @gaythu-rajan
+
+---
+
 ## Existing Failure Patterns
 
-Lots of people just think DDD is "just names"
+Lots of people just think DDD is "just names" - DELI
 
-Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory
+Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
 
-Domain experts don't know best
+Domain experts don't know best - DISCO
 
-Ubiquitous language needn't be ubiquitous, nor does it have to give us clues
+Ubiquitous language needn't be ubiquitous, nor does it have to give us clues - DISCO
 
-There is only one model (that there is only one of anything is a risky view in DDD)
+There is only one model (that there is only one of anything is a risky view in DDD) - DISCO
 
-There is a blessed team responsible for modelling and "the domain model"
+There is a blessed team responsible for modelling and "the domain model" - DELI
 
-The model doesn't need to be explicit in the code
+The model doesn't need to be explicit in the code - DISCO / DELI
 
-The model doesn't need to change once you "find" it
+The model doesn't need to change once you "find" it - DELI
 
-Models have to be in UML or some other "arhcitect-only" notation (the real one is in the code).
+Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI
 
-Constant desire to "future-proof" - this is not the same as building on a supple model.
+Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
 
-Red Book and not the Blue Book
-
-Work with the teams, work with the domain experts, work with the code. Iterate
+Red Book and not the Blue Book - DISCO
 
 ---
 
@@ -120,13 +119,17 @@ Work with the teams, work with the domain experts, work with the code. Iterate
 
 NB: LOTS OF THIS IS THE SOLUTION RATHER THAN THE CHALLENGE, BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
 
-Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands.
+Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
 
-Embrace change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD)
+Driving change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD) - DELI
 
-Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.)
+Managing Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.) - DELI
 
-Finding the icebergs - how big / important is something?
+Finding the Icebergs - how big / important is something? - DELI
+
+---
+
+In summary: Work with the teams, work with the domain experts, work with the code. Iterate.
 
 ---
 
