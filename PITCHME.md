@@ -43,9 +43,13 @@ There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
 * Prioritize the areas we focussed which maximised value for the client AND developers
 
----
+--- 
 
-Do we need to explain what a near enemy is?
+## Or More Simply...
+
+We're just trying to split the hard problem, into smaller maximally independent problems, 
+and trying to get as many people understanding and working on those problems as possible
+
 
 ---
 
@@ -66,8 +70,7 @@ TBC @gaythu-rajan
 
 ---
 
-You're just trying to split your hard problem, into smaller problems, 
-and trying to get as many people understanding and working on the problem as possible
+Do we need to explain what a near enemy is?
 
 ---
 
