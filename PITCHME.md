@@ -34,14 +34,14 @@ Our project together (and some other bits before and after)
 
 We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
-There was a LOT of Tech (Design) Debt.  
+There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.) 
 
 ---
 
-## Our Goal
+## Our Goals
 
-* Prioritize what areas we were focussing to those which maximising value for the business AND developers
-* Make teams independent (as opposed to tightly coupled) so they could build and release independently.
+* Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
+* Prioritize the areas we focussed which maximised value for the client AND developers
 
 ---
 
