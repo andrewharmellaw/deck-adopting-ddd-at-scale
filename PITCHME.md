@@ -11,7 +11,8 @@
   * Tech Principal @ ThoughtWorks
   * Worked on Microservices, CQRS, continuous delivery, and cloud-native computing _at scale_.
 * Gayathri Thiyagarajan
-  * TBD (@gaythu-rajan)
+  * Tech Lead @ Expedia Group (@gaythu-rajan)
+  * Worked on Microservices, Event Sourcing, CQRS in BigData environments
 
 ---
 
