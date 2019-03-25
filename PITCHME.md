@@ -159,9 +159,13 @@ Design Retro - speak to K and G and ... team (first implementers)
 
 ---
 
-## Tools
+## Tools and Methods
 Draw out the entire architecture - showing all the BCs and microservices - Context map
 (WARNING: Don't make the context map do too much! - Use layers on top if it you need this)
+
+Modelling Whirlpool - Where a strawman model is just what everyone needs to get things kicked off instead of a blank wall
+
+Event Storming - by far the best method to find aggregates and document events. It doesn't have to day long full blown exercise. Small, iterative sessions are helpful for solutioning too.
 
 ---
 
@@ -188,11 +192,25 @@ You need to over-communicate and over-share
 You need to work with others to find it
 
 ---
+## Ownership
+Team collectively owns the model. 
+Everyone has some important insight and perspective to add to the model.
+Collective ownership stimulates collective responsibility in implementation. 
+
+---
 
 ## Find the Bounded Contexts
 
 Event Storming is good for this, 
 But Conway's Law is also a good bet
+
+---
+
+## AS-IS <-> TO-BE vicious circle
+
+Obtain knowledge of the domain from the As-Is state. Model the To-Be state. 
+Domain changes more slowly than the system that we are building. 
+Beware the legacy systems - they don't exactly reflect the domain knowledge.
 
 ---
 
@@ -211,7 +229,7 @@ Start to point out the Strategic Patterns (teams succeeding might already be doi
 
 ### End-to-End Flows
 
-Do Event Storming
+Do Event Storming.
 It's in the ThoughtWorks Tech Radar
 It's great for the obvious reasons
 But you also get Business and Tech working together
@@ -220,6 +238,8 @@ And _everyone_ is modelling
 ---
 
 ### You _can_ copy data
+
+Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
 
 ---
 
