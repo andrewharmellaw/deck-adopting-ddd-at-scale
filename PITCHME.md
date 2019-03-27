@@ -61,21 +61,30 @@ and trying to get as many people understanding and working on those problems as 
 
 ---
 
-Do we need to explain what a near enemy is?
-
+Do we need to explain what a near enemy is?  WE DO ***
+ 
 ---
 
 ## Our Constraints
 
-The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
+The "domain" was co-owned (courts and prosecutor)  AND the PROCESS spanned multiple organisations *****
 
-The "domain" was co-owned (courts and prosecutor) The PROCESS spanned multiple organisations
+The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
 
 We were not allowed to "train" folks
 
 Things were already up and running - some ideas had already become entrenched
 
-Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder
+(Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+
+---
+
+## Existing Failure Patterns / Challenges
+
+
+(Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI)
+
+(Red Book and not the Blue Book - DISCO)
 
 ---
 
@@ -83,55 +92,43 @@ Complex Architectural choices - devs getting drowned by them. It was almost alwa
 
 TBC @andrewharmellaw
 
+Intro to the domain ****
+
+FAILURE MODE: MODELLING FAILURES
+
+There is only one model (that there is only one of anything is a risky view in DDD) - DISCO *****
+
+Domain experts don't know best - DISCO
+
+Ubiquitous language needn't be ubiquitous, nor does it have to give us clues - DISCO
+
+Finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
+
 ---
 
 ## Delivery
 
 TBC @gaythu-rajan
 
----
+FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT~S PRACTICAL, NOT THEORETICAL
 
-## Existing Failure Patterns
-
-Domain experts don't know best - DISCO
-
-Ubiquitous language needn't be ubiquitous, nor does it have to give us clues - DISCO
-
-There is only one model (that there is only one of anything is a risky view in DDD) - DISCO
-
-The model doesn't need to be explicit in the code - DISCO / DELI
-
-Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI
+The model doesn't need to change once you "find" it - DELI *****
 
 Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
 
-Red Book and not the Blue Book - DISCO
-
 Lots of people just think DDD is "just names" - DELI
-
-Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
 
 There is a blessed team responsible for modelling and "the domain model" - DELI
 
-The model doesn't need to change once you "find" it - DELI
+The model doesn't need to be explicit in the code - DISCO / DELI  *****
+
+Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
+
+Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
 
 ---
 
-## Our Challenges
-
-NB: LOTS OF THIS IS THE SOLUTION RATHER THAN THE CHALLENGE, BUT WE CAN PULL THAT DOWN TO LOWER SECTIONS LATER
-
-Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
-
-Driving change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD) - DELI
-
-Managing Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.) - DELI
-
-Finding the Icebergs - how big / important is something? - DELI
-
----
-
-In summary: Work with the domain experts, work with the teams, work with the code. Iterate.
+In summary: Solve the business problems. Work with the domain experts. Work with the teams. Work with the code. Iterate.
 
 ---
 
@@ -141,17 +138,25 @@ Action: Decide what our three big topics for "Journey" are.
 
 There is an order to do things...
 
+(HAve some common slide headings / topics for both Gaythri and Andrew to cover)
+
 ---
 
 ## Discovery
 
 TBC @andrewharmellaw
 
+BIG TOPIC ONE: Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
+
 ---
 
 ## Delivery
 
 TBC @gaythu-rajan
+
+Driving change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD) - DELI
+
+Managing Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.) - DELI
 
 ---
 
@@ -179,7 +184,7 @@ Find champions (junior folks can actually be good for this)
 
 ---
 
-## Find the model in the code
+## Find the model in the code 
 
 FEEL the code
 
@@ -194,20 +199,21 @@ You need to work with others to find it
 
 ---
 ## Ownership
+
 Team collectively owns the model. 
 Everyone has some important insight and perspective to add to the model.
 Collective ownership stimulates collective responsibility in implementation. 
 
 ---
 
-## Find the Bounded Contexts
+## Find the Bounded Contexts ***** (AHL)
 
 Event Storming is good for this, 
-But Conway's Law is also a good bet
+But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
 
 ---
 
-## AS-IS <-> TO-BE vicious circle
+## AS-IS <-> TO-BE vicious circle **** (GT)
 
 Obtain knowledge of the domain from the As-Is state. Model the To-Be state. 
 Domain changes more slowly than the system that we are building. 
@@ -215,20 +221,21 @@ Beware the legacy systems - they don't exactly reflect the domain knowledge.
 
 ---
 
-## Context Map
+## Context Map **** (AHL)
 
 (I used to think yiou found this via doing models)
 (Now I've seen Event Storming at scale I realise there are other ways)
 
 ---
 
-## Strategic Patterns
+## (Strategic Patterns)
 
 Start to point out the Strategic Patterns (teams succeeding might already be doing this)
+This would have been the next step
 
 ---
 
-### End-to-End Flows
+### End-to-End Flows ***** (AHL)
 
 Do Event Storming.
 It's in the ThoughtWorks Tech Radar
@@ -238,7 +245,7 @@ And _everyone_ is modelling
 
 ---
 
-### You _can_ copy data
+### You _can_ copy data ***** (AHL/GT)
 
 Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
 
@@ -248,7 +255,7 @@ Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s ab
 
 ---
 
-### Pick your battles
+### Pick your battles ***** (GT)
 
 Don't spread yourself too thin
 Don't waste time trying to convince everyone - some folks will come round to the idea, especially when they see it working
