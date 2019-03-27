@@ -53,7 +53,6 @@ There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 We're just trying to split the hard problem, into smaller maximally independent problems, 
 and trying to get as many people understanding and working on those problems as possible
 
-
 ---
 
 # Part 1: Where we Started / Failure States / Our Challenges
@@ -94,27 +93,27 @@ TBC @gaythu-rajan
 
 ## Existing Failure Patterns
 
-Lots of people just think DDD is "just names" - DELI
-
-Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
-
 Domain experts don't know best - DISCO
 
 Ubiquitous language needn't be ubiquitous, nor does it have to give us clues - DISCO
 
 There is only one model (that there is only one of anything is a risky view in DDD) - DISCO
 
-There is a blessed team responsible for modelling and "the domain model" - DELI
-
 The model doesn't need to be explicit in the code - DISCO / DELI
-
-The model doesn't need to change once you "find" it - DELI
 
 Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI
 
 Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
 
 Red Book and not the Blue Book - DISCO
+
+Lots of people just think DDD is "just names" - DELI
+
+Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
+
+There is a blessed team responsible for modelling and "the domain model" - DELI
+
+The model doesn't need to change once you "find" it - DELI
 
 ---
 
