@@ -23,7 +23,8 @@
 ## Where We Find Ourselves
 
 * People _still_ don't get DDD
-* But it's _still_ the best way that we know of to get teams around codebases
+* But it's _still_ the best way to solve complex problems in software
+* and the best way that we know of to get teams around codebases
 * Whether you're doing microservices, or a modular monolith
 * And worst of all, it gets harder the bigger the problem you're trying to solve
 
