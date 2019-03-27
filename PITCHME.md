@@ -131,7 +131,7 @@ Finding the Icebergs - how big / important is something? - DELI
 
 ---
 
-In summary: Work with the teams, work with the domain experts, work with the code. Iterate.
+In summary: Work with the domain experts, work with the teams, work with the code. Iterate.
 
 ---
 
