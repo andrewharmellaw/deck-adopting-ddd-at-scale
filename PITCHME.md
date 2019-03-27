@@ -42,6 +42,7 @@ There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 
 ## Our Goals
 
+* Solve the right problems and build the right software
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
 * Prioritize the areas we focussed which maximised value for the client AND developers
 
