@@ -117,7 +117,12 @@ This came into direct conflict with the fact that there were teams working with 
 The second tenent was actually mor like a myth, most likely born of misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, which had largely been adhered to.  PROBLEM: TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, NO WAY OF MAKING MODELLING BREAKTHROUGHS.
 
 
-All this combined to create a significant problem - complexities had been created where there needent be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplification where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a quick intro to the doimain we're talking about.
+All this combined to create a significant problem - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplification where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a quick intro to the doimain we're talking about.
+
+
+Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  They bring together a great number of (hostile) parties, all who have their views on the system, and obligations / needs to be met.  Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+
+ALL IN ALL, IT IS AN EXCELLENT FORUM WITHIN WHICH TO DEPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
 
 Intro to the domain ****
