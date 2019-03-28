@@ -104,6 +104,17 @@ TBC @andrewharmellaw
 
 (Tell the story - what were the key points / milestones in this?)
 
+When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.
+
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time in the Scottish Legal system.  I knew things had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.
+
+There were additionally ... (what else was there?)
+
+I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. (I take a very "i'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.) The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case, most likely mastered by a single 
+
+This came into direct conflict with the fact that there were teams working with different domain experts, on different services, with different release plans; all of whom had to play in this unified "case"
+
+The second tenent was actually mor like a myth, most likely born of misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, which had largely been adhered to.
 
 Intro to the domain ****
 
