@@ -86,12 +86,11 @@ The scale - it was a massive piece of work, being built by multiple teams in par
 
 Complex Architectural choices had been made (e.g. CQRS for everything) and devs were getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
 
-(We were not allowed to "train" folks)
-
 ---
 
 ## Existing Failure Patterns / Challenges
 
+(DDD skills were in short supply - We were not allowed to "train" folks)
 
 (Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI)
 
