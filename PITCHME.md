@@ -78,15 +78,15 @@ We want to use this lens to present a collection of challenges and failure patte
 
 ## Our Constraints
 
-The "domain" was co-owned (courts and prosecutor)  AND the PROCESS spanned multiple organisations *****
-
-The scale - EVERYTHING was CQRS (EVERYTHING) and Microservices, plus it was being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
-
-We were not allowed to "train" folks
-
 Things were already up and running - some ideas had already become entrenched
 
-(Complex Architectural choices - devs getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+The "domain" was co-owned (courts and prosecutor)  AND the PROCESS spanned multiple organisations *****
+
+The scale - it was a massive piece of work, being built by multiple teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
+
+Complex Architectural choices had been made (e.g. CQRS for everything) and devs were getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+
+(We were not allowed to "train" folks)
 
 ---
 
