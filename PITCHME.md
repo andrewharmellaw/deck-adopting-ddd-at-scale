@@ -103,6 +103,9 @@ Complex Architectural choices had been made (e.g. CQRS for everything) and devs 
 
 TBC @andrewharmellaw
 
+(Tell the story - what were the key points / milestones in this?)
+
+
 Intro to the domain ****
 
 FAILURE MODE: MODELLING FAILURES
