@@ -106,34 +106,36 @@ TBC @andrewharmellaw
 
 When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  PROBLEM: I WAS TO SOLVE THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
 
-I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  THIS WAS EVIDENCED IN TEH FACT THAT NO ONE DOMAIN EXPERT HAD AN END-TO-END VIEW.
 
-There were additionally an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.
+There were additionally an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DATA.
 
-I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. (I take a very "i'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.) The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case, most likely mastered by a single. PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
+I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. (I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.) The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single microservice / datastore. PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
 
-This came into direct conflict with the fact that there were teams working with different domain experts, on different services, with different release plans; all of whom had to play in this unified "case".  GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.
+What did this mean? Most findamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
 
-The second tenent was actually mor like a myth, most likely born of misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, which had largely been adhered to.  PROBLEM: TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, NO WAY OF MAKING MODELLING BREAKTHROUGHS.
+This came into direct conflict with the fact that there were teams working with different domain experts, on different services, with different release plans; all of whom had to play in this unified "case".  GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  BAD THING / FAILURE: Not listening to the domain experts. Domain experts don't know best. 
 
+The second tenent was actually more like a myth, most likely born of misunderstanding / misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, this ghost-dictat had largely been adhered to.  PROBLEM: TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, AND NO WAY OF MAKING MODELLING BREAKTHROUGHS.  FAILURE: Ubiquitous language needn't be ubiquitous, nor does it have to give us clues.
 
 All this combined to create a significant problem - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplification where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a quick intro to the doimain we're talking about.
-
 
 Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  They bring together a great number of (hostile) parties, all who have their views on the system, and obligations / needs to be met.  Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
 
 ALL IN ALL, IT IS AN EXCELLENT FORUM WITHIN WHICH TO DEPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
+Given all this, things were harder still for the following reasons:
 
-Intro to the domain ****
+ * we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
+ * we had to support a full-lifecycle view - justice end-to-end
+ * and we had to "modernise justice" as we did it
 
-FAILURE MODE: MODELLING FAILURES
+With this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, as were the potential RISKS and BENEFITS.
 
-There is only one model (that there is only one of anything is a risky view in DDD) - DISCO *****
+ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
 
-Domain experts don't know best - DISCO
 
-Ubiquitous language needn't be ubiquitous, nor does it have to give us clues - DISCO
+NEED TO COVER: 
 
 Finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
 
