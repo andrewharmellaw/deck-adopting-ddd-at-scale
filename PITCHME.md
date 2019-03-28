@@ -61,7 +61,18 @@ and trying to get as many people understanding and working on those problems as 
 
 ---
 
-Do we need to explain what a near enemy is?  WE DO ***
+## The Near Enemies of Domain Driven Design (and how to recognise and defeat them)
+
+  "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
+
+Note:
+The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  There are smaller-scale versions in many other places.  DDD is one of them.
+
+Why do they arise? Fundamentally, they appear because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning. 
+
+Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
+
+We want to use this lens to present a collection of challenges and failure patterns we've seen when using DDD at a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people reach for the power tools, and that causes problems.  We want to help you avoid falling into that trap.
  
 ---
 
