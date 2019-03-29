@@ -170,7 +170,7 @@ Action: Decide what our three big topics for "Journey" are.
 
 Andrew's might be: 
 
- * Establish a Domain Vision - what it prioritised and of highest value.  Where does (should?) the control / the power / the centre of gravity sit?
+ * Establish a Domain Vision 
  * Find the AS-IS bounded contexts - you can start from the top, or take value-stream slices, going *end-to-end* helps a lot
     * Context Map
     * Copying data
@@ -193,13 +193,46 @@ TBC @andrewharmellaw
 
 BIG TOPIC ONE: Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
 
+
+As the Discovery phase began to wind up and I began to start _doing_ more I realised my focus would be in three areas:
+
+  * finding what's most important 
+  * finding the big picture and breaking it into smaller pieces
+  * articulating how the pieces fit together 
+
+While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.
+
+---
+
+### What is Most Important?
+
+[domain vision and everyone modelling]
+
+Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
+
+---
+
+### Finding the Big Picture, and Breaking it Up
+
+[Context Mapping and Core Domain]
+
+I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  
+
+When working on this, I realised that you could also profitably see them from the top down (although this is more a blunt-instrument approach it has a lot of value)
+
+---
+
+### How Things Fit Together
+
+(both at implementation-time and run time) [Alberto's: ()->|()->()]
+
 ---
 
 ## Delivery
 
 TBC @gaythu-rajan
 
-Driving change - a lot of people needed to let go of things, but without knowing excatly where we were going (trust the DDD) - DELI
+Driving change - a lot of people needed to let go of things, but without knowing exactly where we were going (trust the DDD) - DELI
 
 Managing Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.) - DELI
 
