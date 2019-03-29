@@ -168,9 +168,22 @@ In summary: Solve the business problems. Work with the domain experts. Work with
 
 Action: Decide what our three big topics for "Journey" are.
 
+Andrew's might be: 
+
+ * Establish a Domain Vision - what it prioritised and of highest value.  Where does (should?) the control / the power / the centre of gravity sit?
+ * Find the AS-IS bounded contexts - you can start from the top, or take value-stream slices, going *end-to-end* helps a lot
+    * Context Map
+    * Copying data
+    * Alberto Brandolini's ()->|()->() diagram
+    * Warning! - SubDomains
+    * Core Domain, and other Strategic design patterns
+ * _Everyone_ does the modelling
+ 	* Running "awareness" sessions to engage the business and allow their language to carry weight
+ 
+
 There is an order to do things...
 
-(HAve some common slide headings / topics for both Gaythri and Andrew to cover)
+(Have some common slide headings / topics for both @Gaythri and @Andrew to cover)
 
 ---
 
@@ -294,7 +307,7 @@ Don't waste time trying to convince everyone - some folks will come round to the
 
 ---
 
-## Domain Vision
+## Domain Vision ***** (AHL)
 
 ---
 
