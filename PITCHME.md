@@ -200,7 +200,7 @@ As the Discovery phase began to wind up and I began to start _doing_ more I real
   * finding the big picture and breaking it into smaller pieces
   * articulating how the pieces fit together 
 
-While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.
+While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.  At a meta level, it was exciting to come at DDD from another angle. It meant I had to re-read Eric's book, and find value in other parts which I'd previously skimmed. I was amazed (yet again) at how relevant and applicable and valuable these concepts were.
 
 ---
 
@@ -212,45 +212,53 @@ Note: what it prioritised and of highest value?  Where does (should?) the contro
 
 ---
 
-#### Domain Vision ***** (AHL)
+#### Articulate the Domain Vision
 
 ---
 
 ### Finding the Big Picture, and Breaking it Up
 
-[Context Mapping and Core Domain]
+[Bounded Contexts, Context Mapping]
 
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  
 
+Event Storming is good for this.
+
+But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
+
+Use the concept of "hats" to dig into this.
+
 When working on this, I realised that you could also profitably see them from the top down (although this is more a blunt-instrument approach it has a lot of value)
+
+ * Find our extent (overall scope)
+ * find our chunks (don't worry yet about overlap, relatinships or gaps - we get to that later)
 
 ---
 
-#### Find the Bounded Contexts ***** (AHL)
+#### Draw it all in a Context Map
 
-Event Storming is good for this, 
-But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
-
-#### Context Map **** (AHL)
-
-(I used to think yiou found this via doing models)
+(I used to think you found this via low-level modelling)
 (Now I've seen Event Storming at scale I realise there are other ways)
 
 ---
 
 ### How Things Fit Together
 
-(both at implementation-time and run time) [Alberto's: ()->|()->(), and Strategic Patterns]
+(both at implementation-time and run time) [Alberto's: ()->|()->(), Strategic Patterns, and especially the Core Domain]
 
 ---
 
-### End-to-End Flows ***** (AHL)
+#### End-to-End Flows
 
 Do Event Storming.
 It's in the ThoughtWorks Tech Radar
 It's great for the obvious reasons
 But you also get Business and Tech working together
 And _everyone_ is modelling
+
+---
+
+#### Core Domain
 
 --- 
 
