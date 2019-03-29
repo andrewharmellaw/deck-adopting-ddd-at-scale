@@ -206,9 +206,13 @@ While I addressed them more in an interleaved fashion, I'll speak about them eac
 
 ### What is Most Important?
 
-[domain vision and everyone modelling]
+[everyone modelling -> domain vision]
 
 Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
+
+---
+
+#### Domain Vision ***** (AHL)
 
 ---
 
@@ -222,9 +226,38 @@ When working on this, I realised that you could also profitably see them from th
 
 ---
 
+#### Find the Bounded Contexts ***** (AHL)
+
+Event Storming is good for this, 
+But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
+
+#### Context Map **** (AHL)
+
+(I used to think yiou found this via doing models)
+(Now I've seen Event Storming at scale I realise there are other ways)
+
+---
+
 ### How Things Fit Together
 
-(both at implementation-time and run time) [Alberto's: ()->|()->()]
+(both at implementation-time and run time) [Alberto's: ()->|()->(), and Strategic Patterns]
+
+---
+
+### End-to-End Flows ***** (AHL)
+
+Do Event Storming.
+It's in the ThoughtWorks Tech Radar
+It's great for the obvious reasons
+But you also get Business and Tech working together
+And _everyone_ is modelling
+
+--- 
+
+#### (Strategic Patterns)
+
+Start to point out the Strategic Patterns (teams succeeding might already be doing this)
+This would have been the next step
 
 ---
 
@@ -284,42 +317,11 @@ Collective ownership stimulates collective responsibility in implementation.
 
 ---
 
-## Find the Bounded Contexts ***** (AHL)
-
-Event Storming is good for this, 
-But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
-
----
-
 ## AS-IS <-> TO-BE vicious circle **** (GT)
 
 Obtain knowledge of the domain from the As-Is state. Model the To-Be state. 
 Domain changes more slowly than the system that we are building. 
 Beware the legacy systems - they don't exactly reflect the domain knowledge.
-
----
-
-## Context Map **** (AHL)
-
-(I used to think yiou found this via doing models)
-(Now I've seen Event Storming at scale I realise there are other ways)
-
----
-
-## (Strategic Patterns)
-
-Start to point out the Strategic Patterns (teams succeeding might already be doing this)
-This would have been the next step
-
----
-
-### End-to-End Flows ***** (AHL)
-
-Do Event Storming.
-It's in the ThoughtWorks Tech Radar
-It's great for the obvious reasons
-But you also get Business and Tech working together
-And _everyone_ is modelling
 
 ---
 
@@ -329,18 +331,10 @@ Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s ab
 
 ---
 
-## This is best seen in Alberto Brandolini's ()->|()->() diagram
-
----
-
 ### Pick your battles ***** (GT)
 
 Don't spread yourself too thin
 Don't waste time trying to convince everyone - some folks will come round to the idea, especially when they see it working
-
----
-
-## Domain Vision ***** (AHL)
 
 ---
 
