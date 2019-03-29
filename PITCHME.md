@@ -122,7 +122,7 @@ All this combined to create a significant problem - complexities had been create
 
 Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  They bring together a great number of (hostile) parties, all who have their views on the system, and obligations / needs to be met.  Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
 
-ALL IN ALL, IT IS AN EXCELLENT FORUM WITHIN WHICH TO DEPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
+ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
 Given all this, things were harder still for the following reasons:
 
@@ -132,12 +132,9 @@ Given all this, things were harder still for the following reasons:
 
 With this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, as were the potential RISKS and BENEFITS.
 
+ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
+
 ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
-
-
-NEED TO COVER: 
-
-Finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
 
 ---
 
