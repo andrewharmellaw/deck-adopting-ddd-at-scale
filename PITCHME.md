@@ -168,6 +168,8 @@ Another sign of failure is failing to realise the difference between learing the
 
 Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
 
+Teams named after thepart of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
+
 architects wanted to 'own' the model and be the gatekeepers. 
 
 FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
@@ -300,6 +302,12 @@ This would have been the next step
 ## Delivery
 
 TBC @gaythu-rajan
+
+Make them see the value of doing DDD - Lot of it was plain old solutionising but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract. They were slowly warming up to it. 
+
+Context maps can be drawn in variosu ways - i used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture. 
+
+These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but noethless the same busiess process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
 
 Driving change - a lot of people needed to let go of things, but without knowing exactly where we were going (trust the DDD) - DELI
 
