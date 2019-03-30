@@ -149,6 +149,27 @@ ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE T
 
 TBC @gaythu-rajan
 
+When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code but they had little idea how to go from there. 
+
+At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified atleast three different models for a case. So they roughly went about hacking the case into 3 pieces. One of the teams(ATCM) were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably.
+
+In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model.
+(Knowing the strategic pattern andthe team relationship was impotant here - as it was "Separate Ways"here but "Partnership")
+
+So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. Danger #2 - SILOs.
+
+Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time(well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "Correct" model! 
+
+Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure. 
+
+I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. Incremental change towards the final model and while incrementing also constantly validating and challenging the model was important. 
+
+Another sign of failure is failing to realise the difference between learing the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
+
+Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
+
+architects wanted to 'own' the model and be the gatekeepers. 
+
 FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
 
 The model doesn't need to change once you "find" it - DELI *****
@@ -293,6 +314,7 @@ Design Retro - speak to K and G and ... team (first implementers)
 
 ## Tools and Methods
 Draw out the entire architecture - showing all the BCs and microservices - Context map
+Model Governance -  to do modelling at every increment and if need be every sprint; add the models to the design document. this is so that the teams get into the culture of doing modelling until it becomes natural  
 (WARNING: Don't make the context map do too much! - Use layers on top if it you need this)
 
 Modelling Whirlpool - Where a strawman model is just what everyone needs to get things kicked off instead of a blank wall
