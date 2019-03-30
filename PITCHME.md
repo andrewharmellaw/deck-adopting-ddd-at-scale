@@ -25,8 +25,8 @@
 * People _still_ don't get DDD
 * But it's _still_ the best way to solve complex problems in software
 * and the best way that we know of to get teams around codebases
-* Whether you're doing microservices, or a modular monolith
-* And worst of all, it gets harder the bigger the problem you're trying to solve
+* Whether you're doing microservices, or a -modular monolith- (Microliths instead?)
+* And worst of all, it gets harder the bigger the problem you're trying to solve (TODO - explain why the scale is a challenge)
 
 ---
 
@@ -36,15 +36,16 @@ Our project together (and some other bits before and after)
 
 We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
-There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.) 
+There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 
 ---
 
 ## Our Goals
 
-* Solve the right problems and build the right software
+* Solve the right business problems and build the right software
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
 * Prioritize the areas we focussed which maximised value for the client AND developers
+* Pick the right battle - there are so many things that you can make perfect, pick the ones that adds most value.
 
 --- 
 
@@ -78,19 +79,25 @@ We want to use this lens to present a collection of challenges and failure patte
 
 ## Our Constraints
 
-Things were already up and running - some ideas had already become entrenched
+Things were already up and running - some ideas had already become entrenched. Bounded Contexts were not there, "Domains and sub-domains" were identified at object level than by the model - E.g. Case, People, Material. The SPLIT was wrong ****
 
 The "domain" was co-owned (courts and prosecutor)  AND the PROCESS spanned multiple organisations *****
+
+Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
 
 The scale - it was a massive piece of work, being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
 
 Complex Architectural choices had been made (e.g. CQRS for everything) and devs were getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+
+Domain experts stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and the expectation was to translate that literally onto the software application. 
 
 ---
 
 ## Existing Failure Patterns / Challenges
 
 (DDD skills were in short supply - We were not allowed to "train" folks)
+
+Models were in the hands of enterprise architect(s) without any further evolution, iteration or improvement. 
 
 (Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI)
 
@@ -106,7 +113,7 @@ TBC @andrewharmellaw
 
 When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  PROBLEM: I WAS TO SOLVE THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
 
-I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  THIS WAS EVIDENCED IN TEH FACT THAT NO ONE DOMAIN EXPERT HAD AN END-TO-END VIEW.
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  THIS WAS EVIDENCED IN THE FACT THAT NO ONE DOMAIN EXPERT HAD AN END-TO-END VIEW.
 
 There were additionally an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DATA.
 
