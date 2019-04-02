@@ -278,28 +278,20 @@ It's great for the obvious reasons
 But you also get Business and Tech working together
 And _everyone_ is modelling
 
+(see above) - this is now how I might have arrived sooner at what we got to the long way round.
+
 ---
 
 #### Core Domain
 
+(see above)
+
 --- 
 
-#### (Strategic Patterns)
+### (Strategic Patterns)
 
 Start to point out the Strategic Patterns (teams succeeding might already be doing this)
 This would have been the next step
-
----
-
-### What is Most Important?
-
-[everyone modelling -> domain vision]
-
-Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
-
----
-
-#### Articulate the Domain Vision
 
 ---
 
@@ -326,6 +318,27 @@ When working on this, I realised that you could also profitably see them from th
 
 (I used to think you found this via low-level modelling)
 (Now I've seen Event Storming at scale I realise there are other ways)
+
+---
+
+### What is Most Important?
+
+[everyone modelling -> domain vision]
+
+Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
+
+
+In wrestling with the cases flow, and discovering the core bounded contexts which encapsulated it, i'd stumbled upon the fundamental aspects of the model.  But when looking at them they quickly became lost in amidst the other detail of their surroundings.  
+
+DETAIL: Desribe the three sections of the Domain Vision Statement.
+
+---
+
+#### Articulate the Domain Vision
+
+By the time we got to this point, there was a LOT of detail - even in the Context Map. I needed something simpler to show key stakeholders and people beginning their journey into the domain. It turns out, yet again, DDD had something for me - the Domain Vision statement.
+
+
 
 ---
 
