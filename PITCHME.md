@@ -258,7 +258,13 @@ This brings us onto a concept which *isn't* explicitly brought out in the (Blue)
 
 [Draw the diagram]
 
-It was also clear that there was a business-level process (ceremony even) involved in moving from one to the other.  These moves involved significant conceptual (and data-level) changes.
+what now seems obvious, but made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - i was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd ciome across something fundamental.
+
+I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  they had criteria, and ownership was transferred.
+
+I felt good about this discovery, mainly because it was corellated strongly to the domain reality. A year or so later, in a workshop with Albertto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
+
+There were relatiohships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
 
 
 
