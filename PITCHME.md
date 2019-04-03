@@ -238,17 +238,15 @@ At a meta level, it was exciting to come at DDD from another angle. It meant I h
 
 ### How Things Fit Together
 
-(There is a paradox here - I needed to investigaet this first, in order to find the concrete elements, which then allowed me to pull back out to see the whole bigger picture.)
-
-(both at implementation-time and run time) [Alberto's: ()->|()->(), Strategic Patterns, and especially the Core Domain]
+(There is a paradox here - I needed to investigate this first, in order to find the concrete elements, which then allowed me to pull back out to see how everything joined together into the whole, bigger picture.)
 
 The route into everything was to try and tackle the "case is a case (is a case)" issue.  I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  One way to do this was clearly to find things which where similar and to treat them in the same way.  There was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were substantial - mainly in the regards to how the cases were handled.
 
 The problem became evident when looking at the existing Case Aggregate Root - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a hot piece of code. Everyone wanted to add their stuff to it.  I began by trying to apportion each of the attributes and functions to the team which added them. Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.
 
-In parallel I went out to the teams themselves,  specifically their domain experts.  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support.  This is where the tensions arose. It was abundantly clear, very early on, that there were many types of case, which served different purposes in the criminal justice system.  Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
+In parallel I went out to sit with the teams themselves, specifically their domain experts.  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  This is where the tensions arose. It was abundantly clear, very early on, that there were very clearly many types of case, which served different purposes in the criminal justice system.  Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
 
-How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out:  Shared Kernels and the core domain.
+How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out:  Shared Kernels and the Core Domain.
 
 While I disagreed that "a case was always a case" because this lost too much detail in abstraction, it was also the signal that there was a common core - this was a shared kernel.  The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways of cases coming into being, and there is a very strict set of protocols governing how these change from one type to another.  And beneath everything, there is something which, on it's own was never enough to be a case in its own right, could be considered an "Abstract Case" from which all concrete types of case could inherit.
 
@@ -258,15 +256,17 @@ This brings us onto a concept which *isn't* explicitly brought out in the (Blue)
 
 [Draw the diagram]
 
-what now seems obvious, but made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - i was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd ciome across something fundamental.
+()->|()->()
+
+What now seems obvious, but which made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - i was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd ciome across something fundamental.
 
 I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  they had criteria, and ownership was transferred.
 
 I felt good about this discovery, mainly because it was corellated strongly to the domain reality. A year or so later, in a workshop with Albertto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
 
-There were relatiohships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
+There were relationships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
 
-
+I turns out that this is entirely valid.
 
 ---
 
