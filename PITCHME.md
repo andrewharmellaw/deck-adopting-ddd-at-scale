@@ -226,9 +226,9 @@ BIG TOPIC ONE: Discovering boundaries - this was a very process-intensive enviro
 
 As the Discovery phase began to wind up and I began to start _doing_ more I realised my focus would be in three areas:
 
-  * finding what's most important 
-  * finding the big picture and breaking it into smaller pieces
-  * articulating how the pieces fit together 
+  * finding what's most important - the domain vision
+  * finding the big picture and breaking it into smaller pieces - context mapping
+  * articulating how the pieces fit together  - value streams / archetypes
 
 While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.  Counter-intutively I'll start with the last bullet first.
 
@@ -270,40 +270,39 @@ I turns out that this is entirely valid.
 
 ---
 
-#### End-to-End Flows
-
-Do Event Storming.
-It's in the ThoughtWorks Tech Radar
-It's great for the obvious reasons
-But you also get Business and Tech working together
-And _everyone_ is modelling
-
-(see above) - this is now how I might have arrived sooner at what we got to the long way round.
-
----
-
-#### Core Domain
-
-(see above)
-
---- 
-
-### (Strategic Patterns)
-
-Start to point out the Strategic Patterns (teams succeeding might already be doing this)
-This would have been the next step
-
----
-
 ### Finding the Big Picture, and Breaking it Up
 
 [Bounded Contexts, Context Mapping]
+
+Now that I had the spine of the model identified I could begin work on fleshing out all the other contexts which hung off it.  This proved relatively simple once I took into account a few rules of thumb:
+
+ * look for technical subdomains
+ * pay attention to the jobs being done and the ways they were structured from an organisation perspective
+
+Ther technical subdomains were the easiest to spot - things like reporting, access management, etc. taking these out of the picture early cleared the decks for the focus on the remainder.  As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of the language used to describe something, my thoughts changed, and I realised they needed 
+
+This specific example brings us on to the second point which was also crucial - a lot of domain driven design requires the suspension fo disbelief. It is my experience that eventually, you will find the one or two facts which indicate to you that your mocel is correct. In this case, it was around whether the scheduling was a soecific use case atop a generic scheduling system, or something far more bespoke and unique.  
+
+I mentioned above that scheduling in courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties.  I'm going to talk a little now about the things which led me away from this conclusion.
+
+The seam I mined was based around the edge cases - when the scheduling was a complex matter, when it changed, when it was significantly sized.  It turned out that these circumstances weren't universal in the Criminal Justice System. Luckily we had domain experts who had a wide range of experience.  By asking about the biggest jurisdictions, and the circumstances when things were the hardest / most comoplicated, we eventually settled on a model which coudl represent the real richness of this complex task.  Alopng the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.  
+
+It also turned out to be a major source of possibility for achieving the goal of "modernising justice".  Getting cases and their hearings scheduled rapidly, and in the near future, and the information about this scheduling disseminated to the various parties (of whom there were a not insignificant amount) was key.
+
+
+It was when we burrowed down to this domain expertise that it became clear we werent in a generic subdomain.  
+
+
+The resulting context map, with its representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow)  
+
+---
+
 
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  
 
 Event Storming is good for this.
 
-But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done rather than organisations.  Everyone is doing things to a shared model all the way through a process.
+But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done .  Everyone is doing things to a shared model all the way through a process.
 
 Use the concept of "hats" to dig into this.
 
