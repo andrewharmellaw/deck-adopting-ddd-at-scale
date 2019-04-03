@@ -295,6 +295,7 @@ It was when we burrowed down to this domain expertise that it became clear we we
 
 The resulting context map, with its representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow)  
 
+
 ---
 
 
