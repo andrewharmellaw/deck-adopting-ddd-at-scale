@@ -30,7 +30,7 @@
 
 ---
 
-## Our Story
+## Our Story 
 
 Our project together (and some other bits before and after)
 
