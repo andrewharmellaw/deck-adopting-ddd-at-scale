@@ -307,58 +307,63 @@ I turns out that this is entirely valid.
 
 ### Finding the Big Picture, and Breaking it Up
 
-Now that I had the spine of the model identified I could begin work on fleshing out all the other contexts which hung off it.  This proved relatively simple once I took into account a few rules of thumb:
+Note:
+Now that I had the spine of bounded contexts identified I could begin work on fleshing out all the others which hung off it.  This proved relatively simple once I took into account a few rules of thumb:
 
  * look for generic (technical) subdomains
  * pay attention to the jobs being done and the ways they were structured from an organisation perspective
 
 ---
 
-#### What is a Generic (Technical) Subdomain?
+#### When is Sometihng NOT a Generic (Technical) Subdomain?
 
-Ther technical subdomains were the easiest to spot - things like reporting, access management, etc. taking these out of the picture early cleared the decks for the focus on the remainder.  As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of the language used to describe something, my thoughts changed, and I realised they needed 
+The obviously generic technical subdomains were the easiest to spot - things like reporting, access management, etc. Taking these out of the picture early cleared the decks for the focus on the remainder.  These were the ones where there might well be some above-and-beyond value being added.  
 
-This specific example brings us on to the second point which was also crucial - a lot of domain driven design requires the suspension fo disbelief. It is my experience that eventually, you will find the one or two facts which indicate to you that your mocel is correct. In this case, it was around whether the scheduling was a soecific use case atop a generic scheduling system, or something far more bespoke and unique.  
+As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of the language used to describe something, my thoughts changed, and I realised they were describing something bespoke.
 
-I mentioned above that scheduling in courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties.  I'm going to talk a little now about the things which led me away from this conclusion.
+This specific example brings us on to the second point which was also crucial - a lot of domain driven design requires the suspension fo disbelief. It is my experience that eventually, you will find the one or two facts which indicate to you that your mocel is correct. In this case, it was around whether the scheduling was a specific use case atop a generic scheduling system, or something far more bespoke and unique.  
 
-The seam I mined was based around the edge cases - when the scheduling was a complex matter, when it changed, when it was significantly sized.  It turned out that these circumstances weren't universal in the Criminal Justice System. Luckily we had domain experts who had a wide range of experience.  By asking about the biggest jurisdictions, and the circumstances when things were the hardest / most comoplicated, we eventually settled on a model which coudl represent the real richness of this complex task.  Alopng the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.  
+I mentioned above that scheduling in courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties (other BCs).  I'm going to talk a little now about the things which led me away from this conclusion.
 
-It also turned out to be a major source of possibility for achieving the goal of "modernising justice".  Getting cases and their hearings scheduled rapidly, and in the near future, and the information about this scheduling disseminated to the various parties (of whom there were a not insignificant amount) was key.
+The seam I mined was based around the edge cases - when the scheduling was a complex matter, when it changed, when it was significantly sized.  It turned out that these circumstances weren't universal in this Criminal Justice System. Luckily we had domain experts who had a wide range of experience.  By asking about the biggest jurisdictions, and the circumstances when things were the hardest / most comoplicated, we eventually settled on a model which coudl represent the real richness of this complex task.  Along the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.  
 
+It also turned out to be a major source of possibility for achieving the goal of "modernising justice".  Getting cases and their hearings scheduled rapidly, and in the near future, and the information about this scheduling disseminated to the various parties (of whom there were a not insignificant amount) was key.  
 
-It was when we burrowed down to this domain expertise that it became clear we werent in a generic subdomain.  
+We now had our two indicators - value add, and rich domain language to desctibe it (to the extent there were in some cases specific job roles).
 
 ---
 
 #### The Resulting Context Map
 
-The resulting context map, with its representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow)  
+I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention Conways Law and studying organisations, departments, actors and jobs-to-be-done.
 
-I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  
+(Event Storming is also good for this and another short-cut.)
 
-Event Storming is good for this.
+We could now draw our context map.
 
-But Conway's Law is also a good bet - sometimes: focus on actors and jobs-to-be-done .  Everyone is doing things to a shared model all the way through a process.
+[Rough sketch of the context map - @Gayathri, do you have a memory of this which might help?]
 
-Use the concept of "hats" to dig into this.
+[Describe the map]
 
-When working on this, I realised that you could also profitably see them from the top down (although this is more a blunt-instrument approach it has a lot of value)
+This map, with it's representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow).
 
- * Find our extent (overall scope)
- * find our chunks (don't worry yet about overlap, relatinships or gaps - we get to that later)
+[Allude to the relationships, and the direction and their nature (all partnership / shared kernel?)]
 
 ---
 
 ### Given All This Context, What is _Most Important?_
 
-[everyone modelling -> domain vision]
+[Domain Vision Statement]
 
 Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
 
-In wrestling with the cases flow, and discovering the core bounded contexts which encapsulated it, I'd stumbled upon the fundamental aspects of the model.  But when looking at them they quickly became lost in amidst the other detail of their surroundings.  
+In wrestling with the cases flow, and discovering the core bounded contexts which encapsulated it, I'd uncovered many of the fundamental aspects of the domain.  
 
-DETAIL: Desribe the three sections of the Domain Vision Statement.
+I'd then taken our focus out and dug into other key aspects of the domain - the places where the processing, and the moving of the Case elements through the system took place.
+
+In doing so we'd also fleshed out a bunch more detail which wasn't super-important, but did perform a function.
+
+This gave us a problem: when looking at all this detail, the important parts they quickly became lost in amidst the other detail of their surroundings.  
 
 ---
 
@@ -367,6 +372,7 @@ DETAIL: Desribe the three sections of the Domain Vision Statement.
 By the time we got to this point, there was a LOT of detail - even in the Context Map. I needed something simpler to show key stakeholders and people beginning their journey into the domain. It turns out, yet again, DDD had something for me - the Domain Vision statement.
 
 TBC: Andrew
+DETAIL: Desribe the three sections of the Domain Vision Statement.
 
 ---
 
@@ -417,8 +423,6 @@ We're _all_ doing design; challenge again at scale is there are advocates and sc
 Draw pictures!
 C4 is good for this (Simon Brown has training for Developers too)
 Find champions (junior folks can actually be good for this)
-
----
 
 ## Find the model in the code 
 
