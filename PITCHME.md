@@ -107,10 +107,6 @@ Models were in the hands of enterprise architect(s) without any further evolutio
 
 ## Discovery
 
-TBC @andrewharmellaw
-
-(Tell the story - what were the key points / milestones in this?)
-
 ---
 
 ### I'm Alone "Doing the DDD"
@@ -225,6 +221,8 @@ In summary: Solve the business problems. Work with the domain experts. Work with
 
 # Part 2: The Journey Towards Success
 
+
+Notes:
 Action: Decide what our three big topics for "Journey" are.
 
 Andrew's might be: 
@@ -248,10 +246,9 @@ There is an order to do things...
 
 ## Discovery
 
-TBC @andrewharmellaw
+---
 
-BIG TOPIC ONE: Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
-
+### Focussing Efforts
 
 As the Discovery phase began to wind up and I began to start _doing_ more I realised my focus would be in three areas:
 
@@ -265,9 +262,16 @@ At a meta level, it was exciting to come at DDD from another angle. It meant I h
 
 ---
 
-### How Things Fit Together
+### How the Pieces Fit Together
+
+
+BIG TOPIC ONE: Discovering boundaries - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
 
 (There is a paradox here - I needed to investigate this first, in order to find the concrete elements, which then allowed me to pull back out to see how everything joined together into the whole, bigger picture.)
+
+---
+
+#### "A Case is a Case is a Case"
 
 The route into everything was to try and tackle the "case is a case (is a case)" issue.  I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  One way to do this was clearly to find things which where similar and to treat them in the same way.  There was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were substantial - mainly in the regards to how the cases were handled.
 
@@ -276,6 +280,8 @@ The problem became evident when looking at the existing Case Aggregate Root - it
 In parallel I went out to sit with the teams themselves, specifically their domain experts.  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  This is where the tensions arose. It was abundantly clear, very early on, that there were very clearly many types of case, which served different purposes in the criminal justice system.  Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
 
 How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out:  Shared Kernels and the Core Domain.
+
+#### Shared Kernels and the Core Domain
 
 While I disagreed that "a case was always a case" because this lost too much detail in abstraction, it was also the signal that there was a common core - this was a shared kernel.  The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways of cases coming into being, and there is a very strict set of protocols governing how these change from one type to another.  And beneath everything, there is something which, on it's own was never enough to be a case in its own right, could be considered an "Abstract Case" from which all concrete types of case could inherit.
 
@@ -301,12 +307,14 @@ I turns out that this is entirely valid.
 
 ### Finding the Big Picture, and Breaking it Up
 
-[Bounded Contexts, Context Mapping]
-
 Now that I had the spine of the model identified I could begin work on fleshing out all the other contexts which hung off it.  This proved relatively simple once I took into account a few rules of thumb:
 
- * look for technical subdomains
+ * look for generic (technical) subdomains
  * pay attention to the jobs being done and the ways they were structured from an organisation perspective
+
+---
+
+#### What is a Generic (Technical) Subdomain?
 
 Ther technical subdomains were the easiest to spot - things like reporting, access management, etc. taking these out of the picture early cleared the decks for the focus on the remainder.  As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of the language used to describe something, my thoughts changed, and I realised they needed 
 
@@ -321,12 +329,11 @@ It also turned out to be a major source of possibility for achieving the goal of
 
 It was when we burrowed down to this domain expertise that it became clear we werent in a generic subdomain.  
 
-
-The resulting context map, with its representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow)  
-
-
 ---
 
+#### The Resulting Context Map
+
+The resulting context map, with its representations of the spine, ... all in the ubiquitious language was a very useful artefact.  It served exactly the purpose stated in the blue book.  it served to orient, to scope, to show relationships (and flow)  
 
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  
 
@@ -343,21 +350,13 @@ When working on this, I realised that you could also profitably see them from th
 
 ---
 
-#### Draw it all in a Context Map
-
-(I used to think you found this via low-level modelling)
-(Now I've seen Event Storming at scale I realise there are other ways)
-
----
-
-### What is Most Important?
+### Given All This Context, What is _Most Important?_
 
 [everyone modelling -> domain vision]
 
 Note: what it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
 
-
-In wrestling with the cases flow, and discovering the core bounded contexts which encapsulated it, i'd stumbled upon the fundamental aspects of the model.  But when looking at them they quickly became lost in amidst the other detail of their surroundings.  
+In wrestling with the cases flow, and discovering the core bounded contexts which encapsulated it, I'd stumbled upon the fundamental aspects of the model.  But when looking at them they quickly became lost in amidst the other detail of their surroundings.  
 
 DETAIL: Desribe the three sections of the Domain Vision Statement.
 
@@ -367,7 +366,7 @@ DETAIL: Desribe the three sections of the Domain Vision Statement.
 
 By the time we got to this point, there was a LOT of detail - even in the Context Map. I needed something simpler to show key stakeholders and people beginning their journey into the domain. It turns out, yet again, DDD had something for me - the Domain Vision statement.
 
-
+TBC: Andrew
 
 ---
 
