@@ -212,10 +212,11 @@ Constantly having to battle with businesss quick wins and resulting tactical sol
 
 ---
 
-### 
-Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
+### Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
 
 TBD @gaythu-rajan
+
+---
 
 /*
 architects wanted to 'own' the model and be the gatekeepers. 
@@ -398,8 +399,6 @@ DETAIL: Desribe the three sections of the Domain Vision Statement.
 ---
 
 ## Delivery
-
-TBC @gaythu-rajan
 
 Make them see the value of doing DDD - Lot of it was plain old solutionising but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract. They were slowly warming up to it. 
 
