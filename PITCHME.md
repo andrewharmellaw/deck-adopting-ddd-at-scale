@@ -111,15 +111,31 @@ TBC @andrewharmellaw
 
 (Tell the story - what were the key points / milestones in this?)
 
+---
+
+### I'm Alone "Doing the DDD"
+
 When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  PROBLEM: I WAS TO SOLVE THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
 
+---
+
+### Where is the Big Picture?
+
 I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  THIS WAS EVIDENCED IN THE FACT THAT NO ONE DOMAIN EXPERT HAD AN END-TO-END VIEW.
+
+---
+
+### "One Model to Rule Them All"
 
 There were additionally an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DATA.
 
 I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. (I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.) The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single microservice / datastore. PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
 
-What did this mean? Most findamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
+What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
+
+---
+
+### _Loads_ of Lovely Domain Experts - Listen to Them
 
 This came into direct conflict with the fact that there were teams working with different domain experts, on different services, with different release plans; all of whom had to play in this unified "case".  GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  BAD THING / FAILURE: Not listening to the domain experts. Domain experts don't know best. 
 
@@ -127,11 +143,24 @@ The second tenent was actually more like a myth, most likely born of misundersta
 
 All this combined to create a significant problem - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplification where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a quick intro to the doimain we're talking about.
 
+---
+
+### Legal Systems are **Complex**
+
 Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  They bring together a great number of (hostile) parties, all who have their views on the system, and obligations / needs to be met.  Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+
+---
+
+### Legal System Systems are **Ripe** for DDD
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
-Given all this, things were harder still for the following reasons:
+
+---
+
+### Incredibly High Stakes
+
+Given all this, things made were harder still via the following forces:
 
  * we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
  * we had to support a full-lifecycle view - justice end-to-end
@@ -139,9 +168,9 @@ Given all this, things were harder still for the following reasons:
 
 With this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, as were the potential RISKS and BENEFITS.
 
-ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
-
-ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
+Note:
+* ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
+* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
 
 ---
 
