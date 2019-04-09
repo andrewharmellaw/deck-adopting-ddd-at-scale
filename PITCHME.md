@@ -83,8 +83,11 @@ We want to use this lens to present a collection of challenges and failure patte
 
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned (courts and prosecutor)  AND the PROCESSES entailed spanned multiple organisations. We were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
 
+<<<<<<< HEAD
 We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with businesss against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
+=======
+>>>>>>> 6b0c1d03ce3f15d0f82259d104028555bfbf3112
 The scale - it was a massive piece of work, being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
 
 Complex Architectural choices had been made (e.g. CQRS for everything) and devs were getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
@@ -191,29 +194,55 @@ ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF 
 
 ## Delivery
 
-TBC @gaythu-rajan
-
+### Mind the Gap!
 When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code but they had little idea how to go from there. 
 
-At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified atleast three different models for a case. So they roughly went about hacking the case into 3 pieces. One of the teams(ATCM) were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably.
-
-In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model.
-(Knowing the strategic pattern andthe team relationship was impotant here - as it was "Separate Ways"here but "Partnership")
-
-So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. Danger #2 - SILOs.
-
-Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time(well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "Correct" model! 
+At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified atleast three different models for a case. So they roughly went about hacking the case into 3 pieces. 
 
 Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure. 
 
 I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. Incremental change towards the final model and while incrementing also constantly validating and challenging the model was important. 
 
-Another sign of failure is failing to realise the difference between learing the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
+---
+
+### Split != Separation (!@$?) 
+
+One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably.
+
+In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model.
+(Knowing the strategic pattern andthe team relationship was impotant here - as it was "Separate Ways" here but "Partnership")
+
+So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. Danger #2 - SILOs.
+
+---
+
+### Attitude @scale
+I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
 
 Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
 
-Teams named after thepart of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
+Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time(well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "Correct" model! 
 
+We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead. 
+
+---
+
+### Shortsight Vs Longsight 
+Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
+
+Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
+
+Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
+
+---
+
+### Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
+
+TBD @gaythu-rajan
+
+---
+
+/*
 architects wanted to 'own' the model and be the gatekeepers. 
 
 FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
@@ -228,9 +257,7 @@ There is a blessed team responsible for modelling and "the domain model" - DELI
 
 The model doesn't need to be explicit in the code - DISCO / DELI  *****
 
-Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI
-
-Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
+Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI */
 
 ---
 
@@ -428,8 +455,6 @@ At a meta level, it was exciting to come at DDD from another angle. It meant I h
 ---
 
 ## Delivery
-
-TBC @gaythu-rajan
 
 Make them see the value of doing DDD - Lot of it was plain old solutionising but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract. They were slowly warming up to it. 
 
