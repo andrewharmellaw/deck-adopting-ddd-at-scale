@@ -79,11 +79,11 @@ We want to use this lens to present a collection of challenges and failure patte
 
 ## Our Constraints
 
-Things were already up and running - some ideas had already become entrenched. Bounded Contexts were not there, "Domains and sub-domains" were identified at object level than by the model - E.g. Case, People, Material. The SPLIT was wrong ****
+(Things were already up and running - some ideas had already become entrenched. Bounded Contexts were not there, "Domains and sub-domains" were identified at object level than by the model - E.g. Case, People, Material. The SPLIT was wrong)
 
-The "domain" was co-owned (courts and prosecutor)  AND the PROCESS spanned multiple organisations *****
+We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned (courts and prosecutor)  AND the PROCESSES entailed spanned multiple organisations. We were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
 
-Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
+We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with businesss against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
 The scale - it was a massive piece of work, being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
 
@@ -186,23 +186,6 @@ Legal systems are complex.  They have evolved over _significant_ periods of time
 ### Legal System Systems are **Ripe** for DDD
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
-
-
----
-
-### Incredibly High Stakes
-
-Given all this, things made were harder still via the following forces:
-
- * we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
- * we had to support a full-lifecycle view - justice end-to-end
- * and we had to "modernise justice" as we did it
-
-With this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, as were the potential RISKS and BENEFITS.
-
-Note:
-* ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
-* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
 
 ---
 
