@@ -83,11 +83,8 @@ We want to use this lens to present a collection of challenges and failure patte
 
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned (courts and prosecutor)  AND the PROCESSES entailed spanned multiple organisations. We were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
 
-<<<<<<< HEAD
 We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with businesss against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
-=======
->>>>>>> 6b0c1d03ce3f15d0f82259d104028555bfbf3112
 The scale - it was a massive piece of work, being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. Find something which ties all this together (-> DOMAIN VISION))
 
 Complex Architectural choices had been made (e.g. CQRS for everything) and devs were getting drowned by them. It was almost always an impediment rather than a boost - We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
@@ -242,24 +239,25 @@ TBD @gaythu-rajan
 
 ---
 
-/*
-architects wanted to 'own' the model and be the gatekeepers. 
 
-FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
+//architects wanted to 'own' the model and be the gatekeepers. 
 
-The model doesn't need to change once you "find" it - DELI *****
+//FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
 
-Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
+//The model doesn't need to change once you "find" it - DELI *****
 
-Lots of people just think DDD is "just names" - DELI
+//Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
 
-There is a blessed team responsible for modelling and "the domain model" - DELI
+//Lots of people just think DDD is "just names" - DELI
 
-The model doesn't need to be explicit in the code - DISCO / DELI  *****
+//There is a blessed team responsible for modelling and "the domain model" - DELI
 
-Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI */
+//The model doesn't need to be explicit in the code - DISCO / DELI  *****
+
+//Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI 
 
 ---
+
 
 In summary: Solve the business problems. Work with the domain experts. Work with the teams. Work with the code. Iterate.
 
