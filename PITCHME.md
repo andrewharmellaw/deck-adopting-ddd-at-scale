@@ -45,7 +45,7 @@ There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 * Solve the right business problems and build the right software
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
 * Prioritize the areas we focussed which maximised value for the client AND developers
-* Pick the right battle - there are so many things that you can make perfect, pick the ones that adds most value.
+* Pick the right battle - there are so many things that you can make perfect, pick the ones that add most value.
 
 --- 
 
@@ -93,7 +93,21 @@ Domain experts stuck in the legacy way of thinking or worse paper based. In cour
 
 ---
 
+### Incredibly High Stakes
+
+With all this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, both RISKS and BENEFITS.
+
+Note:
+* ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
+* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
+
+---
+
 ## Existing Failure Patterns / Challenges
+
+Note:
+
+@ANDREW: I THINK WE COULD DROP THIS SLIDE. WHILE ITS ACCURATE, IT ADDS LITTLE TO OUR MESSAGE.
 
 (DDD skills were in short supply - We were not allowed to "train" folks)
 
@@ -109,7 +123,7 @@ Models were in the hands of enterprise architect(s) without any further evolutio
 
 ---
 
-### I'm Alone "Doing the DDD"
+### Alone, "Doing the DDD"
 
 Note:
 When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  
