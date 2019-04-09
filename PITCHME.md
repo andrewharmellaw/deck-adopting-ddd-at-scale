@@ -376,6 +376,19 @@ DETAIL: Desribe the three sections of the Domain Vision Statement.
 
 ---
 
+### Method: Model -> Share -> Question -> Repeat
+
+Note:
+Draw lots of pictures - try and find what is "comfortable". Being able to draw something on a sheet of A3, or a standard whiteboard is a good sign that the level of detail is correct.
+
+Go back to the book. The "pattern style" that it is written in means it is very easy to find your problem already described.  Then simply follow the solution.  
+
+Find the *Armature* - it sometimes seems to me that this part of the process is  lot like discovering the model's armature.  (Talk more about this here.)
+
+Share these pictures constantly.  Adipt a beginners mind.  Articulate when something doesnt feel comfortable (though be willing to accept a minor amount of discomfort, not everything will fit elegantly into the model you need.)  get the help of others - specifically the domain experts.  Gather round the board and ask questions of your models and see when they break.
+
+---
+
 ## Delivery
 
 TBC @gaythu-rajan
