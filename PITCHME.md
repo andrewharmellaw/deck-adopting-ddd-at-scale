@@ -329,6 +329,8 @@ The seam I mined was based around the edge cases - when the scheduling was a com
 
 It also turned out to be a major source of possibility for achieving the goal of "modernising justice".  Getting cases and their hearings scheduled rapidly, and in the near future, and the information about this scheduling disseminated to the various parties (of whom there were a not insignificant amount) was key.  
 
+There is however a caveat.  The "modernising justice" remit had been taken to heart by some domain experts.  They were using this as an excuse to self-censor; only talking about the "core" or "common" use cases.  This meant they were already pre-judging the outcome and not allowing themselves to go into all the detail which they were party to.  To work this out with them took a building up of trust.  It had to be stated that just because we modelled it didn't mean we were going to build it.  But in order to make this decision we needed to know the full extent of what we were dealing with - then, and only then, would we decide what to build / automate, what we would enable, and what we would target to simply do away with altogether.  This seemed to work.
+
 We now had our two indicators - value add, and rich domain language to desctibe it (to the extent there were in some cases specific job roles).
 
 ---
