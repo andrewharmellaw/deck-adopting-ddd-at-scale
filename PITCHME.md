@@ -235,7 +235,14 @@ Constantly having to battle with businesss quick wins and resulting tactical sol
 
 ### Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
 
-TBD @gaythu-rajan
+In an oceanic domain such as the legal system, there are always usecases or problems which are seemingly trivial to start with. Sometimes requirements and reduced scope can diguise a key process as a simple straight forward one. The real magnitude of it can only be obtained by looking into the actual domain. 
+Therefore, do not constrain yourself by requirements and scope(MVP) when learning about the domain. MVP is another near enemy! Once the actual process is learnt, distill the bits not within scope adn what remains is implemented but atleast you know the true size of it and confident that the model can expand as the scope gets bigger.
+
+One such example is the IDPC. What was perceived as a simple service for pdf generation from multiple documents was actually a key stage in the prosecution process particularly one main prosecutor (CPS). As you will hear later, while implementing this feature I personally learnt the above lesson of not underestimating the size based on just the MVP.
+
+The other side of this exists too. What is considered as a big problem (Glacier?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem. 
+It actually turned out to be a design smell by not defining the boundaries between different models of the case. When we started implementing the different models in their own bounded contexts, this problem just went away. 
+Access control is another example - ofcourse it is important but delineation of models particularly multiple models of the same entity in their own bounded context and operated on by corresponding actors provides out of the box access control at the very basic level.
 
 ---
 
