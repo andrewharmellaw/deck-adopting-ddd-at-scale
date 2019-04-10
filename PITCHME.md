@@ -9,7 +9,7 @@
 
 * Andrew Harmel-Law ([@al94781](https://twitter.com/al94781))
   * Tech Principal @ ThoughtWorks
-  * Worked on Microservices, CQRS, continuous delivery, and cloud-native computing _at scale_.
+  * Java dev (worked on Microservices, CQRS, continuous delivery, and cloud-native computing _at scale_).
 * Gayathri Thiyagarajan
   * Tech Lead @ Expedia Group (@gaythu-rajan)
   * Worked on Microservices, Event Sourcing, CQRS in BigData environments
@@ -18,6 +18,8 @@
 
 ## Agenda
 
+Complete this once we have the rest of the deck
+
 ---
 
 ## Where We Find Ourselves
@@ -25,14 +27,14 @@
 * People _still_ don't get DDD
 * But it's _still_ the best way to solve complex problems in software
 * and the best way that we know of to get teams around codebases
-* Whether you're doing microservices, or a -modular monolith- (Microliths instead?)
+* Whether you're doing microservices, a -modular monolith-, or nanoservices
 * And worst of all, it gets harder the bigger the problem you're trying to solve (TODO - explain why the scale is a challenge)
 
 ---
 
 ## Our Story 
 
-Our project together (and some other bits before and after)
+We're going to tshare the story of our most recent project together (and some other bits before and after)
 
 We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
@@ -41,6 +43,8 @@ There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
 ---
 
 ## Our Goals
+
+As Senior Developers, all projects we work on share some common goals.  This project was no different:
 
 * Solve the right business problems and build the right software
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
@@ -58,8 +62,6 @@ and trying to get as many people understanding and working on those problems as 
 
 # Part 1: Where we Started / Failure States / Our Challenges
 
-(Patterns?)
-
 ---
 
 ## The Near Enemies of Domain Driven Design (and how to recognise and defeat them)
@@ -67,18 +69,28 @@ and trying to get as many people understanding and working on those problems as 
   "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
 Note:
-The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  There are smaller-scale versions in many other places.  DDD is one of them.
+The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
 
-Why do they arise? Fundamentally, they appear because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning. 
+There are smaller-scale versions in many other places.  DDD is one of them.
 
-Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
+Why do they arise? They arise because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning.  Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
 
-We want to use this lens to present a collection of challenges and failure patterns we've seen when using DDD at a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people reach for the power tools, and that causes problems.  We want to help you avoid falling into that trap.
+We want to use this lens to present a collection of challenges and failure patterns we saw when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people forget about the core concepts, and that causes problems.  
+
+Hopefully this story will help you avoid falling into that trap.
  
 ---
 
 ## Our Constraints
 
+  * Lots of code had already been cut
+  * We were supporting the full justice-lifecycle, end to end, across multiple organisations
+  * There was an efficiency-finding "modernising" agenda to serve
+  * Many teams, already working in parallel
+  * CQRS _everywhere_
+  * Existing tech legacy cast a _long_ shadow over domain experts
+
+Note: 
 (Things were already up and running - some ideas had already become entrenched. Bounded Contexts were not there, "Domains and sub-domains" were identified at object level than by the model - E.g. Case, People, Material. The SPLIT was wrong)
 
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned (courts and prosecutor)  AND the PROCESSES entailed spanned multiple organisations. We were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System
@@ -99,7 +111,7 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 Note:
 * ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
-* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT?  WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
+* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT? WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
 
 ---
 
@@ -121,69 +133,101 @@ Models were in the hands of enterprise architect(s) without any further evolutio
 
 ## Discovery
 
+Note:
+I (Andrew) arrived first.  
+I (Gayathri) arrived second.  we overlapped a little, but not much.
+
+With hindsight, we both followed similar meta-approaches.  Starting with a our own "discovery" phases, and then moving on to "delivery" work.
+
 ---
 
-### Alone, "Doing the DDD"
+### Alone, "Doing the DDD" [AHL]
 
 Note:
-When I landed I was heralded as the "DDD expert".  I'd go into meetings and people would address me as such. It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  
+When I landed I was heralded as the "DDD expert".  
+
+I'd go into meetings and people would address me as such. 
+
+It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  
+
+Rather than everyone looking for a more general adoption of DDD as an approach / set of skills, I was there to take things off people's hands.
 
 PROBLEM: I WAS TO SOLVE THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
 
 ---
 
-### Where is the Big Picture?
+### Where was the Big Picture? [AHL]
 
 Note:
-I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  It's very different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
+
+I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the confluence wiki, and a significant bunch of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest already in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  
+
+I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we were now.
+
+I tried to make sure I didnt get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
 
 PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  
 THIS WAS EVIDENCED BY THE FACT THAT NO SINGLE DOMAIN EXPERT HAD AN END-TO-END VIEW.
 
 ---
 
-### "One Model to Rule Them All"
+### "One Model to Rule Them All" [AHL]
 
 Note:
-There were additionally an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  
-
-PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DATA.
-
 I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. (I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.) The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single microservice / datastore. 
 
-PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
+From a DDD perspective, there was an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. (The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
 
 What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
 
+PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
+PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE INFO.
+
 ---
 
-### _Loads_ of Lovely Domain Experts - Listen to Them
+### _Loads_ of Lovely Domain Experts - Listen [AHL]
 
 Note:
-This came into direct conflict with the fact that there were teams working with different domain experts, on different services, with different release plans; all of whom had to play in this unified "case".  
+This unified case construct came into direct conflict with the fact that there were many teams, working with their own individual domain experts, on different services, with different release plans; all of whom had to play in this unified "case" space.
 
-GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  BAD THING / FAILURE: Not listening to the domain experts. Domain experts don't know best. 
+The existence of the domain experts, embedded 3 out of 5 days with each team was a boon. (I've seen _many_ DDD projects fail due to a lack of this.)  This involvement must have been incredibly difficult to plan, set up and finiance, and as such it needs to be explicitly called out.
 
-The second tenent was actually more like a myth, most likely born of misunderstanding / misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, this ghost-dictat had largely been adhered to.  
+GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  
+
+There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didnt agree with their embedded Crown Prosecution rep. And not just on which version of a java library, no. I heard people saying that they were wrong when they described how their job worked.
+
+PROBLEM: NOT _LISTENING_ TO THE DOMAIN EXPERTS. DOMAIN EXPERTS **DON'T** KNOW BEST.
+
+A little later I stumbled upon something which might have been the root cause of the above lack of shared domain understanding.  Almost a myth, most likely born of misunderstanding / misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, this ghost-dictat had largely been adhered to.  
+
+What this was saying was "biquitous language needn't be ubiquitous, nor does it have to give us clues".
 
 PROBLEM: TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, AND NO WAY OF MAKING MODELLING BREAKTHROUGHS.  
-FAILURE: Ubiquitous language needn't be ubiquitous, nor does it have to give us clues.
 
 ---
 
-### [Picture of an Iceberg]
+### [Picture of an Iceberg] [AHL]
 
-All this combined to create a significant problem - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplification where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a quick intro to the doimain we're talking about.
-
----
-
-### Legal Systems are **Complex**
-
-Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  They bring together a great number of (hostile) parties, all who have their views on the system, and obligations / needs to be met.  Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+Note:
+All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer.  We came to refer to these as the "Icebergs".  To evidence how this is we need to provide a lightning intro to the domain we're talking about.
 
 ---
 
-### Legal System Systems are **Ripe** for DDD
+### Legal Systems are **Complex** [AHL]
+
+Note:
+We need to pause a second and make some things clear.  
+
+Legal systems are complex.  They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  
+
+They bring together a great number of (by the very nature of the adveserial system, hostile) parties, all who have their views on the system, and obligations / needs to be met.  
+
+Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+
+---
+
+### Legal System Systems are **Ripe** for DDD [AHL]
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
@@ -191,7 +235,7 @@ ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF 
 
 ## Delivery
 
-### Mind the Gap!
+### Mind the Gap! [GT]
 When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code but they had little idea how to go from there. 
 
 At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified atleast three different models for a case. So they roughly went about hacking the case into 3 pieces. 
@@ -202,7 +246,7 @@ I mentioned the implementation of the new models before - it was not an easy job
 
 ---
 
-### Split != Separation (!@$?) 
+### Split != Separation (!@$?) [GT]
 
 One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably.
 
@@ -213,7 +257,8 @@ So my job was to make sure that the teams were made aware that this is not the c
 
 ---
 
-### Attitude @scale
+### Attitude @Scale [GT]
+
 I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
 
 Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
@@ -224,7 +269,8 @@ We will see again and again that people are the making or breaking factor for an
 
 ---
 
-### Shortsight Vs Longsight 
+### Shortsight Vs Longsight [GT]
+
 Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
 
 Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
@@ -238,7 +284,6 @@ Constantly having to battle with businesss quick wins and resulting tactical sol
 TBD @gaythu-rajan
 
 ---
-
 
 //architects wanted to 'own' the model and be the gatekeepers. 
 
@@ -265,23 +310,15 @@ In summary: Solve the business problems. Work with the domain experts. Work with
 
 # Part 2: The Journey Towards Success
 
-
 Notes:
-Andrew's three big topics:
+Andrew isn't yet talking enough about:
+	* Copying data
+		* Link this back in when we talk about the "()->|()->()" archetype?
 
-Andrew's might be: 
-
- * Establish a Domain Vision 
- * Find the AS-IS bounded contexts - you can start from the top, or take value-stream slices, going *end-to-end* helps a lot
-    * Context Map
-    * Copying data
-    * Alberto Brandolini's ()->|()->() diagram
-    * Warning! - SubDomains
-    * Core Domain, and other Strategic design patterns
- * _Everyone_ does the modelling
- 	* Running "awareness" sessions to engage the business and allow their language to carry weight
+Andrew / Gayathri might talk more about:
+	* _Everyone_ does the modelling
+ 		* Running "awareness" sessions to engage the business and allow their language to carry weight
  
-
 There is an order to do things...
 
 (Have some common slide headings / topics for both @Gaythri and @Andrew to cover)
@@ -292,10 +329,10 @@ There is an order to do things...
 
 ---
 
-### Focussing the Effort
+### Focussing the Effort [AHL]
 
 Note:
-As the Discovery phase began to wind up and I began to start _doing_ I slowly realised my focus would be in three areas:
+As the Discovery phase began to wind up and I (Andrew) began to start _doing_ I slowly realised my focus would be in three areas:
 
   * finding what's most important - the domain vision
   * finding the big picture and breaking it into smaller pieces - context mapping
@@ -305,7 +342,7 @@ While I addressed them more in an interleaved fashion, I'll speak about them eac
 
 ---
 
-### How do the Key Pieces Fit Together?
+### How do the Key Pieces Fit Together? [AHL]
 
 Note:
 BIG TOPIC ONE: Discovering the spine / the armature - this was a very process-intensive environment, where things (cases) seemed to pass through a lot of organisations and hands. - DISCO
@@ -316,7 +353,7 @@ You can start from the top, or take value-stream slices, going *end-to-end* help
 
 ---
 
-#### "A Case is a Case is a Case"
+#### "A Case is a Case is a Case" [AHL]
 
 Note:
 The route into everything was to try and tackle the "case is a case (is a case)" issue.  I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  One way to do this was clearly to find things which where similar and to treat them in the same way.  There was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were substantial - mainly in the regards to how the cases were handled.
@@ -327,7 +364,7 @@ In parallel I went out to sit with the teams themselves, specifically their doma
 
 How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out: Shared Kernels and the Core Domain.
 
-#### Shared Kernels and the Core Domain
+#### Shared Kernels and the Core Domain [AHL]
 
 Note:
 While I disagreed that "a case was always a case" because this lost too much detail in abstraction, it was also the signal that there was a common core - this was a shared kernel.  
@@ -356,7 +393,7 @@ I turns out that this is entirely valid.
 
 ---
 
-### Finding the Big Picture, and Breaking it Up
+### Finding the Big Picture, and Breaking it Up [AHL]
 
 Note:
 Now that I had the spine of bounded contexts identified I could begin work on fleshing out all the others which hung off it.  This proved relatively simple once I took into account a few rules of thumb:
@@ -366,7 +403,7 @@ Now that I had the spine of bounded contexts identified I could begin work on fl
 
 ---
 
-#### When is Sometihng NOT a Generic (Technical) Subdomain?
+#### When is Sometihng NOT a Generic (Technical) Subdomain? [AHL]
 
 [BRING IN THE DDD DIAGRAM AND DEFINITION HERE]
 
@@ -389,7 +426,7 @@ We now had our two indicators - value add, and rich domain language to desctibe 
 
 ---
 
-#### The Resulting Context Map
+#### The Resulting Context Map [AHL]
 
 Note:
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention Conways Law and studying organisations, departments, actors and jobs-to-be-done.
@@ -410,7 +447,7 @@ This map, with it's representations of the spine, ... all in the ubiquitious lan
 
 ---
 
-### Given All This, What is _Most Important?_
+### Given All This, What is _Most Important?_ [AHL]
 
 Note:
 What it prioritised and of highest value?  Where does (should?) the control / the power / the centre of gravity sit?
@@ -425,7 +462,7 @@ This gave us a problem: when looking at all this detail, the important parts the
 
 ---
 
-#### Articulate the Domain Vision
+#### Articulate the Domain Vision [AHL]
 
 Note:
 By the time we got to this point, there was a LOT of detail - even in the Context Map. I needed something simpler to show key stakeholders and people beginning their journey into the domain. It turns out, yet again, DDD had something for me - the Domain Vision statement.
@@ -437,7 +474,7 @@ DETAIL: Describe how we used it.
 
 ---
 
-### Method: Model -> Share -> Question -> Repeat
+### Method: Model -> Share -> Question -> Repeat [AHL]
 
 Note:
 Draw lots of pictures - try and find what is "comfortable". Being able to draw something on a sheet of A3, or a standard whiteboard is a good sign that the level of detail is correct.
