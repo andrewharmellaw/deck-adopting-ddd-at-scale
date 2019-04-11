@@ -345,7 +345,7 @@ In summary: Solve the business problems. Work with the domain experts. Work with
 
 # Part 2: The Journey Towards Success
 
-Notes:
+Note:
 Andrew isn't yet talking enough about:
 	* Copying data
 		* Link this back in when we talk about the "()->|()->()" archetype?
