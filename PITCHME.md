@@ -18,7 +18,8 @@
 
 ## Agenda
 
-Complete this once we have the rest of the deck
+Note:
+[Complete this once we have the rest of the deck]
 
 ---
 
