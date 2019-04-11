@@ -17,6 +17,8 @@
 
 ## Agenda
 
+[TBC]
+
 Note:
 [Complete this once we have the rest of the deck]
 
@@ -24,51 +26,13 @@ Note:
 
 ## Where We Find Ourselves
 
-* People _still_ don't get DDD
+* Many people _still_ don't get DDD
 * But it's _still_ the best way to solve complex problems in software
-* and the best way that we know of to get teams around codebases
+* And the best way that we know of to get teams around codebases
 * Whether you're doing microservices, a -modular monolith-, or nanoservices
-* And worst of all, it gets harder the bigger the problem you're trying to solve (TODO - explain why the scale is a challenge)
-
----
-
-## Our Story 
 
 Note:
-We're going to share the story of our most recent project together (and some other bits before and after)
-
-We have first hand experience of seeing what DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
-
----
-
-## Our Goals
-
-  * Solve it right, build it right
-  * Maximally indepenent teams
-  * Prioritise value for _everyone_
-  * Pick our battles
-
-Note:
-As Senior Developers, all projects we work on share some common goals.  This project was no different:
-
-* Solve the right business problems and build the software right
-* Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
-* Prioritize the areas we focussed which maximised value for the client AND developers
-* Pick the right battle - there are so many things that you can make perfect, pick the ones that add most value.
-
---- 
-
-## Or More Simply...
-
-We're just trying to split the hard problem, into smaller maximally independent problems, 
-
-and trying to get as many of the right people understanding and working on the right problems as possible.
-
----
-
-# Part 1: Near Enemies, Constraints & Existing Challenges
-
-Note:
+Drop this @gaythu-rajan? -> * And worst of all, it gets harder the bigger the problem you're trying to solve (TODO - explain why the scale is a challenge)
 
 ---
 
@@ -77,6 +41,8 @@ Note:
   "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
 Note:
+We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  Well, not really...
+
 The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
 
 There are smaller-scale versions in many other places.  DDD is one of them.
@@ -86,6 +52,15 @@ Why do they arise? They arise because people do not engage fully with a concept,
 We want to use this lens to present a collection of challenges and failure patterns we saw when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people can easily forget about the core concepts, and that causes problems.  
 
 Hopefully this story will help you avoid falling into that trap.
+
+---
+
+# Part 1: Our Story Begins: Existing Constraints & High Stakes
+
+Note:
+We're going to share the story of our most recent project together (and some other bits before and after)
+
+We have first hand experience of seeing what DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
  
 ---
 
@@ -119,6 +94,31 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 Note:
 * ACTION: @gayathu-rajan - Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings) - you cover all this right?
+
+---
+
+## Our Goals
+
+  * Solve it right, build it right
+  * Maximally indepenent teams
+  * Prioritise value for _everyone_
+  * Pick our battles
+
+Note:
+As Senior Developers, all projects we work on share some common goals.  This project was no different:
+
+* Solve the right business problems and build the software right
+* Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
+* Prioritize the areas we focussed which maximised value for the client AND developers
+* Pick the right battle - there are so many things that you can make perfect, pick the ones that add most value.
+
+--- 
+
+## Or More Simply...
+
+We're just trying to split the hard problem, into smaller maximally independent problems, 
+
+and trying to get as many of the right people understanding and working on the right problems as possible.
 
 ---
 
