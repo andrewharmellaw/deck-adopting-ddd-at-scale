@@ -137,13 +137,17 @@ With hindsight, we both followed similar meta-approaches.  Starting with a our o
 Note:
 When I landed I was heralded as the "DDD expert".  
 
-I'd go into meetings and people would address me as such. 
+I'd go into meetings and people would address me as such. I even got called the "DDD Messiah" once.  Thats when I got worried.
 
-It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, and that DDD would be my tool to do so.  
+It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, that DDD would be my tool to do so, and that it would fix everyone's problems.  
 
-Rather than everyone looking for a more general adoption of DDD as an approach / set of skills, I was there to take things off people's hands.
+However, rather than everyone looking for a more general adoption of DDD as an approach / set of skills, I was there to take things off people's hands.
 
-PROBLEM: I WAS TO SOLVE THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
+---
+
+### Alone, "Doing the DDD" [AHL]
+
+PROBLEM: I WAS TO SOLVE ALL THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. I WAS GOING TO TELL EVERYONE WHAT TO DO.
 
 ---
 
