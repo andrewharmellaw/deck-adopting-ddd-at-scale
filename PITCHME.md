@@ -101,7 +101,7 @@ Domain experts stuck in the legacy way of thinking or worse paper based. In cour
 With all this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, both RISKS and BENEFITS.
 
 Note:
-* ACTION: @gayathu-rajan - Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings) - you cover all this right?
+* ACTION: @gayathu-rajan - Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings) - you cover all this right? GT: Yup already covered
 
 ---
 
@@ -320,21 +320,7 @@ Access control is another example - ofcourse it is important but delineation of 
 
 ---
 
-//architects wanted to 'own' the model and be the gatekeepers. 
-
-//FAILURE MODE: DESIGN CONTINUES DURING DELIVERY -IT'S PRACTICAL, NOT THEORETICAL
-
-//The model doesn't need to change once you "find" it - DELI *****
-
-//Constant desire to "future-proof" - this is not the same as building on a supple model - DISCO / DELI
-
-//Lots of people just think DDD is "just names" - DELI
-
-//There is a blessed team responsible for modelling and "the domain model" - DELI
-
-//The model doesn't need to be explicit in the code - DISCO / DELI  *****
-
-//Grasping the theory is easy, but putting it into practice is harder - practice builds up pattern recognition, gut instincts and muscle memory - DELI 
+//architects wanted to 'own' the model and be the gatekeepers.  -> I need to say something about people, desire to control which curtails the innovation in model - DDD requires the best skills from everyone: architects on oversight/practice, domain experts on language and domain knowledge, developers on the model implemnentation : THIS is the success of DDD, it implictly brings the whole team together 
 
 ---
 
@@ -552,7 +538,21 @@ At a meta level, it was exciting to come at DDD from another angle. It meant I h
 
 ## Delivery
 
-Make them see the value of doing DDD - Lot of it was plain old solutionising but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract. They were slowly warming up to it. 
+### Target the low hanging fruits
+
+This is a winning approach for various reasons - you have shown success quickly, demonstrated the benefits to various stakeholders, you gain confidence, good practices and principles starts from something small
+
+Everyone needs to see/feel the value of doing "real" DDD - Lot of it was plain old solutionising and common sense but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract concepts. They were slowly warming up to it. These were also sessions where they can think aloud. Allow mistakes to be made, challenge assumptions, accept compromises. Flexibility is another winning secret of DDD. Remember Eric Evans and Alberto - the design doesn't have to perfect, doesn't have to neat. Note: GT to find quote
+
+### Things you don't compromise! 
+
+1. Name and language - even if temporary; i would rather have an ugly name because it forces me to think it over; early incorporation embeds these into the team for good or bad
+2. Boundaries - beware of violating boundaries 
+3. 
+
+### Distill ... The noise. 
+
+Learning to recognise what is core to your domain, to your business context, to your aggregate is important.
 
 Domain distillation e.g. ATCM - overly complex solution of what is supposed to be a simple process. this is because the team had no visibility beyond their part of the process. This is because they implemented what turned out to be a typical Process Manger's job into their core process. It became very difficult to untangle from it, at one point we even considered scraping the whole thing and build it from the start. 
 
