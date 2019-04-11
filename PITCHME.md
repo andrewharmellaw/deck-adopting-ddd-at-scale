@@ -513,10 +513,25 @@ This gave us a problem: when looking at all this detail, the important parts the
 Note:
 By the time we got to this point, there was a LOT of detail - even in the Context Map. I needed something simpler to show key stakeholders and people beginning their journey into the domain. It turns out, yet again, DDD had something for me - the Domain Vision statement.
 
-[BRING IN THE DDD DIAGRAM AND DEFINITION HERE]
+---
 
-DETAIL: Desribe the three sections of the Domain Vision Statement.
-DETAIL: Describe how we used it.
+#### Why have a Domain Vision Statement?
+
+- the critical aspects of a Domain may span multiple bounded contexts
+- but you can't structure them to show their common focus
+- write something (a single page) to bring this out and keep the team headed in a common direction
+
+#### What's in a Domain Vision Statement?
+
+- Paragraph One: The key entities
+- Paragraph Two: The key roles / activities / events 
+- Paragraph Three: The key integrations
+
+In _each case_, include _why_ these elements are important.  
+
+Note:
+
+DETAIL: Describe how we used it. (Do you cover this @gaythu-rajan? I think I saw that you did...)
 
 ---
 
