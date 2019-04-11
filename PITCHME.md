@@ -140,7 +140,9 @@ With hindsight, we both followed similar meta-approaches.  Starting with a our o
 
 ---
 
+@snap[west]
 ### Alone, "Doing the DDD" [AHL]
+@snapend
 
 Note:
 When I landed I was heralded as the "DDD expert".  
@@ -153,9 +155,13 @@ However, rather than everyone looking for a more general adoption of DDD as an a
 
 ---
 
+@snap[west]
 ### Alone, "Doing the DDD" [AHL]
+@snapend
 
+@snap[east]
 PROBLEM: I WAS TO SOLVE ALL THE PROBLEMS, AND I OWNED THE DESIGN. DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. I WAS GOING TO TELL EVERYONE WHAT TO DO.
+@snap
 
 ---
 
