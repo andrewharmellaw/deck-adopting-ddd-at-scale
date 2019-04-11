@@ -17,10 +17,14 @@
 
 ## Agenda
 
-[TBC]
+  * Intro - Near Enemies
+  * Part 1: Existing Constraints and High Stakes
+  * Part 2: Journey Towards Success
+  * Part 3: Applications in Other DDD-Derived Areas (E.g. CQRS)
+  * Conclusions
 
 Note:
-[Complete this once we have the rest of the deck]
+Call out the "discovery and delivery" aspects of each section. (see "Where we find ourselves" below)
 
 ---
 
@@ -61,6 +65,10 @@ Note:
 We're going to share the story of our most recent project together (and some other bits before and after)
 
 We have first hand experience of seeing what DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
+
+We worked on the same project but we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
+
+Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and fixing the mistakes he had made.)
  
 ---
 
@@ -162,8 +170,12 @@ I pulled in as many info sources as I could, official and unofficial, trying to 
 
 I tried to make sure I didnt get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
 
+---
+
+### Where was the Big Picture? [AHL]
+
 PROBLEM: THERE WAS NO WAY IN. THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  THE COGNITIVE LOAD WAS TOO HIGH.  
-THIS WAS EVIDENCED BY THE FACT THAT NO SINGLE DOMAIN EXPERT HAD AN END-TO-END VIEW.
+NO SINGLE DOMAIN EXPERT HAD AN END-TO-END VIEW.
 
 ---
 
@@ -175,6 +187,10 @@ I quickly came across a few core tenents which had embedded themselves in the ps
 From a DDD perspective, there was an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. (The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
 
 What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
+
+---
+
+### "One Model to Rule Them All" [AHL]
 
 PROBLEM: "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP, BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
 PROBLEM: DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE INFO.
@@ -192,11 +208,20 @@ GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.
 
 There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didnt agree with their embedded Crown Prosecution rep. And not just on which version of a java library, no. I heard people saying that they were wrong when they described how their job worked.
 
+---
+
+### _Loads_ of Lovely Domain Experts - Listen [AHL]
+
 PROBLEM: NOT _LISTENING_ TO THE DOMAIN EXPERTS. DOMAIN EXPERTS **DON'T** KNOW BEST.
 
+Note:
 A little later I stumbled upon something which might have been the root cause of the above lack of shared domain understanding.  Almost a myth, most likely born of misunderstanding / misinterpretation than anything else - it was that "diagrams can't be drawn".  And despite the fact that a few guerilla diagrams were in existence, this ghost-dictat had largely been adhered to.  
 
-What this was saying was "biquitous language needn't be ubiquitous, nor does it have to give us clues".
+What this was saying was "ubiquitous language needn't be ubiquitous, nor does it even have to give us clues".
+
+---
+
+### _Loads_ of Lovely Domain Experts - Listen [AHL]
 
 PROBLEM: TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, AND NO WAY OF MAKING MODELLING BREAKTHROUGHS.  
 
