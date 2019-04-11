@@ -5,7 +5,6 @@
 ---
 
 # Hi
-(Who we are)
 
 * Andrew Harmel-Law ([@al94781](https://twitter.com/al94781))
   * Tech Principal @ ThoughtWorks
@@ -35,19 +34,24 @@ Note:
 
 ## Our Story 
 
-We're going to tshare the story of our most recent project together (and some other bits before and after)
+Note:
+We're going to share the story of our most recent project together (and some other bits before and after)
 
-We have first hand experience of seeing what failed DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
-
-There was a LOT of Tech (Design) Debt. (We'll get to why in a little bit.)
+We have first hand experience of seeing what DDD looks like on a very large scale. We have seen in detail how pseudo-DDD is the near enemy[1] or real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more effort.
 
 ---
 
 ## Our Goals
 
+  * Solve it right, build it right
+  * Maximally indepenent teams
+  * Prioritise value for _everyone_
+  * Pick our battles
+
+Note:
 As Senior Developers, all projects we work on share some common goals.  This project was no different:
 
-* Solve the right business problems and build the right software
+* Solve the right business problems and build the software right
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
 * Prioritize the areas we focussed which maximised value for the client AND developers
 * Pick the right battle - there are so many things that you can make perfect, pick the ones that add most value.
@@ -57,11 +61,14 @@ As Senior Developers, all projects we work on share some common goals.  This pro
 ## Or More Simply...
 
 We're just trying to split the hard problem, into smaller maximally independent problems, 
-and trying to get as many people understanding and working on those problems as possible
+
+and trying to get as many of the right people understanding and working on the right problems as possible.
 
 ---
 
-# Part 1: Where we Started / Failure States / Our Challenges
+# Part 1: Near Enemies, Constraints & Existing Challenges
+
+Note:
 
 ---
 
@@ -76,7 +83,7 @@ There are smaller-scale versions in many other places.  DDD is one of them.
 
 Why do they arise? They arise because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning.  Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
 
-We want to use this lens to present a collection of challenges and failure patterns we saw when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people forget about the core concepts, and that causes problems.  
+We want to use this lens to present a collection of challenges and failure patterns we saw when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people can easily forget about the core concepts, and that causes problems.  
 
 Hopefully this story will help you avoid falling into that trap.
  
@@ -87,7 +94,7 @@ Hopefully this story will help you avoid falling into that trap.
   * Lots of code had already been cut
   * We were supporting the full justice-lifecycle, end to end, across multiple organisations
   * There was an efficiency-finding "modernising" agenda to serve
-  * Many teams, already working in parallel
+  * Significant scale - many teams, already working in parallel
   * CQRS _everywhere_
   * Existing tech legacy cast a _long_ shadow over domain experts
 
@@ -111,24 +118,7 @@ Domain experts stuck in the legacy way of thinking or worse paper based. In cour
 With all this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, both RISKS and BENEFITS.
 
 Note:
-* ACTION: Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings)
-* ACTION: AHL TO SUMMARISE - WHERE WERE WE AT THIS POINT? WHAT SPECIFICALLY ARE THE NEAR ENEMIES WHAT WE'VE IDENTIFIED?
-
----
-
-## Existing Failure Patterns / Challenges
-
-Note:
-
-@ANDREW: I THINK WE COULD DROP THIS SLIDE. WHILE ITS ACCURATE, IT ADDS LITTLE TO OUR MESSAGE.
-
-(DDD skills were in short supply - We were not allowed to "train" folks)
-
-Models were in the hands of enterprise architect(s) without any further evolution, iteration or improvement. 
-
-(Models have to be in UML or some other "architect-only" notation (the real one is in the code). - DISCO / DELI)
-
-(Red Book and not the Blue Book - DISCO)
+* ACTION: @gayathu-rajan - Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings) - you cover all this right?
 
 ---
 
