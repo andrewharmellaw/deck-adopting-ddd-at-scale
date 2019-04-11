@@ -247,7 +247,7 @@ Most importantly, they must contaim within themselves a great deal of flexibilit
 
 ---
 
-### Legal System Systems are **Ripe** for DDD [AHL]
+### Legal Systems are **Ripe** for DDD [AHL]
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
