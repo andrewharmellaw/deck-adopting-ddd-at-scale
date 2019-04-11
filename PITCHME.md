@@ -140,7 +140,7 @@ With hindsight, we both followed similar meta-approaches.  Starting with a our o
 
 ---
 
-@snap[west]
+@snap[north]
 ### Alone, "Doing the DDD" [AHL]
 @snapend
 
@@ -155,17 +155,15 @@ However, rather than everyone looking for a more general adoption of DDD as an a
 
 ---
 
-@snap[west]
+@snap[north]
 ### Alone, "Doing the DDD" [AHL]
 @snapend
 
-@snap[east]
 PROBLEMS: 
-- I WAS TO SOLVE ALL THE PROBLEMS,
+- I WAS THERE TO SOLVE ALL THE PROBLEMS,
 - AND I OWNED THE DESIGN. 
 - DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
 - I WAS GOING TO TELL EVERYONE WHAT TO DO.
-@snapend
 
 ---
 
