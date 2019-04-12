@@ -544,9 +544,9 @@ This is a winning approach for various reasons - you have shown success quickly,
 
 Everyone needs to see/feel the value of doing "real" DDD - Lot of it was plain old solutionising and common sense but as I used models to explain and demonstrate this, the teams were able to relate the implementation to the abstract concepts. They were slowly warming up to it. These were also sessions where they can think aloud. Allow mistakes to be made, challenge assumptions, accept compromises. Flexibility is another winning secret of DDD. Remember Eric Evans and Alberto - the design doesn't have to perfect, doesn't have to neat. Note: GT to find quote
 
-### Things you don't compromise! 
+### Things that cannot be compromised! 
 
-1. Name and language - even if temporary; i would rather have an ugly name because it forces me to think it over; early incorporation embeds these into the team for good or bad
+1. Language & Names - even if temporary; i would rather have an ugly name because it forces me to think it over; early incorporation embeds these into the team for good or bad
 2. Boundaries - beware of violating boundaries 
 3. 
 
@@ -556,42 +556,53 @@ Learning to recognise what is core to your domain, to your business context, to 
 
 Domain distillation e.g. ATCM - overly complex solution of what is supposed to be a simple process. this is because the team had no visibility beyond their part of the process. This is because they implemented what turned out to be a typical Process Manger's job into their core process. It became very difficult to untangle from it, at one point we even considered scraping the whole thing and build it from the start. 
 
-There are many ways to skin cat - what you built may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notice and forward it to appropriate court context or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
+### Looking through the crystal ball
 
-Context maps can be drawn in variosu ways - i used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture. 
+There are many ways to skin cat - what you built may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
+It is worth remembering that real world != software application. Software world offers so many opportuniies to optimise that leverage it even if it means that performing business differently.
 
-These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but noethless the same busiess process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
+### Visualisation
 
-Driving change - a lot of people needed to let go of things, but without knowing exactly where we were going (trust the DDD) - DELI
+Context maps can be drawn in various ways - I used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture. 
 
-Managing Cost - the cost of lots of people is enourmous, so prepare, define the problem statement, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". SOME PROBLEMS WERE PHANTOM PROBLEMS - e.g. "simultaneous updates to a case" only occurs when you have one case to rule them all.) - DELI
+These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but nonethless the same business process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
+
+### Driver for change 
+
+A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
+
+### Modelling is not cheap
+
+One practical challenge at this scale was the cost. Cost of failing - yes (@Andrew touched on this before?) but also the cost of pulling people together to do modelling.
+Therefore, define the problem statement ahead, and get the right people but no more. (A lot of vague things will get thrown at you, and you will be invited to a lot of meetings as "the domain expert". Beware of the PHANTOM PROBLEMS.
 
 ---
 
 ## Process
 ### Before
 
-Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consitency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document.   - this is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off. 
+Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
 ### After
-Design Retro - speak to K and G and ... team (first implementers). Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could dangerously be modelled as a single step process. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COUDL GET INTO TROUBLE IF I SAID THIS, I AM SURE)
+Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COUDL GET INTO TROUBLE IF I SAID THIS, I AM SURE)
 
 ---
 
 ## Tools and Methods
-Draw out the entire architecture - showing all the BCs and microservices - Context map: Context Map and i had few versions of it is an excellent tool to show the enterprise architecture with all the microservices, their relationship at a high level. I drew another one to show how they came together as part of the process or journey. I also had smaller versions for the core teams made out which showed their BC at the centre and the other BCs they actively interact with, this filtered out the noise of the big picture which to Tom, Dee and Hari as devs is not as important as their own world. CONTEXT MAP IS A POWERFUL TOOL.
+Draw out the entire architecture - showing all the BCs and microservices - Context map: Context Map and I had few versions of it is an excellent tool to show the enterprise architecture with all the microservices, their relationship at a high level. I drew another one to show how they came together as part of the process or journey. I also had smaller versions for the core teams made out which showed their BC at the centre and the other BCs they actively interact with, this filtered out the noise of the big picture which to Tom, Dee and Hari as devs is not as important as their own world. CONTEXT MAP IS A POWERFUL TOOL.
  
 (WARNING: Don't make the context map do too much! - Use layers on top if it you need this)
 
-Modelling Whirlpool - Where a strawman model is just what everyone needs to get things kicked off instead of a blank wall
+Modelling Whirlpool - Where a strawman model is just what everyone needs to get things kicked off instead of a blank wall. Remember the cost as well, can you afford to coup people in a room for the whole day? How can you make things go faster. 
 
-Event Storming - by far the best method to find aggregates and document events. It doesn't have to day long full blown exercise. Small, iterative sessions are helpful for solutioning too.
+Event Storming - by far the best method to find aggregates and document events. It doesn't have to be a day long full blown exercise. Small, iterative sessions are helpful for solutioning too. It is a good method to document event driven contexts too. 
 
 ---
 
 ## Everyone get modelling
 
 We're _all_ doing design; challenge again at scale is there are advocates and sceptics; DDD may not be bought in by everyone, this is fine as long as it doesn't become an impediment, a healthy scepticism is good for design. Find allies of DDD who can help you sell it.
+
 Draw pictures!
 C4 is good for this (Simon Brown has training for Developers too)
 Find champions (junior folks can actually be good for this)
@@ -660,7 +671,17 @@ TBC @andrewharmellaw
 
 ## Delivery
 
-TBC @gaythu-rajan
+Challenge in documenting a CQRS architecture. 
+CQRS is a paradox of DDD 
+
+CQRS uses the term Aggregate. IMHO, CQRS aggregates are similar but not the same as a DDD aggregate. Often, I have found that one muddles the implementation of the other. CQRS ofcourse made the DDD aggregates famous. 
+
+1. DDD is all about explicit modelling - In CQRS aggregates, apart from the root entity, the model is not visible. It is in pieces within the events. Although strictly events themselves are not domain models, they are BASED on your domain model (they are too denormalised to be a model - they just capture facts) 
+2. In pure DDD, there can be group of entities as aggregates, again I beleive in CQRS most of the times, you will have only one entity as an aggregate root and the rest are value objects. It is mainly because as an entity with it's own lifecycle it would make sense to have to capture events in it's own stream hence a different aggregate. 
+3. Strict definition of DDD Aggregate does not apply in CQRS -> for e.g. DDD aggregate mentions that the root is the only way to access the children in an aggregate and that's mostly how you will identify the root. This mostly lead in our project to "Case" being the root all the times! Everything needs to have a case to start with ofcourse. But in CQRS, this only means that the stream-id is caseId but the other entities can be an aggregate in themselves. E.g. Case, Casematerial, Defendant. They are separate CQRS aggregates as you want to capture events in their own streams but they all have the same streamId. (@GT to elaborate this a bit more to make it clear)
+4. Read model or write model -> what is your domain model. If you overlay the domain model diagram it would seem like a read model which is a normalised view of domain data is you domain model BUT it is not. It is simple a projection. The meat of your model is in write side
+5. Visualisation - very difficult at best of times. Our mind is trained to look at things in a synchronous(?) way, cause-effect, request-response. With async events flowing all over the place, it is difficult to capture a synchronised view of the architecture. The closest I got to was to use Sequence diagram to show a handovers and flow of events (instead of method calls)
+6. CQRS Vs Rest Vs DDD
 
 ---
 
