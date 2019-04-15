@@ -24,7 +24,8 @@
   * Conclusions
 
 Note:
-Call out the "discovery and delivery" aspects of each section. (see "Where we find ourselves" below)
+Alternate discovery and delivery for each section.
+@andrew to draw models/pictures and @gaythu-rajan to write code
 
 ---
 
@@ -34,9 +35,6 @@ Call out the "discovery and delivery" aspects of each section. (see "Where we fi
 * But it's _still_ the best way to solve complex problems in software
 * And the best way that we know of to get teams around codebases
 * Whether you're doing microservices, a -modular monolith-, or whatever we end up doing in the future
-
-Note:
-Drop this @gaythu-rajan? -> * And worst of all, it gets harder the bigger the problem you're trying to solve (TODO - explain why the scale is a challenge)
 
 ---
 
@@ -68,9 +66,9 @@ We have first hand experience of seeing what DDD looks like on a large scale. We
 
 While we worked on the same project but we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
-Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and fixing the mistakes he had made.)
+Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and challenging the assumptions he had made)
 
-SO what was the project? It was the transformation and modernisation of the core public systems within the UK Judicial system.
+So what was the project? It was the transformation and modernisation of the core public systems within the UK Judicial system.
  
 ---
 
@@ -85,8 +83,10 @@ SO what was the project? It was the transformation and modernisation of the core
 
 Note: 
 (Things were already up and running - some ideas had already become entrenched. Bounded Contexts were not there, "Domains and sub-domains" were identified at object level than by the model - E.g. Case, People, Material. The SPLIT was wrong)
+@gaythu-rajan made further changes as it was still more object based split.
 
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned, we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System - AND the PROCESSES entailed spanned even more organisations than that. 
+Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are implementing. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
 
 We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with businesss against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
@@ -101,9 +101,6 @@ Domain experts were stuck in the legacy way of thinking or worse paper based. In
 ### Incredibly High Stakes
 
 With all this in mind it is no surprise that things had got complicated prior to our arrival.  The stakes were INCREDIBLY HIGH, both RISKS and BENEFITS.
-
-Note:
-* ACTION: @gayathu-rajan - Deal explicitly with finding the Icebergs - how big / important is something? - DISCO / DELI (and the opposite - red herrings) - you cover all this right? GT: Yup already covered
 
 ---
 
