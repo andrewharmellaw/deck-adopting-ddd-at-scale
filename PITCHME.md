@@ -69,6 +69,8 @@ While we worked on the same project but we overlapped very little.  I (Andrew) i
 Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and challenging the assumptions he had made)
 
 So what was the project? It was the transformation and modernisation of the core public systems within the UK Judicial system.
+
+@gaythu-rajan and @andrew to alternate on each slide
  
 ---
 
@@ -113,6 +115,7 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 Note:
 As Senior Developers, all projects we work on share some common goals.  This project was no different:
+@gaythu-rajan to state the goals and pull this into conclusion section
 
 * Solve the right business problems and build the software right
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
@@ -136,6 +139,8 @@ I (Andrew) arrived first.
 I (Gayathri) arrived second.  We overlapped a little, but not much.
 
 With hindsight, we both followed similar meta-approaches.  Starting with our own "discovery" phases, and then moving on to "delivery" work. - IS THIS HOW WE'VE STRUCTUED IT? I'M NOT SURE IT IS, BUT TO LOSE THIS WOULD BE FINE IMHO.
+
+@andrew to draw a timeline of @gaythu-rajan (a year and half) and @andrew's (9mo) time there
 
 ---
 
@@ -176,7 +181,7 @@ I began by setting off a number of lines of enquiry - I had a vague idea of the 
 I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we were now.
 
 I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the programme wiki, and a significant amount of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest already in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  
-
+ 
 I tried to make sure I didnt get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
 
 ---
@@ -196,7 +201,7 @@ PROBLEMS:
 Note:
 I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single microservice / datastore. 
 
-From a DDD perspective, there was an over-focus on the data, and an under-emphasis on the behaviour / workflow / jobs to be done.  It didnt even really manifest in domain events  This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. (The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
+From a DDD perspective, there was an over-focus on the data (@gaythu-rajan to elaborate with the defendant model and people context; mention how @andrew comes up with the idea and how it was implemented), and an under-emphasis on the behaviour / workflow / jobs to be done.  It didnt even really manifest in domain events  This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. (The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
 
 What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
 
@@ -254,6 +259,7 @@ Note:
 All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer.  We came to refer to these as the "icebergs".  
 
 To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.
+@gaythu-rajan to bring her stuff up here about icebergs
 
 ---
 
@@ -273,6 +279,16 @@ Most importantly, they must contaim within themselves a great deal of flexibilit
 ### Legal Systems are **Ripe** for DDD [AHL]
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
+
+### Attitude @Scale [GT]
+
+I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
+
+Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
+
+Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model! 
+
+We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead. 
 
 ---
 
@@ -298,23 +314,30 @@ In the legal system, different parties go off on their own to work on the casefi
 
 So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. Danger #2 - SILOs.
 
+@gaythu-rajan pull this to the place where @andrew talks about independant teams 
+
 ---
+### Data focussed [GT]
 
-### Attitude @Scale [GT]
+@gaythu-rajan to talk about that data centricity and pull this to the place where @andrew talks about it above
 
-I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
++
++
++
++
++
++
++
++
 
-Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
-
-Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model! 
-
-We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead. 
 
 ---
 
 ### Shortsight Vs Longsight [GT]
 
 Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
+
+### Naming teams -> scheduling 
 
 Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
 
@@ -330,7 +353,7 @@ Therefore, do not constrain yourself by requirements and scope (MVP) when learni
 
 One such example is the IDPC. What was perceived as a simple service for PDF generation from multiple documents was actually a key stage in the prosecution process particularly one main prosecutor (the Crown Prosecution Service). As you will hear later, while implementing this feature I personally learnt the above lesson of not underestimating the size based on just the MVP.
 
-The other side of this exists too. What is considered as a big problem (Glacier?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem. 
+The other side of this exists too. What is considered as a big problem (Ice cubes?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem. 
 
 It actually turned out to be a design smell by not defining the boundaries between different models of the case. When we started implementing the different models in their own bounded contexts, this problem just went away. 
 
@@ -339,6 +362,12 @@ Access control is another example - of course it is important but delineation of
 ---
 
 //architects wanted to 'own' the model and be the gatekeepers.  -> I need to say something about people, desire to control which curtails the innovation in model - DDD requires the best skills from everyone: architects on oversight/practice, domain experts on language and domain knowledge, developers on the model implemnentation : THIS is the success of DDD, it implictly brings the whole team together. 
+
+## Ownership
+
+Team collectively owns the model. 
+Everyone has some important insight and perspective to add to the model.
+Collective ownership stimulates collective responsibility in implementation. 
 
 ---
 
@@ -360,6 +389,7 @@ Andrew / Gayathri might talk more about:
 There is an order to do things...
 
 (Have some common slide headings / topics for both @Gaythri and @Andrew to cover)
+@gaythu-rajan and @andrew to talk Discovery and then Delivery 
 
 ---
 
@@ -398,7 +428,7 @@ You don't need to do this all bottom-up.  You can start from the top, or take va
 Note:
 The route into everything was to try and tackle the "case is a case (is a case)" issue.  I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  
 
-!DATA!DATA!DATA! ADD SOMETHING ABOUT DATA (AND TRYING NOT TO HAVE TOO MUCH OF IT) HERE.
+!DATA!DATA!DATA! ADD SOMETHING ABOUT DATA (AND TRYING NOT TO HAVE TOO MUCH OF IT) HERE. @gaythu-rajan to pull tihs into the data section
 
 One way to do this was clearly to find things which where similar and to treat them in the same way.  There was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled.
 
@@ -431,6 +461,7 @@ This brings us onto a concept which *isn't* explicitly brought out in the (Blue)
 ()->|()->()
 
 What now seems obvious, but which made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - I was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd come across something fundamental.
+@gaythu-rajan to provide te sketch of this
 
 #### The Domain is Talking to You
 
@@ -488,7 +519,7 @@ We could now draw our context map.
 
 [BRING IN THE DDD DIAGRAM AND DEFINITION HERE]
 
-[Rough sketch of the context map - @Gayathri, do you have a memory of this which might help?]
+[Rough sketch of the context map - @Gayathri, do you have a memory of this which might help?] - yup, @andrew to say this is how it started and @gaythu-rajan 
 
 [Describe the map]
 
@@ -603,6 +634,12 @@ Therefore, define the problem statement ahead, and get the right people but no m
 
 Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
+Ownership
+
+Team collectively owns the model. 
+Everyone has some important insight and perspective to add to the model.
+Collective ownership stimulates collective responsibility in implementation. 
+
 ### After
 Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
 
@@ -626,26 +663,7 @@ We're _all_ doing design; challenge again at scale is there are advocates and sc
 Draw pictures!
 C4 is good for this (Simon Brown has training for Developers too)
 Find champions (junior folks can actually be good for this)
-
-## Find the model in the code 
-
-FEEL the code
-
----
-
-## It's not your model, it's everyone's
-
-Use tools to generate your models that everyone can use to edit
-N.b. folks need to be confident in these tools, not just have access to them.
-You need to over-communicate and over-share
-You need to work with others to find it
-
----
-## Ownership
-
-Team collectively owns the model. 
-Everyone has some important insight and perspective to add to the model.
-Collective ownership stimulates collective responsibility in implementation. 
+@gaythu-rajan to pull this into the right section of hers
 
 ---
 
@@ -655,11 +673,15 @@ Obtain knowledge of the domain from the As-Is state. Model the To-Be state.
 Domain changes more slowly than the system that we are building. 
 Beware the legacy systems - they don't exactly reflect the domain knowledge.
 
+@gaythu-rajan to pull into her sectino where appropriate
+
 ---
 
 ### You _can_ copy data ***** (AHL/GT)
 
 Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
+
+@andrew to pull this into his sectino on copuying data
 
 ---
 
@@ -667,15 +689,7 @@ Matthias Verraes : “Don’t Repeat Yourself” was never about code. It’s ab
 
 Don't spread yourself too thin
 Don't waste time trying to convince everyone - some folks will come round to the idea, especially when they see it working
-
----
-
-## It's in the frikkin' book
-
-* Work with the teams
-* Work with the domain experts
-* Work with the code
-* Iterate
+@andrew to talk about this in concliusion
 
 ---
 
@@ -692,6 +706,7 @@ TBC @andrewharmellaw
 ## Delivery
 
 Challenge in documenting a CQRS architecture. 
+
 CQRS is a paradox of DDD 
 
 CQRS uses the term Aggregate. IMHO, CQRS aggregates are similar but not the same as a DDD aggregate. Often, I have found that one muddles the implementation of the other. CQRS ofcourse made the DDD aggregates famous. 
@@ -701,33 +716,7 @@ CQRS uses the term Aggregate. IMHO, CQRS aggregates are similar but not the same
 3. Strict definition of DDD Aggregate does not apply in CQRS -> for e.g. DDD aggregate mentions that the root is the only way to access the children in an aggregate and that's mostly how you will identify the root. This mostly lead in our project to "Case" being the root all the times! Everything needs to have a case to start with ofcourse. But in CQRS, this only means that the stream-id is caseId but the other entities can be an aggregate in themselves. E.g. Case, Casematerial, Defendant. They are separate CQRS aggregates as you want to capture events in their own streams but they all have the same streamId. (@GT to elaborate this a bit more to make it clear)
 4. Read model or write model -> what is your domain model. If you overlay the domain model diagram it would seem like a read model which is a normalised view of domain data is you domain model BUT it is not. It is simple a projection. The meat of your model is in write side
 5. Visualisation - very difficult at best of times. Our mind is trained to look at things in a synchronous(?) way, cause-effect, request-response. With async events flowing all over the place, it is difficult to capture a synchronised view of the architecture. The closest I got to was to use Sequence diagram to show a handovers and flow of events (instead of method calls)
-6. CQRS Vs Rest Vs DDD
-
----
-
-## Consolidate / Fight
-
----
-
-## Beware close enemies
-
----
-
-## Core domain
-
----
-
-## Generic Sub Domain
-Lose some battles
-
----
-
-## It's in the frikkin' book
-
-* Work with the teams
-* Work with the domain experts
-* Work with the code
-* Iterate
+6. CQRS Vs Rest Vs DDD - @gaythu-rajan to elaborate this
 
 ---
 
