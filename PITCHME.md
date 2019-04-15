@@ -40,9 +40,11 @@ Alternate discovery and delivery for each section.
 
 ## The Near Enemies of Domain Driven Design (and how to recognise and defeat them)
 
-  "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
+  "The near enemy is a [...] counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us[...], the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
 Note:
+Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
+
 We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  Well, not really...
 
 The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
