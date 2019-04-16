@@ -243,6 +243,7 @@ A little later I stumbled upon something which might have been the root cause of
 What this was saying to me was "ubiquitous language needn't be ubiquitous, nor does it even have to give us clues".
 
 Worse still, it was stopping developers playing with the language of the domain in order to grasp it more deeply, and consequently arrive at modelling breakthroughs.
+@Andrew - make this and then next one into single slide?
 
 ---
 
@@ -252,16 +253,6 @@ PROBLEM:
 - TECHNICAL TEAM MEMBERS HAD NO WAY OF GRAPPLING WITH THE DOMAIN, 
 - NO WAY OF TESTING THEIR UNDERSTANDING OF THE UBIQUITOUS LANGUAGE, 
 - AND NO WAY OF MAKING MODELLING BREAKTHROUGHS.  
-
----
-
-### [Picture of an Iceberg] [AHL]
-
-Note:
-All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer.  We came to refer to these as the "icebergs".  
-
-To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.
-@gaythu-rajan to bring her stuff up here about icebergs
 
 ---
 
@@ -282,19 +273,13 @@ Most importantly, they must contaim within themselves a great deal of flexibilit
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
-### Attitude @Scale [GT]
-
-I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
-
-Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
-
-Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model! 
-
-We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead. 
+Segue into GT's delivery after this
 
 ---
 
 ## Delivery
+
+---
 
 ### Mind the Gap! [GT]
 When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there. 
@@ -307,14 +292,46 @@ I mentioned the implementation of the new models before - it was not an easy job
 
 ---
 
-### Split != Separation (!@$?) [GT]
+### Icebergs and Icecubes [GT]
 
-One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably.
+All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer.  We came to refer to these as the "icebergs".  
+
+(To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.) - TODO - Simplified pictorial rep of domain here?
+
+Sometimes requirements and reduced scope can diguise a key process as a simple straight forward one. The real magnitude of it can only be obtained by looking into the actual domain. 
+
+Therefore, do not constrain yourself by requirements and scope (MVP) when learning about the domain. MVP is another near enemy! Once the actual process is learnt, distill the bits not within scope and what remains is implemented but at least you know the true size of it and confident that the model can expand as the scope gets bigger.
+
+One such example is the IDPC. What was perceived as a simple service for PDF generation from multiple documents was actually a key stage in the prosecution process particularly one main prosecutor (the Crown Prosecution Service). As you will hear later, while implementing this feature I personally learnt the above lesson of not underestimating the size based on just the MVP.
+
+The other side of this exists too. What is considered as a big problem (Ice cubes?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem. 
+
+It actually turned out to be a design smell by not defining the boundaries between different models of the case. When we started implementing the different models in their own bounded contexts, this problem just went away. 
+
+Access control is another example - of course it is important but delineation of models particularly multiple models of the same entity in their own bounded context and operated on by corresponding actors provides out of the box access control at the very basic level.
+
+---
+
+### Perception @Scale [GT]
+
+I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong. 
+
+Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically. 
+
+Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model! 
+
+We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead. 
+
+---
+
+### Split != Silos [GT]
+
+One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate. 
 
 In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model.
 (Knowing the strategic pattern andthe team relationship was important here - as it was "Separate Ways" here but "Partnership")
 
-So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. Danger #2 - SILOs.
+So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. The other danger was from avoiding Silos forming from these splits. 
 
 @gaythu-rajan pull this to the place where @andrew talks about independant teams 
 
@@ -338,38 +355,20 @@ So my job was to make sure that the teams were made aware that this is not the c
 ### Shortsight Vs Longsight [GT]
 
 Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
-
-### Naming teams -> scheduling 
-
-Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system.
-
 Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
 
----
+### Naming teams
 
-### Finding the Icebergs - how big / important is something? - DELI **** (and the opposite - red herrings - e.g. simultaneous updates to cases)
-
-In an oceanic domain such as the legal system, there are always usecases or problems which are seemingly trivial to start with. Sometimes requirements and reduced scope can diguise a key process as a simple straight forward one. The real magnitude of it can only be obtained by looking into the actual domain. 
-
-Therefore, do not constrain yourself by requirements and scope (MVP) when learning about the domain. MVP is another near enemy! Once the actual process is learnt, distill the bits not within scope and what remains is implemented but at least you know the true size of it and confident that the model can expand as the scope gets bigger.
-
-One such example is the IDPC. What was perceived as a simple service for PDF generation from multiple documents was actually a key stage in the prosecution process particularly one main prosecutor (the Crown Prosecution Service). As you will hear later, while implementing this feature I personally learnt the above lesson of not underestimating the size based on just the MVP.
-
-The other side of this exists too. What is considered as a big problem (Ice cubes?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem. 
-
-It actually turned out to be a design smell by not defining the boundaries between different models of the case. When we started implementing the different models in their own bounded contexts, this problem just went away. 
-
-Access control is another example - of course it is important but delineation of models particularly multiple models of the same entity in their own bounded context and operated on by corresponding actors provides out of the box access control at the very basic level.
+Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. Wrong names/contexts used by the wrong teams. Scheduling was something used by ATCM which created SJP session.
 
 ---
 
-//architects wanted to 'own' the model and be the gatekeepers.  -> I need to say something about people, desire to control which curtails the innovation in model - DDD requires the best skills from everyone: architects on oversight/practice, domain experts on language and domain knowledge, developers on the model implemnentation : THIS is the success of DDD, it implictly brings the whole team together. 
-
-## Ownership
+### Ownership
 
 Team collectively owns the model. 
 Everyone has some important insight and perspective to add to the model.
 Collective ownership stimulates collective responsibility in implementation. 
+architects wanted to 'own' the model and be the gatekeepers.  -> I need to say something about people, desire to control which curtails the innovation in model - DDD requires the best skills from everyone: architects on oversight/practice, domain experts on language and domain knowledge, developers on the model implemnentation : THIS is the success of DDD, it implictly brings the whole team together. 
 
 ---
 
