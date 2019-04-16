@@ -441,7 +441,7 @@ In parallel I went out to sit with the teams themselves, predominantly their dom
 
 How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out: Shared Kernels and the Core Domain.
 
-#### Shared Kernels and the Abstract [AHL]
+#### Shared Kernels and the Abstract Core [AHL]
 
 Note:
 While I disagreed that "a case was always a case" because this lost too much detail in abstraction, it was also the signal that there was highly likely to be a common core - in DDD parlance a shared kernel.  
@@ -468,7 +468,7 @@ What now seems obvious, but which made me nervous at the time, was the relations
 
 I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had criteria, and ownership was transferred.
 
-I felt good about this discovery, mainly because it was corellated strongly to the domain reality. A year or so later, in a workshop with Albertto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
+I felt good about this discovery, mainly because it was corellated strongly to the domain reality. A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
 
 There were relationships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
 
@@ -635,11 +635,15 @@ Therefore, define the problem statement ahead, and get the right people but no m
 
 Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
-Ownership
+---
+
+### Ownership
 
 Team collectively owns the model. 
 Everyone has some important insight and perspective to add to the model.
 Collective ownership stimulates collective responsibility in implementation. 
+
+---
 
 ### After
 Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
