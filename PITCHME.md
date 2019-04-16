@@ -184,7 +184,7 @@ I pulled in as many info sources as I could, official and unofficial, trying to 
 
 I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the programme wiki, and a significant amount of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest already in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  
  
-I tried to make sure I didnt get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
+I tried to make sure I didn't get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
 
 ---
 
@@ -405,7 +405,7 @@ As the first, listening, phase began to wind up and I (Andrew) began to start _d
 
   * stating clearly what's most important - the domain vision
   * finding the big picture and breaking it into smaller pieces - context mapping
-  * discovering how the key pieces fit together  - value streams / archetypes
+  * discovering how the key pieces fit together  - shared kernels / core domain value streams / archetypes
 
 While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.  Counter-intutively I'll start with the last bullet first.
 
@@ -609,7 +609,7 @@ Domain distillation e.g. ATCM - overly complex solution of what is supposed to b
 
 ### Looking through the crystal ball
 
-There are many ways to skin cat - what you built may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
+There are many ways to skin a cat - what you build may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
 
 It is worth remembering that real world != software application. Software world offers so many opportuniies to optimise that leverage it even if it means that performing business differently.
 
