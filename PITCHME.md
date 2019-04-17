@@ -352,15 +352,12 @@ So my job was to make sure that the teams were made aware that this is not the c
 
 @gaythu-rajan to talk about that data centricity and pull this to the place where @andrew talks about it above
 
-+
-+
-+
-+
-+
-+
-+
-+
-
+1. As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object centric split leads to data centered archtecture. 
+2. To give an example - A Case is not a case without someone being prosecuted. That someone could be a suspect at the beginning of a case and then become a defendant when the case is brought to the court. This is when the offence is indictable (you could go to prison for). In summary only offence, you enter the system as a defendant. As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts. 
+3. What's wrong with that? 
+	a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. 	      b. Reconciling the states in case of failures becomes easier. 
+	c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). 
+	d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model. 
 
 ---
 
