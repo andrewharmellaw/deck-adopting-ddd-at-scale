@@ -32,7 +32,7 @@ _Loads_ of Lovely Domain Experts - Listen [AHL]					DOMAIN-EXPERTS
 
 				(Delivery [GT])								
 
-				Mind the Gap! [GT]								MODELS -> CODE     (!!!! - ORDER-PROBLEM - !!!!)
+				Mind the Gap! [GT]								MODELS -> CODE     							(!!!! - ORDER-PROBLEM - !!!!)
 
 				Icebergs and Icecubes [GT]						DOMAIN-EXPERTS, DATA-NOT-PROCESS, BCs
 
@@ -66,15 +66,15 @@ The Domain is Talking to You [AHL]								DOMAIN-EXPERTS, (CORE-DOMAIN)
 
 Finding the Big Picture, and Breaking it Up [AHL]				BCs, END-TO-END-VIEW
 
-When is Something NOT a Generic (Technical) Subdomain? [AHL]	(CONTEXT-MAP), DOMAIN-EXPERTS.  (!!!! - DROPPABLE - !!!!)
+When is Something NOT a Generic (Technical) Subdomain? [AHL]	(CONTEXT-MAP), DOMAIN-EXPERTS, MODELS->CODE (!!!! - DROPPABLE - !!!!)
 
 The Resulting Context Map [AHL]									CONTEXT-MAP
 
-Given All This, What is _Most Important?_ [AHL]					DOMAIN-VISION					(!!!! - DROPPABLE - !!!!)
+Given All This, What is _Most Important?_ [AHL]					DOMAIN-VISION								(!!!! - DROPPABLE - !!!!)
 
-Articulate the Domain Vision [AHL]								DOMAIN-VISION					(!!!! - DROPPABLE - !!!!)
+Articulate the Domain Vision [AHL]								DOMAIN-VISION								(!!!! - DROPPABLE - !!!!)
 
-Method: Model -> Share -> Question -> Repeat [AHL]              OWNERSHIP,  					<<<< MOVE LATER / DROP
+Method: Model -> Share -> Question -> Repeat [AHL]              OWNERSHIP,  								<<<< MOVE LATER / DROP
 
 				Delivery [GT]									OWNERSHIP, TRANSFORMATION
 
@@ -90,7 +90,7 @@ Method: Model -> Share -> Question -> Repeat [AHL]              OWNERSHIP,  				
 
 				Driver for change [GT]							TRANSFORMATION, DOMAIN-EXPERTS
 
-				Modelling is not cheap [GT]														(!!!! - DROPPABLE - !!!!)
+				Modelling is not cheap [GT]																	(!!!! - DROPPABLE - !!!!)
 
 				Process [GT]									TRANSFORMATION
 
@@ -102,7 +102,7 @@ Method: Model -> Share -> Question -> Repeat [AHL]              OWNERSHIP,  				
 
 				Tools and Methods [GT]							CONTEXT-MAP, BCs, END-TO-END-VIEW, EVENT-STORMING
 
-		Everyone get modelling [?]																(!!!! - DROPPABLE - !!!!)
+		Everyone get modelling [?]																			(!!!! - DROPPABLE - !!!!)
 
 		AS-IS <-> TO-BE vicious circle [?]						DOMAIN-EXPERTS, TRANSFORMATION
 
