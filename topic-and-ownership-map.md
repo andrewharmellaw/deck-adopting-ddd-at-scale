@@ -16,15 +16,15 @@
 
 		Or more simply [both]
 
-(Discovery [AHL])
-
-Alone, "Doing the DDD" [AHL] - 									OWNERSHIP
+(Discovery [AHL)
 	
 Where was the Big Picture? [AHL] - 								GROKK-ABILITY, END-TO-END-VIEW
 
-"One Model to Rule Them All" [AHL] - 							DATA-NOT-PROCESS, MODELS
+"One Model to Rule Them All" [AHL] - 							DATA-NOT-PROCESS, MODELS			
 
-_Loads_ of Lovely Domain Experts - Listen [AHL]					DOMAIN-EXPERTS
+_Loads_ of Lovely Domain Experts - Listen [AHL]					DOMAIN-EXPERTS 								!!!!! MOVEABLE !!!!!
+
+Alone, "Doing the DDD" [AHL] - 									OWNERSHIP
 
 		Legal Systems are **Complex** [both]
 
@@ -32,13 +32,11 @@ _Loads_ of Lovely Domain Experts - Listen [AHL]					DOMAIN-EXPERTS
 
 				(Delivery [GT])								
 
-				Mind the Gap! [GT]								MODELS -> CODE     							(!!!! - ORDER-PROBLEM - !!!!)
-
 				Icebergs and Icecubes [GT]						DOMAIN-EXPERTS, DATA-NOT-PROCESS, BCs
 
 				Perception @Scale [GT]							OWNERSHIP, GROKK-ABILITY
 
-				Split != Silos [GT]								CORE-DOMAIN, BCs, OWNERSHIP
+				Split != Silos [GT]								CORE-DOMAIN, BCs, STRATEGIC-PATTERNS
 
 				Data focussed [GT]								DATA-NOT-PROCESS
 
@@ -60,7 +58,11 @@ How do the Key Pieces Fit Together? [AHL]						GROKK-ABILITY, END-TO-END-VIEW
 
 Shared Kernels and the Abstract Core [AHL]						SHARED KERNEL, ABSRACT-CORE, (CORE-DOMAIN)
 
+				Mind the Gap! [GT]								MODELS -> CODE     							
+
 ()->|()->() [AHL]												BCs, END-TO-END-VIEW, (CORE-DOMAIN)
+
+				Visualisation [GT]								CONTEXT-MAP, BCs, END-TO-END-VIEW
 
 The Domain is Talking to You [AHL]								DOMAIN-EXPERTS, (CORE-DOMAIN)
 
@@ -86,7 +88,6 @@ Method: Model -> Share -> Question -> Repeat [AHL]              OWNERSHIP,  				
 
 				Looking through the crystal ball [GT]			MODELS->CODE, 
 
-				Visualisation [GT]								CONTEXT-MAP, BCs, END-TO-END-VIEW
 
 				Driver for change [GT]							TRANSFORMATION, DOMAIN-EXPERTS
 
