@@ -47,9 +47,9 @@ Quote: "The traditional term “near enemy” points to some spiritually unhelpf
 
 We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  Well, not really...
 
-The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - there are _many_ near enemies in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
+The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - we have _many_ near enemies: in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
 
-There are smaller-scale instances of this story in many other places.  The application of DDD is one of them.
+The application of DDD is another one of them.
 
 Why do they arise? They arise because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning.  Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
 
@@ -64,7 +64,7 @@ Hopefully this story will help you avoid falling into that trap.
 Note:
 We're going to share the story of one of our most recent projects together (and some other bits before and after)
 
-We have first hand experience of seeing what DDD looks like on a large scale. We have seen in detail how pseudo-DDD is the near enemy[1] of real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more difficult.
+We have first-hand experience of seeing what DDD looks like on a large scale. We have seen in detail how pseudo-DDD is the near enemy[1] of real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more difficult.
 
 While we worked on the same project but we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
@@ -92,7 +92,7 @@ Note:
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned, we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System - AND the PROCESSES entailed spanned even more organisations than that. 
 Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are implementing. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
 
-We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with businesss against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
+We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with business against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
 The scale - it was a massive piece of work that was being tackled head on. Software was being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc. 
 
@@ -121,8 +121,8 @@ As Senior Developers, all projects we work on share some common goals.  This pro
 
 * Solve the right business problems and build the software right
 * Make teams independent (as opposed to tightly coupled) so they could build and release independently (and therefore more quickly).
-* Prioritize the areas we focussed which maximised value for the client AND developers
-* Pick the right battle - there are so many things that you can make perfect, pick the ones that add most value.
+* Prioritize the areas we focussed on, maximising value for the justice system AND developers
+* Pick the right battles - there are so many things that you can make perfect, pick the ones that add most value.
 
 --- 
 
@@ -155,7 +155,7 @@ When I landed I was heralded as the "DDD expert".
 
 I'd go into meetings and people would address me as such. I even got called the "DDD Messiah" once.  That's when I got worried.
 
-It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems, that DDD would be my tool to do so.  
+It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems; and that DDD would be my tool for doing so.  
 
 However, rather than everyone looking for a more general adoption of DDD as an approach / set of skills, I was there to take things off people's hands.
 
@@ -178,13 +178,17 @@ PROBLEMS:
 Note:
 I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.
 
-I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  It's very different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  That's very different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
 
-I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we were now.
+I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we found ourselves.
 
-I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the programme wiki, and a significant amount of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  I had to look at what was there, and how it had manifest already in the team structures and codebases.  I had to reverse engineer a big picture from the pieces I could find.  
+I knew things here had been running for a while already, and that there was a bunch of designs already in existence on the programme wiki, and a significant amount of code already written.  There was talk of an architect who had done a bunch of the early work, but they had since moved on.  
+
+I had to look at what was there, and how it had manifest already in the team structures and codebases.  
+
+I had to reverse engineer a big picture from the pieces I could find.  
  
-I tried to make sure I didn't get sucked into too much detail in any one area.  I needed to avoid getting overwhelmed at this stage.
+I tried to make sure I didn't get sucked into too much detail in any one area.  At this stage I needed to avoid getting overwhelmed by any one thing.
 
 ---
 
@@ -201,9 +205,15 @@ PROBLEMS:
 ### "One Model to Rule Them All" [AHL]
 
 Note:
-I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single microservice / datastore. 
+I quickly came across a few core tenents which had embedded themselves in the psyche of everyone on the project. The most prevalent was the dictum that "a case is a case (is a case)", by which was meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single "Case" microservice / datastore. 
 
-From a DDD perspective, there was an over-focus on the data (@gaythu-rajan to elaborate with the defendant model and people context; mention how @andrew comes up with the idea and how it was implemented), and an under-emphasis on the behaviour / workflow / jobs to be done.  It didnt even really manifest in domain events  This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. (The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
+From a DDD perspective, this meant an over-focus on the data (@gaythu-rajan to elaborate with the defendant model and people context; mention how @andrew comes up with the idea and how it was implemented), and an under-emphasis on the behaviour / workflow / jobs to be done.  
+
+It didn't even really manifest in domain events  
+
+This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. 
+
+(The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
 
 What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
 
@@ -221,13 +231,13 @@ PROBLEM:
 ### _Loads_ of Lovely Domain Experts - Listen [AHL]
 
 Note:
-This unified "Case" construct came into direct conflict with the fact that there were many teams, working with their own individual domain experts, on different services, with different release plans; all of whom had to play in this "Case" space.
+This unified "Case" construct came into direct conflict with the fact that there were many teams, working with their own individual domain experts, on different services, with different release plans; all of whom had to play in this shared "Case" space.
 
-The existence of the domain experts, embedded 3 out of 5 days with each team was a boon. (I've seen _many_ DDD projects fail due to a lack of this.)  This involvement must have been incredibly difficult to plan, set up and finiance, and as such it needs to be explicitly called out.
+The existence of the domain experts, embedded 3 out of 5 days with each team was a boon. (I've seen _many_ DDD projects fail due to a lack of this.)  This involvement must have been incredibly difficult to plan, set up and finance, and as such it needs to be explicitly called out as a win.
 
 GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  
 
-There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didnt agree with their embedded Crown Prosecution rep. And not just on which version of a java library, no. I heard people saying that they were wrong when they described how their job worked.
+There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didnt agree with their embedded Crown Prosecution rep. And not just on which version of a java library to use. No, I heard people saying that they were wrong when they described how their job worked.
 
 ---
 
@@ -256,7 +266,7 @@ PROBLEM:
 
 ---
 
-### Legal Systems are **Complex** [AHL]
+### Legal Systems are **Complex** [BOTH]
 
 Note:
 We need to pause a second and make some things clear.  
@@ -265,15 +275,17 @@ Legal systems are complex.  They have evolved over _significant_ periods of time
 
 They bring together a great number of (by the very nature of the adveserial system, hostile) parties, all who have their views on the system, and obligations / needs to be met.  
 
-Most importantly, they must contaim within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+Most importantly, they must contain within themselves a great deal of flexibility, while still balancing against this an incredible formality; seemingly small details can make large differences, and have VERY SERIOUS, real-world outcomes.  
+
+@gaythu-rajan - shall we move this and the next slide to the top?
 
 ---
 
-### Legal Systems are **Ripe** for DDD [AHL]
+### Legal Systems are **Ripe** for DDD [BOTH]
 
 ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
-Segue into GT's delivery after this
+Segue into GT's delivery after this.
 
 ---
 
@@ -401,13 +413,15 @@ There is an order to do things...
 ### Focussing the Effort [AHL]
 
 Note:
-As the first, listening, phase began to wind up and I (Andrew) began to start _doing_ I slowly realised my focus would be in three areas:
+As my (Andrew) first, listening, phase began to wind up and I began to start _doing_ I slowly realised my focus would be in three areas:
 
   * stating clearly what's most important - the domain vision
   * finding the big picture and breaking it into smaller pieces - context mapping
   * discovering how the key pieces fit together  - shared kernels / core domain value streams / archetypes
 
-While I addressed them more in an interleaved fashion, I'll speak about them each in turn for clarity.  Counter-intutively I'll start with the last bullet first.
+While I actually tackled them together in an interleaved fashion, I'll speak about them each in turn for clarity.
+
+I'll start with the last bullet first.
 
 ---
 
@@ -416,7 +430,9 @@ While I addressed them more in an interleaved fashion, I'll speak about them eac
 Note:
 Knowing about all the various models is one thing. Knowing how they relate, interact, and (possibly) overlap is the _big_ thing.  
 
-Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. Remember; this was a very process-intensive environment, where our things (Cases) pass through a lot of organisations and hands.
+Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. 
+
+Remember; this was a very process-intensive environment, where our things (Cases) pass through a lot of organisations and hands.
 
 You don't need to do this all bottom-up.  You can start from the top, or take value-stream slices. Going *end-to-end* helps a lot.  (This is a great use case for Event Storming, and one reason why it has proved so popular.)
 
@@ -435,11 +451,15 @@ One way to do this was clearly to find things which where similar and to treat t
 
 The problem became painfully evident when looking at the existing Case Aggregate Root - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
 
-I began by trying to apportion each of the attributes and functions to the team which added them. Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.
+I began by apportioning each of the attributes and functions to the team which had added them. Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.
 
-In parallel I went out to sit with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  This is where the tensions arose. It was abundantly clear, very early on, that there were many types of case, which served different purposes in the criminal justice system.  Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
+In parallel I went out to sit with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  
 
-How to square the circle? How could I reconcile the pull in these tweo diretions?  I went back to the DDD book.  Yet another time, there was something there to help me out: Shared Kernels and the Core Domain.
+This is where the tensions arose. It was abundantly clear very early on, that there were many types of case, which served different purposes in the criminal justice system.  Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
+
+How to square the circle? How could I reconcile the pull in these two opposed directions?  
+
+I went back to the DDD book.  Yet another time, there was something there to help me out: Shared Kernels and the Core Domain.
 
 #### Shared Kernels and the Abstract Core [AHL]
 
@@ -457,18 +477,23 @@ There is space at this point to bring in one more concept. Beneath everything, t
 #### ()->|()->()
 
 Note:
-This brings us onto a concept which *isn't* explicitly brought out in the (Blue) DDD book and which I arrived at on my own prior to discovering it detailed in Alberto Brandolini's Context Map Archetypes.  Having pulled out the shared kernel of cases, and having identified how this was manifest in various contexts to solve various problems and support various activities the question of how these were related came up.  It was clear that not only did each one exist in its own bounded context, but also that there was a flow from one manifestation to another:
+This brings us onto a concept which *isn't* explicitly brought out in the (Blue) DDD book and which I arrived at on my own prior to discovering it detailed in Alberto Brandolini's Context Map Archetypes.  
+
+Having pulled out the shared kernel of cases, and having identified how this was manifest in various contexts to solve various problems and support various activities the question of how these were related came up.  It was clear that not only did each one exist in its own bounded context, but also that there was a flow from one manifestation to another:
 
 ()->|()->()
 
 What now seems obvious, but which made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - I was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd come across something fundamental.
+
 @gaythu-rajan to provide te sketch of this
 
 #### The Domain is Talking to You
 
 I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had criteria, and ownership was transferred.
 
-I felt good about this discovery, mainly because it was corellated strongly to the domain reality. A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
+This discovery felt good, a real modelling breakthrough, mainly because it was corellated strongly to the domain reality. 
+
+A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
 
 There were relationships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
 
@@ -493,13 +518,15 @@ Now that I had the spine of bounded contexts identified I could begin work on fl
 Note:
 The obviously generic technical subdomains were the easiest to spot - things like reporting, access management, etc. Taking these out of the picture early cleared the decks for the focus on the remainder.  These were the ones where there might well be some above-and-beyond value being added.  
 
-As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of the language used to describe something, my thoughts changed, and I realised they were describing something bespoke.
+As per the Blue book, I went back and forward on some areas where initial engagement with the domain experts indicated that something was a very generic component, but later, typically guided by the richness of their language used to describe something, my thoughts changed, and I realised they were describing something highly specialised.
 
 This specific example brings us on to the second point which was also crucial - a lot of domain driven design requires the suspension fo disbelief. It is my experience that eventually, you will find the one or two facts which indicate to you that your model is correct. In my case, it was around whether the scheduling of cases into courts and court rooms (called "listing" in the domain parlance) was a specific use case atop a generic scheduling system, or something far more bespoke and unique.  
 
-I mentioned above that scheduling in courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties (other BCs).  I'm going to talk a little now about the things which led me away from this conclusion.
+I mentioned earlier that scheduling in courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties (other BCs).  I'm going to talk a little now about the things which led me away from this conclusion.
 
-The seam I mined was based around the edge cases - when the scheduling was a complex matter, when it changed, when it was significantly sized.  It turned out that these circumstances weren't universal in this Criminal Justice System. Luckily we had domain experts who had a wide range of experience.  By asking about the biggest jurisdictions, and the circumstances when things were the hardest / most comoplicated, we eventually settled on a model which coudl represent the real richness of this complex task.  Along the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.  
+The seam I mined was based around the edge cases - when the scheduling was a complex matter, when it changed, when it was significantly sized.  It turned out that these circumstances weren't universal in this Criminal Justice System. Luckily we had domain experts who had a wide range of experience.  By asking about the biggest jurisdictions, and the circumstances when things were the hardest / most comoplicated, we eventually settled on a model which could represent the real richness of this complex task.  
+
+Along the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.  
 
 It also turned out to be a major source of possibility for achieving the goal of "modernising justice".  Getting cases and their hearings scheduled rapidly, and in the near future, and the information about this scheduling disseminated to the various parties (of whom there were a not insignificant amount) was key.  
 
@@ -512,7 +539,7 @@ We now had our two indicators - value add, and rich domain language to describe 
 #### The Resulting Context Map [AHL]
 
 Note:
-I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention Conways Law and studying organisations, departments, actors and jobs-to-be-done.
+I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention to Conways Law and studying organisations, departments, actors and jobs-to-be-done.
 
 (Event Storming is also good for this and another short-cut.)
 
@@ -581,7 +608,7 @@ Go back to the book. The "pattern style" that it is written in means it is very 
 
 Find the *armature* - it sometimes seems to me that this part of the process is a lot like discovering the model's armature.
 
-Share these pictures constantly.  Adopt a beginners mind.  Articulate when something doesnt feel comfortable (though be willing to accept a minor amount of discomfort, not everything will fit elegantly into the model you need.)  get the help of others - specifically the domain experts.  Gather round the board and ask questions of your models and see when they break.
+Share these pictures constantly.  Adopt a beginners mind.  Articulate when something doesnt feel comfortable (though be willing to accept a minor amount of discomfort, not everything will fit elegantly into the model you need.)  Get the help of others - specifically the domain experts.  Gather round the board and ask questions of your models and see when they break.
 
 At a meta level, it was exciting to come at DDD from another angle. It meant I had to re-read Eric's book, and find value in other parts which I'd previously skimmed. I was amazed (yet again) at how relevant and applicable and valuable these concepts were.
 
