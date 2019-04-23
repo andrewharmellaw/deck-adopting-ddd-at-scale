@@ -40,7 +40,9 @@ Hopefully this story will help you avoid falling into that trap.
 
 ---
 
-## Mordernising the English and Welsh Criminal Justice System
+## Modernising the English and Welsh Criminal Justice System
+
+!!!!!! @andrewharmellaw added this on top of the agreed sections !!!!!!
 
 Note:
 We're going to share the story of one of our most recent projects together (and some other bits before and after)
@@ -91,7 +93,7 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 ---
 
-# Where things were when Andrew started?
+# Where things were when Andrew started? //when "we" started rather?
 
 ---
 	
@@ -150,11 +152,21 @@ PROBLEM:
 
 ---
 
-### Data Focused [GT] <<<<<< TO COME from @gaythu-rajan
+### Data Focused [GT]
+As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object centric split leads to data centered archtecture.
+To give an example - A Case is not a case without someone being prosecuted. That someone could be a suspect at the beginning of a case and then become a defendant when the case is brought to the court. This is when the offence is indictable (you could go to prison for). In summary only offence, you enter the system as a defendant. As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts.
+What's wrong with that? a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. b. Reconciling the states in case of failures becomes easier. c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model.
 
 ---
 
-## (Pull "lifecycle", "object-based-split" from Constraints slide under here) [GT] <<<<<< TO COME from @gaythu-rajan
+## (Pull "lifecycle", "object-based-split" from Constraints slide under here) [GT]  
+
+// !!!!!! not sure it fits here. !!!!!!
+
+We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned, we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System - AND the PROCESSES entailed spanned even more organisations than that. 
+Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are implementing. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
+
+We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with business against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
 ---
 	
@@ -185,6 +197,7 @@ PROBLEMS:
 ---
 
 ### Ownership [GT] <<<<<< TO COME from @gaythu-rajan
+Architects wanted to 'own' the model and be the gatekeepers. -> I need to say something about people, desire to control which curtails the innovation in model @gaythu-rajan to add more bits here
 
 ---
 
@@ -193,10 +206,18 @@ PROBLEMS:
 ---
 
 ### Perception @ Scale [GT] <<<<<< TO COME from @gaythu-rajan
+I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong.
+
+Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically.
+
+Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model!
+
+We will see again and again that people are the making or breaking factor for any adoption at this scale be it Agile, DevOps or DDD. We had to deal with a good many sceptics, critics and some who point blank refused that DDD is useful. I stopped explaining why they should DDD but resolved to show them its merits in practice instead.
 
 ---
 
 ## BCs (Naming Teams)
+Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. Wrong names/contexts used by the wrong teams. Scheduling was something used by ATCM which created SJP session.
 
 ---
 
@@ -299,6 +320,13 @@ There is space at this point to bring in one more concept. Beneath everything, t
 ---
 
 ### Mind the Gap [GT] <<<<<< TO COME from @gaythu-rajan
+When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
+
+At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified at least three different models for a case. So they roughly went about hacking the case into 3 pieces.
+
+Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure.
+
+I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. Incremental change towards the final model and while incrementing also constantly validating and challenging the model was important.
 
 ---
 
@@ -318,7 +346,9 @@ What now seems obvious, but which made me nervous at the time, was the relations
 
 @gaythu-rajan to provide the sketch of this
 
-### The Domain is Talking to You  [AHL] ADDED THIS AS IT FELT LIKE A LEAP WITHOUT IT
+### The Domain is Talking to You  [AHL] 
+
+!!!!!! ADDED THIS AS IT FELT LIKE A LEAP WITHOUT IT !!!!!!!
 
 I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had criteria, and ownership was transferred.
 
@@ -333,6 +363,9 @@ I turns out that this is entirely valid.
 ---
 
 ### Visualisation [GT] <<<<<< TO COME from @gaythu-rajan
+Context maps can be drawn in various ways - I used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture.
+
+These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but nonethless the same business process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
 
 ---
 
@@ -341,10 +374,33 @@ I turns out that this is entirely valid.
 ---
 
 ### Icebergs and Icecubes [GT] <<<<<< TO COME from @gaythu-rajan
+All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer. We came to refer to these as the "icebergs".
+
+(To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.) - TODO - Simplified pictorial rep of domain here?
+
+Sometimes requirements and reduced scope can diguise a key process as a simple straight forward one. The real magnitude of it can only be obtained by looking into the actual domain.
+
+Therefore, do not constrain yourself by requirements and scope (MVP) when learning about the domain. MVP is another near enemy! Once the actual process is learnt, distill the bits not within scope and what remains is implemented but at least you know the true size of it and confident that the model can expand as the scope gets bigger.
+
+One such example is the IDPC. What was perceived as a simple service for PDF generation from multiple documents was actually a key stage in the prosecution process particularly one main prosecutor (the Crown Prosecution Service). As you will hear later, while implementing this feature I personally learnt the above lesson of not underestimating the size based on just the MVP.
+
+The other side of this exists too. What is considered as a big problem (Ice cubes?) sometimes fizzles into nothing. Simulataneous updates to a case is a good example. When I started there was serious apprehension amongst domain experts about how to deal with simultaneous updates to a case. So I was asked to setup a DDD session to find a solution to this problem.
+
+It actually turned out to be a design smell by not defining the boundaries between different models of the case. When we started implementing the different models in their own bounded contexts, this problem just went away.
+
+Access control is another example - of course it is important but delineation of models particularly multiple models of the same entity in their own bounded context and operated on by corresponding actors provides out of the box access control at the very basic level.
 
 ---
 
 ### Splits vs Silos [GT] <<<<<< TO COME from @gaythu-rajan
+
+One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate.
+
+In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model. (Knowing the strategic pattern andthe team relationship was important here - as it was "Separate Ways" here but "Partnership")
+
+So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. The other danger was from avoiding Silos forming from these splits.
+
+@gaythu-rajan pull this to the place where @andrew talks about independant teams
 
 ---
 	
@@ -353,10 +409,14 @@ I turns out that this is entirely valid.
 ---
 
 ### Looking through the crystal ball [GT] <<<<<< TO COME from @gaythu-rajan
+There are many ways to skin a cat - what you build may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
+
+It is worth remembering that real world != software application. Software world offers so many opportuniies to optimise that leverage it even if it means that performing business differently.
 
 ---
 
 ### Shortsight vs longsight [GT] <<<<<< TO COME from @gaythu-rajan
+Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
 
 ---
 
@@ -383,10 +443,16 @@ Along the way we'd discovered that there were individuals who had this schedulin
 ---
 
 ### Distill... the noise [GT] <<<<<< TO COME from @gaythu-rajan
+Learning to recognise what is core to your domain, to your business context, to your aggregate is important.
+
+Domain distillation e.g. ATCM - overly complex solution of what is supposed to be a simple process. this is because the team had no visibility beyond their part of the process. This is because they implemented what turned out to be a typical Process Manger's job into their core process. It became very difficult to untangle from it, at one point we even considered scrapping the whole thing and build it from the start.
 
 ---
 
 ### Driver for change [GT] <<<<<< TO COME from @gaythu-rajan
+A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
+
+---
 
 ---
 
