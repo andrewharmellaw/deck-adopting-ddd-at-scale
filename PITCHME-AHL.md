@@ -233,7 +233,20 @@ ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF 
 
 ---
 
-### WHAT WENT IN THIS SECTION?
+### WHAT WENT IN THIS SECTION? PERHAPS THE FOLLOWING?
+
+### How do the Key Pieces Fit Together? [AHL]
+
+Note:
+Knowing about all the various models is one thing. Knowing how they relate, interact, and (possibly) overlap is the _big_ thing.  
+
+Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. 
+
+Remember; this was a very process-intensive environment, where our things (Cases) pass through a lot of organisations and hands.
+
+You don't need to do this all bottom-up.  You can start from the top, or take value-stream slices. Going *end-to-end* helps a lot.  (This is a great use case for Event Storming, and one reason why it has proved so popular.)
+
+(There is a paradox here - I needed to investigate this first, in order to find the concrete elements, which then allowed me to pull back out to see how everything joined together into the whole, bigger picture.)
 
 ---
 
@@ -304,6 +317,18 @@ Having pulled out the shared kernel of cases, and having identified how this was
 What now seems obvious, but which made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - I was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd come across something fundamental.
 
 @gaythu-rajan to provide the sketch of this
+
+### The Domain is Talking to You  [AHL] ADDED THIS AS IT FELT LIKE A LEAP WITHOUT IT
+
+I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had criteria, and ownership was transferred.
+
+This discovery felt good, a real modelling breakthrough, mainly because it was corellated strongly to the domain reality. 
+
+A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
+
+There were relationships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
+
+I turns out that this is entirely valid.
 
 ---
 
