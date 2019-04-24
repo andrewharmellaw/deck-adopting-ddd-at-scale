@@ -298,8 +298,13 @@ We will see again and again that people are the making or breaking factor for an
 
 ---
 
-## BCs (Naming Teams)
-Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. Wrong names/contexts used by the wrong teams. Scheduling was something used by ATCM which created SJP session.
+## BCs (Naming Teams) [GT]
+
+Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. 
+
+Wrong names/contexts were used by the wrong teams. Scheduling was something used by ATCM which created SJP session.
+
+@andrewharmellaw - I think we'd need to give too much context to the audience to make this point in the time we have.  What do you reckon?
 
 ---
 
@@ -310,11 +315,13 @@ Teams named after the part of business process they were working on (which would
 ## Legal Systems are **Complex** [BOTH]
 
 Note:
-We need to pause a second and make some things clear.  
+We need to pause a few seconds and state what might be obvious.
+
+It's no wonder that things had got confused in the places they had in the ways that they had.
 
 Legal systems are complex.  
 
-They have evolved over _significant_ periods of time, and contain TIME itself as a significant factor (i.e. the law changes, things can expire, things have deadlines).  
+They have evolved over _significant_ periods of time, and they contain TIME itself as a significant Domain consideration (i.e. the law changes, things can expire, things have deadlines).  
 
 They bring together a great number of (by the very nature of the adveserial system, hostile) parties, all who have their views on the system, and obligations / needs to be met.  
 
@@ -324,7 +331,7 @@ Most importantly, they must contain within themselves a great deal of flexibilit
 
 ## Legal Systems are **Ripe** for DDD [BOTH]
 
-ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
+ALL IN ALL, THEY MAKE FOR AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF DOMAIN DRIVEN DESIGN.
 
 ---
 
@@ -336,20 +343,33 @@ ALL IN ALL, IT IS AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNIQUES OF 
 
 ---
 
-### WHAT WENT IN THIS SECTION? PERHAPS THE FOLLOWING?
-
 ### How do the Key Pieces Fit Together? [AHL]
 
 Note:
-Knowing about all the various models is one thing. Knowing how they relate, interact, and (possibly) overlap is the _big_ thing.  
 
-Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. 
+@andrewharmellaw: WHAT WENT IN THIS SECTION? PERHAPS THE FOLLOWING?
+
+Knowing about all the various models is one thing. 
+
+When you're doing work this complex, at this scale, knowing how they inter-relate, interact, and (possibly) overlap is the _big_ thing.  
+
+We've discussed a little about the unsuccessful attempt to distill out a core - the case of Case.
+
 
 Remember; this was a very process-intensive environment, where our things (Cases) pass through a lot of organisations and hands.
 
-You don't need to do this all bottom-up.  You can start from the top, or take value-stream slices. Going *end-to-end* helps a lot.  (This is a great use case for Event Storming, and one reason why it has proved so popular.)
+Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. 
+
+
+You don't need to do this all bottom-up.  You can start from the top, or take value-stream slices. 
+
+Going *end-to-end* helped us _a lot_.  
+
+(This is a great use case for Event Storming, and one reason why it has proved so popular.)
 
 (There is a paradox here - I needed to investigate this first, in order to find the concrete elements, which then allowed me to pull back out to see how everything joined together into the whole, bigger picture.)
+
+NEAR ENEMY: When modelling, don't lose the bigger picture. 
 
 ---
 
@@ -360,13 +380,21 @@ You don't need to do this all bottom-up.  You can start from the top, or take va
 ### "A Case is a Case is a Case" [AHL]
 
 Note:
-The route into everything was to try and tackle the "case is a case (is a case)" issue.  I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  
+The route into everything was to try and tackle the "case is a case (is a case)" issue.
+
+I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  
 
 !DATA!DATA!DATA! ADD SOMETHING ABOUT DATA (AND TRYING NOT TO HAVE TOO MUCH OF IT) HERE. 
 
 @gaythu-rajan to pull this into the data section.
 
-One way to do this was clearly to find things which where similar and to treat them in the same way.  There was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled.
+One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
+
+
+NEAR ENEMY: When exploring the domain, listen for difference, rather than look for similarity.  Don't abstract too early.
+
+
+How to prove one way was right, and the other wrong however?
 
 The problem became painfully evident when looking at the existing Case Aggregate - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
 
@@ -374,13 +402,17 @@ I began by apportioning each of the attributes and functions to the team which h
 
 In parallel I went out to sit with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  
 
-This is where the tensions arose. It was abundantly clear very early on, that there were many types of case, which served different purposes in the criminal justice system.  
+It was abundantly clear very early on, that there were many types of case, which served different purposes in the criminal justice system.  
 
-Not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  
+But not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  
 
 At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
 
-How to square the circle? How could I reconcile the pull in these two opposed directions?  
+This is where the tensions arose.  How to square the circle? How could I reconcile the pull in these two opposed directions?  To keep the shared concept (which at some level wa correct - a case was a case from some perspectives) but balance it with the need for explicit differences.
+
+
+NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all tensions, and use the tools of DDD to make them and the solution to reconciling them explicit.
+
 
 I went back to DDD; and there was something to help me out: Shared Kernels and the Core Domain.
 
@@ -393,7 +425,7 @@ While I disagreed that "a case was always a case" because this lost too much det
 
 [BRING IN THE DDD DIAGRAM AND DEFINITIONS HERE]
 
-The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways for cases to come into being, and there is a very strict set of protocols governing how these change from one type to another.  
+The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways for cases to come into being, and there is a very strict set of protocols governing how they change from one type to another.  
 
 There is space at this point to bring in one more concept. Beneath everything, there was something which, on it's own was never enough to be a case in its own right, but that could be considered an "Abstract Case" from which all concrete types of case could inherit.
 
@@ -402,13 +434,21 @@ There is space at this point to bring in one more concept. Beneath everything, t
 ---
 
 ### Mind the Gap [GT] <<<<<< TO COME from @gaythu-rajan
-When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation. First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
+When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation in code. 
 
-At that point we had a big 'Case' model which the teams had realised they needed to split. But Andrew had identified at least three different models for a case. So they roughly went about hacking the case into 3 pieces.
+First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
+
+At that point we still had the big 'Case' model Andrew mentioned, and the teams had realised they needed to split it out. 
+
+Andrew had identified at least three different models for a case. So they roughly went about hacking the case into 3 pieces.
 
 Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure.
 
-I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. Incremental change towards the final model and while incrementing also constantly validating and challenging the model was important.
+@andrewharmellaw - the above paragraph jumps in out of nowhere.  How does it link into what goes before it?
+
+I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. 
+
+Incremental changes towards the final model; and while incrementing constantly validating and challenging the model was important.
 
 ---
 
@@ -418,13 +458,29 @@ I mentioned the implementation of the new models before - it was not an easy job
 ### ()->|()->() [AHL]
 
 Note:
-This brings us onto a concept which *isn't* explicitly brought out in the (Blue) DDD book and which I arrived at on my own prior to discovering it detailed in Alberto Brandolini's Context Map Archetypes.  
+While we leave Gayathri wrestling with the tough task of actually splitting out the various types of case in the code base, I'd like to introduce the next concept.
 
-Having pulled out the shared kernel of cases, and having identified how this was manifest in various contexts to solve various problems and support various activities the question of how these were related came up.  It was clear that not only did each one exist in its own bounded context, but also that there was a flow from one manifestation to another:
+This one *isn't* explicitly brought out in the (Blue) DDD book.  
+
+Alberto Brandolini had however identified it, and if I'd know that when I started I might have been a lot more confident in what I uncovered.
+
+Having pulled out the shared kernel of cases, and having identified how this was manifest in various contexts to solve various problems and support various activities the question of how these were related could no longer be avoided.  
+
+It was clear that not only did each distinct case model exist within its own bounded context, but also that there was a clear flow from one manifestation to another:
 
 ()->|()->()
 
-What now seems obvious, but which made me nervous at the time, was the relationship between these contexts.  There was almost a flow of execution and data and ownership (over a significant period of time, but a flow nontheless).  I knew relationships between bounded contexts was significant - I was a big fan of the strategic design patterns and the clarity they gave, but this seemed to be a different form.  It seemed like I'd come across something fundamental.
+But despite this breakthrough, I was nervous.  I was nervous about the nature of the relationships between these contexts.  
+
+I knew relationships between bounded contexts was significant - I am a big fan of the strategic design patterns and the clarity they gave - but what I had here felt like a different form.  
+
+Instances of earlier case types would almost transmogrify into subsequent instances.  
+
+These relationships between bounded contexts represented a flow of execution and data and ownership (over a significant period of time, but a flow nontheless). 
+
+It seemed like I'd come across something fundamental.
+
+With hindsight this seems obvious, but which made me nervous at the time, 
 
 @gaythu-rajan to provide the sketch of this
 
@@ -432,7 +488,9 @@ What now seems obvious, but which made me nervous at the time, was the relations
 
 !!!!!! ADDED THIS AS IT FELT LIKE A LEAP WITHOUT IT !!!!!!!
 
-I went back to the domain experts.  What I thought I could see in the model was right there in the domain. It was clear that there were business-level processes (ceremonies even) involved in moving from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had criteria, and ownership was transferred.
+I went back to the domain experts.  What I thought I could see in the model was right there in the domain in their heads. 
+
+It was clear very rapidly that there were business-level processes (ceremonies even) involved in moving cases from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had specific criteria, and ownership was typically transferred from one organisation or body to another.
 
 This discovery felt good, a real modelling breakthrough, mainly because it was corellated strongly to the domain reality. 
 
@@ -442,12 +500,21 @@ There were relationships - and they were creation-level ones. One model could pa
 
 I turns out that this is entirely valid.
 
+It also turned out that I'd not brought the development teams along with me.
+
+NEAR ENEMY: The greatest modelling breakthroughs are worthless if they don't end up down in the code.
+
 ---
 
 ### Visualisation [GT] <<<<<< TO COME from @gaythu-rajan
+
+@andrewharmellaw - I think this could actually go _after_ the "Icebergs and Icecubes" slide.
+
 Context maps can be drawn in various ways - I used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture.
 
 These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but nonethless the same business process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
+
+NEAR ENEMY: Purity in delivery of DDD artefacts can make them difficult to consume for teams.  They are just tools - the code is the real model, so work to make it 
 
 ---
 
@@ -456,7 +523,7 @@ These modelling sessions brought out new bounded contexts like Defence into the 
 ---
 
 ### Icebergs and Icecubes [GT] <<<<<< TO COME from @gaythu-rajan
-All this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer. We came to refer to these as the "icebergs".
+At the code level, all this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer. We came to refer to these as the "icebergs".
 
 (To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.) - TODO - Simplified pictorial rep of domain here?
 
@@ -476,9 +543,11 @@ Access control is another example - of course it is important but delineation of
 
 ### Splits vs Silos [GT] <<<<<< TO COME from @gaythu-rajan
 
-One of the teams were dying to split off and be able to do things on their own. This new found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate.
+One of the teams were dying to split off and be able to do things on their own. This new-found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate.
 
-In the legal system, different parties go off on their own to work on the casefile - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model. (Knowing the strategic pattern andthe team relationship was important here - as it was "Separate Ways" here but "Partnership")
+In the legal system, different parties go off on their own to work on the case file - collect evidence, witnesses, putting together documents, case material and then COME TOGETHER for the next phase of hearing, sentencing. 
+
+Not realising this was a big failure. I.e. Even though teams should have the freedom to go off and work within their boundaries on thier own model, at the end of that process, they will have to be able to come back together which means they can't diverge too much from a consistent thread of a model. (Knowing the strategic pattern andthe team relationship was important here - as it was "Separate Ways" here but "Partnership")
 
 So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. The other danger was from avoiding Silos forming from these splits.
 
@@ -491,18 +560,22 @@ So my job was to make sure that the teams were made aware that this is not the c
 ---
 
 ### Looking through the crystal ball [GT] <<<<<< TO COME from @gaythu-rajan
-There are many ways to skin a cat - what you build may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
+
+There are many ways to skin a cat - what you build may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! 
+
+E.g. We could have had an orchestration service which replicates the physical world of sorting out different types of prosecution notices and forward it to appropriate court or have the case land in the correct context depending on the type and then let the natural court process take it course as the case goes for referral to higher jurisdiction atcm->mag->crown.
 
 It is worth remembering that real world != software application. Software world offers so many opportuniies to optimise that leverage it even if it means that performing business differently.
 
 ---
 
 ### Shortsight vs longsight [GT] <<<<<< TO COME from @gaythu-rajan
+
 Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
 
 ---
 
-### When is Sometihng NOT a Generic (Technical) Subdomain? [AHL]
+### When is Something NOT a Generic (Technical) Subdomain? [AHL]
 
 I THINK WE CAN DROP THIS TO SAVE TIME. WE MIGHT WANT TO PULL SOME SPECIFIC BITS OUT OF IT HOWEVER.  
 
@@ -514,7 +587,7 @@ I THINK WE CAN DROP THIS TO SAVE TIME. WE MIGHT WANT TO PULL SOME SPECIFIC BITS 
 
 ---
 
-### Domain Experts - Good [AHL]. (from "When is Sometihng NOT a Generic (Technical) Subdomain?") 
+### Domain Experts - Good [AHL]. (from "When is Something NOT a Generic (Technical) Subdomain?") 
 
 Scheduling in Courts seemed initially to be the opportunity for an off-the-shelf product, perhaps with a little wrapping up to expose it in a meaningful way to consuming parties (other BCs).  I'm going to talk a little now about how listening to domain experts led me away from this conclusion.
 
@@ -522,9 +595,12 @@ The seam I mined was based around the edge cases - when the scheduling was a com
 
 Along the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.
 
+NEAR ENEMIES: Think you know better than a Domain Expert.  Thinking that all Domain Experts are the same and will all agree all the time.
+
 ---
 
 ### Distill... the noise [GT] <<<<<< TO COME from @gaythu-rajan
+
 Learning to recognise what is core to your domain, to your business context, to your aggregate is important.
 
 Domain distillation e.g. ATCM - overly complex solution of what is supposed to be a simple process. this is because the team had no visibility beyond their part of the process. This is because they implemented what turned out to be a typical Process Manger's job into their core process. It became very difficult to untangle from it, at one point we even considered scrapping the whole thing and build it from the start.
@@ -532,9 +608,8 @@ Domain distillation e.g. ATCM - overly complex solution of what is supposed to b
 ---
 
 ### Driver for change [GT] <<<<<< TO COME from @gaythu-rajan
-A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
 
----
+A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
 
 ---
 
@@ -548,8 +623,7 @@ A lot of people needed to let go of things, but without knowing exactly where we
 
 ### Method: Model -> Share -> Question -> Repeat [AHL]
 
-DID WE WANT THIS ONE HERE? (I'M HAPPY TO DROP IT)
-
+@andrewharmellaw - DID WE WANT THIS ONE HERE? (I'M HAPPY TO DROP IT)  We could put any bits we want to keep up in other slides.
 YOU HAD SOMETHING ABOUT THE MODELLING WHIRLPOOL.
 
 Note:
@@ -611,6 +685,9 @@ I think these are all yours @gaythu-rajan. Right?
 ### The Resulting Context Map [AHL]
 
 Note:
+
+@andrewharmellaw - this next para is a repeat.  Also you talk about Context Maps higher up.
+
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention to Conways Law and studying organisations, departments, actors and jobs-to-be-done.
 
 (Event Storming is also good for this and another short-cut.)
@@ -631,6 +708,8 @@ This map, with it's representations of the spine, ... all in the ubiquitious lan
 
 ## Talking to Domain Experts
 
+@andrewharmellaw - We have a bunch of stuff on Domain Experts about 5 slides above this.  Do we want to merge? (I think we should.)
+
 ---
 
 ### _Loads_ of Lovely Domain Experts - Listen [AHL]
@@ -642,7 +721,7 @@ The existence of the domain experts, embedded 3 out of 5 days with each team was
 
 GOOD THING: HAVING DOMAIN EXPERTS AROUND ALL THE TIME IS A MUST.  
 
-There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didnt agree with their embedded Crown Prosecution rep. And not just on which version of a java library to use. No, I heard people saying that they were wrong when they described how their job worked.
+There was a problem however. In many teams, the domain experts weren't being used to their full potential.  I kept coming across the worrying signs that the technical people didn't agree with their embedded Crown Prosecution rep. And not just on which version of a java library to use. No, I heard people saying that they were wrong when they described how their job worked.
 
 ---
 
@@ -669,15 +748,19 @@ Worse still, it was stopping developers playing with the language of the domain 
 ### Process
 
 #### Before
+
 Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
 
 #### After
+
 Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
 
 ---
 
 ### Tools
+
+@andrewharmellaw - we talk about this earlier, but I think it's better dealt with in this section.
 
 Draw out the entire architecture - showing all the BCs and microservices 
 
@@ -706,7 +789,9 @@ By far the best method to find aggregates and document events. It doesn't have t
 
 ---
 	
-## CQRS good - history and replayable In (core domains
+## CQRS good - history and replayable In (core domains)
+
+@andrewharmellaw - I can put some things in here...
 
 ---
 
