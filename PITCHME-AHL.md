@@ -26,17 +26,23 @@
 Note:
 Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
-We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  Well, not really...
+We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  
 
-The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - we have _many_ near enemies: in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
+Well, not really...
 
-The application of DDD is another one of them.
+The concept of near enemies should be very familiar to anyone who has worked in software for even a short while - we have _many_ near enemies: great examples can be seen in the adoption of so-called "Agile" methodologies, and more recently in the drive towards "DevOps culture".  
 
-Why do they arise? They arise because people do not engage fully with a concept, and typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning.  Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
+In our opinion, the application of DDD, especially at scale is another one of them.
+
+Why do Near Enemies arise? They arise because people do not engage fully with a concept. 
+
+Typically this is because they ignore the core, fundamental aspects; which are also typically the most simple.  They forget the simple four lines of the Agile manifesto, or ignore the DevOps goals of breaking down boundaries and building a culture of learning.  Instead get tied up in the complicated details which seem more "valuable" and where the "expertise" lies.
 
 We want to use this lens to present a collection of challenges and failure patterns we experienced when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people can easily forget about the core concepts, and that causes problems.  
 
 Hopefully this story will help you avoid falling into that trap.
+
+!!!!!! We need to make clear at every point how the core got forgotten and things got lost !!!!!!
 
 ---
 
@@ -45,15 +51,17 @@ Hopefully this story will help you avoid falling into that trap.
 !!!!!! @andrewharmellaw added this on top of the agreed sections !!!!!!
 
 Note:
-We're going to share the story of one of our most recent projects together (and some other bits before and after)
+We're going to share the story of our most recent project together.
 
-We have first-hand experience of seeing what DDD looks like on a large scale. We have seen in detail how pseudo-DDD is the near enemy[1] of real DDD, and that when it strikes it can make the adoption job all the harder, and make the journey towards shaping a success even more difficult.
+We have first-hand experience of seeing what DDD looks like on a large scale. 
 
-While we worked on the same project but we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
+We have seen in detail how pseudo-DDD is the near enemy[1] of real DDD, and that when it strikes it can make the adoption job all the harder.
+
+In this story it's important to note that while we worked on the same project, we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
 Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and challenging the assumptions he had made).
 
-So what was the project? It was the transformation and modernisation of the core public systems within the UK Judicial system.
+So what was the project? It was the transformation and modernisation of some core public systems within the UK Judicial system.
 
 @gaythu-rajan and @andrew to alternate on each slide
  
@@ -63,27 +71,44 @@ So what was the project? It was the transformation and modernisation of the core
 
   * Lots of code had already been cut
   * We were supporting the full justice-lifecycle, end to end, across multiple organisations
-  * There was an efficiency-finding "modernising" agenda to serve
   * Significant scale - many teams, already working in parallel
   * CQRS _everywhere_
+  * There was an efficiency-finding "modernising" agenda to serve
   * Existing tech legacy cast a _long_ shadow over domain experts
 
 Note: 
-(Things were already up and running - some DDD "ideas" had already become entrenched. Bounded Contexts were not evident, but "Domains and sub-domains" were there and identified at object level than by the model - E.g. Case, People, Material. The SPLIT felt wrong.)
+When I (Andrew) joined the project things were already up and running and lots of code had already been cut. 
+
+Consequently some DDD "ideas" had already become entrenched. 
 
 @gaythu-rajan made further changes as it was still more object based split.
 
-We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned, we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System - AND the PROCESSES entailed spanned even more organisations than that. 
+
+We had to support a full-lifecycle view - justice end-to-end. 
+
+Not only that, the "domain" was co-owned: we were tasked with building a collection of systems which met the needs of two different stakeholder organisations - the State Prosecutor, and the Courts System - AND the END-TO-END-PROCESSES spanned even more client organisations. 
 
 Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are wrtiting the code. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
 
-We had to "modernise justice" as we did it, within a publicly funded program of work. We had to push back against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
-The scale - it was a massive piece of work that was being tackled head on. Software was being built by multiple (how many?) teams in parallel, staffed from multiple partners. (Different roles thought in different ways - e.g. Devs, BAs, Data Architects, Software Architects, etc.)
+This massive piece of work was being tackled head on. 
 
-Complex Architectural choices had been made (e.g. CQRS for everything) and devs were struggling with them. It was almost always an impediment rather than a boost - (We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+When I (Andrew) started, software was being built by multiple (7?) teams in parallel.
 
-Domain experts were stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and the expectation was to translate that literally onto the software application. 
+
+Complex Architectural choices had been made (e.g. CQRS for everything) and devs were struggling with them. 
+
+At the time I (Andrew) arrived it was almost always an impediment rather than a boost 
+
+(We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
+
+
+We had to "modernise justice" as we delivered things. 
+
+This meant we had to push back against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
+
+
+Finally it's useful to raise the issue that Domain experts were stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and the expectation was to translate that literally onto the software application. 
 
 ---
 
@@ -106,25 +131,33 @@ With all this in mind it is no surprise that things had got complicated prior to
 Note:
 I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.
 
-I had to look at what was there, and how it had manifest already in the team structures and codebases.  
+When I first started I had to look at what was already there design-wise, including how it had manifest already in the team structures, lines of communication, dependencies (human and code), and codebases and artefacts.  
 
-I had to reverse engineer a big picture from the pieces I could find.  
+I needed to reverse engineer a big picture from the pieces I could find.  
  
-I tried to make sure I didn't get sucked into too much detail in any one area.  At this stage I needed to avoid getting overwhelmed by any one thing.
+As I did this I tried to make sure I didn't get sucked into too much detail in any one area.  At this stage I needed to avoid getting overwhelmed by any one thing.
 
 I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  
 
-That's distinctly different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
+As Scots will remind you, things there are distinctly different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
 
 I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we found ourselves.
 
-I knew things here had been running for a while already, that there was a bunch of designs already in existence, and a significant amount of code already written.  There was also an architect who had done a bunch of the early work, but they had since moved on - we never overlapped.  
+What did I find?
 
-PROBLEMS: 
+As we said earlier things here had been running for a while already.
+
+There was a bunch of designs already in existence, and a significant amount of code already written.  There was also an architect who had done a bunch of the early work, but they had since moved on - we never overlapped. 
+
+This is what I found. But what was lacking? 
+
+LACKING: 
 - THERE WAS NO WAY IN. 
 - THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  
-- THE COGNITIVE LOAD WAS TOO HIGH.  
-- NO SINGLE DOMAIN EXPERT HAD AN END-TO-END VIEW.
+- CONSEQUENTLY THE COGNITIVE LOAD WAS TOO HIGH ON INDIVIDUAL TEAM MEMBERS.  
+- THERE WASN'T EVEN A SINGLE DOMAIN EXPERT WITH AN END-TO-END VIEW.
+
+NEAR ENEMY: Design had been done. A lot of it in fact.  But it hadn't been laid out in a way that made it consumable by those who needed it the most - the Domain Experts and the Development Teams.
 
 ---
 	
@@ -133,9 +166,23 @@ PROBLEMS:
 ### "One Model to Rule Them All" [AHL]
 
 Note:
-I quickly came across a few core tenents which had embedded themselves in the minds of everyone on the project. The most prevalent was the dictum that "a case is a case (is a case)", which meant that there should be a single representation of a case making its way through the criminal justice system, most likely mastered by a single "Case" microservice / datastore. 
 
-From a DDD perspective, this meant an over-focus on the data (@gaythu-rajan to elaborate with the defendant model and people context; mention how @andrew comes up with the idea and how it was implemented), and an under-emphasis on the behaviour / workflow / jobs to be done.  
+Not only were there core aspects lacking. I uncovered problems with what _had_ stuck from the design efforts too.  These proved far more hard to resolve.
+
+As I investigated, I slowly uncovered a few core tenents which had embedded themselves in the minds of everyone on the project. 
+
+The most prevalent was a oft-repeated phrase that "a case is a case (is a case)".  
+
+
+This had been interpreted to mean there should be a single representation of a case that made its way through the criminal justice system. 
+
+It had also been decided that this Case representation be handled via a single "Case" microservice / datastore. 
+
+
+Further investigation revealed that this had come into being via a (noble) desire to reduce data copying and hold central case records.  In itself, no bad thing.  
+
+The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
+
 
 Despite this being a CQRS shop, these didn't even really manifest in domain events.
 
@@ -143,27 +190,47 @@ Despite this being a CQRS shop, these didn't even really manifest in domain even
 
 This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. 
 
-What did this mean? Most fundamentally, there was only one model of a case which tried to be all cases (that there is only one of anything is a risky view in DDD).
+
+What did this mean? 
+
+Most fundamentally, this core tenent had subtly given teams and domain experts the signal to look for _commonality and overlaps in the data_, and to de-prioritise the _differences in the ownership, processing and behaviour_.  This wasn't just confined to Cases either.
 
 PROBLEM: 
 - "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP,
 - BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
-- CONSEQUENTLY DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE INFO.
+- CONSEQUENTLY DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DOMAIN INFORMATION.
+
+NEAR ENEMY: Domain Driven Design is about the data, and not the behaviour, or if it is both, then the data has more weight, and the behaviour is of secondary importance.  (I actually think it's the other way around.)
+
+
+(@gaythu-rajan to elaborate with the defendant model and people context; mention how @andrewharmellaw comes up with the idea and how it was implemented)
 
 ---
 
 ### Data Focused [GT]
-As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object centric split leads to data centered archtecture.
+
+// @gaythu-rajan - this is nice, and gives more detail to the general point I make half way down the slide above.  I suggest we split that slide in two, and move this up into the gapo between them.
+
+As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object-centric split leads to data centered archtecture.
+
 To give an example - A Case is not a case without someone being prosecuted. That someone could be a suspect at the beginning of a case and then become a defendant when the case is brought to the court. This is when the offence is indictable (you could go to prison for). In summary only offence, you enter the system as a defendant. As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts.
-What's wrong with that? a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. b. Reconciling the states in case of failures becomes easier. c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model.
+
+What's wrong with that? 
+
+ a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. 
+ b. Reconciling the states in case of failures becomes easier. 
+ c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). 
+ d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model.
 
 ---
 
 ## (Pull "lifecycle", "object-based-split" from Constraints slide under here) [GT]  
 
 // !!!!!! not sure it fits here. !!!!!!
+// AGREED - I THINK WE CAN DROP THIS.
 
 We had to support a full-lifecycle view - justice end-to-end. The "domain" was co-owned, we were tasked with building a collection of systems which met the needs of two different stakeholders - the State Prosecutor, and the Courts System - AND the PROCESSES entailed spanned even more organisations than that. 
+
 Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are implementing. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
 
 We had to "modernise justice" as we did it, within a publicly funded program of work. Constantly having to battle with business against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
@@ -179,7 +246,9 @@ We had to "modernise justice" as we did it, within a publicly funded program of 
 Note:
 When I landed I was heralded as the "DDD expert".  
 
-I'd go into meetings and people would address me as such. I even got called the "DDD Messiah" once.  That's when I got worried.
+I'd go into meetings and people would address me as such. I even got called the "DDD Messiah" once.  
+
+That's when I really started to get worried.
 
 It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems; and that DDD would be my tool for doing so.  
 
@@ -194,10 +263,20 @@ PROBLEMS:
 - I WAS GOING TO TELL EVERYONE WHAT TO DO,
 - BUT WITHOUT HANDS ON.
 
+NEAR ENEMIES: 
+- Domain Driven Design isn't done "to" teams, it's done "by" teams.  Ubiquitous language needs to be _ubiquitous_.  
+- Hands on modellers need to be _hands on_.  
+- Domain Driven Design isn't for governance and _control_, it's a tool to _enable_.  People need to be trusted and helped to use it.
+
 ---
 
 ### Ownership [GT] <<<<<< TO COME from @gaythu-rajan
-Architects wanted to 'own' the model and be the gatekeepers. -> I need to say something about people, desire to control which curtails the innovation in model @gaythu-rajan to add more bits here
+
+Architects wanted to not only 'own' the model, they also wanted to be its gatekeepers. -> I need to say something about people, desire to control which curtails the innovation in model 
+
+@gaythu-rajan to add more bits here
+
+@andrewharmellaw Again I think this fits really nice as a follow-up to my slide above, or as a topic sliced into it.  Actually, having read the slide below I think we could chop this up a little (i.e. put the slide boundaries in different places.)
 
 ---
 
@@ -206,9 +285,12 @@ Architects wanted to 'own' the model and be the gatekeepers. -> I need to say so
 ---
 
 ### Perception @ Scale [GT] <<<<<< TO COME from @gaythu-rajan
-I also realised that DDD was being 'done' because someone said so. Very few had realised the actual benefits of doing it but lot of pain from doing it wrong.
 
-Lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibiiility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically.
+I (Gayathri) also realised that DDD was being 'done' because someone said so. 
+
+Very few teams had realised the actual benefits of doing it but many were experiencing a lot of pain from doing it wrong.
+
+This lack of awareness about DDD was a big problem. It was seen as 'someone' else's problem, teams were not clear about whose responsibility it was to do DDD, more often than not it was seen as a directive from the top, seen as a 'must be done' step rather than something which developed organically.
 
 Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model!
 
