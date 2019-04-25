@@ -26,7 +26,7 @@
 Note:
 Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
-We say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  
+We've often been heard to say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  
 
 Well, not really...
 
@@ -42,20 +42,20 @@ We want to use this lens to present a collection of challenges and failure patte
 
 Hopefully this story will help you avoid falling into that trap.
 
-!!!!!! We need to make clear at every point how the core got forgotten and things got lost !!!!!!
-
 ---
 
-## Modernising the English and Welsh Criminal Justice System
+## Modernising the English / Welsh Criminal Justice System
 
 !!!!!! @andrewharmellaw added this on top of the agreed sections !!!!!!
 
 Note:
 We're going to share the story of our most recent project together.
 
-We have first-hand experience of seeing what DDD looks like on a large scale. 
+We both have first-hand experience of seeing what DDD looks like on a large scale. 
 
-We have seen in detail how pseudo-DDD is the near enemy[1] of real DDD, and that when it strikes it can make the adoption job all the harder.
+We've seen in detail how pseudo-DDD is the near enemy of real DDD, and that when it strikes it can make the adoption job all the harder.
+
+[PICTURE OF OUR NOT-VERY-OVERLAPPING TIMELINES]
 
 In this story it's important to note that while we worked on the same project, we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
@@ -134,25 +134,19 @@ END-TO-END-VIEW
 ### Where was the Big Picture? [AHL]
 
 Note:
-I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" style of approach to DDD.
+I needed to reverse engineer a big picture from the pieces I found.  
 
-When I first started I had to look at what was already there design-wise, including how it had manifest already in the team structures, lines of communication, dependencies (human and code), and codebases and artefacts.  
-
-I needed to reverse engineer a big picture from the pieces I could find.  
+When I first started I had to look at what was already there design-, code- and team-org-wise, including how it had manifest already in lines of communication, dependencies (human and code), and other artefacts.  
  
 As I did this I tried to make sure I didn't get sucked into too much detail in any one area.  At this stage I needed to avoid getting overwhelmed by any one thing.
 
 I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  
 
+I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" style of approach to DDD.
+
 As Scots will remind you, things there are distinctly different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and of so, who does it?"
 
 I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we found ourselves.
-
-What did I find?
-
-As we said earlier things here had been running for a while already.
-
-There was a bunch of designs already in existence, and a significant amount of code already written.  There was also an architect who had done a bunch of the early work, but they had since moved on - we never overlapped. 
 
 This is what I found. But what was lacking? 
 
@@ -178,14 +172,14 @@ MODELS
 
 Note:
 
-Not only were there core aspects lacking. I uncovered problems with what _had_ stuck from the design efforts too.  These proved far more hard to resolve.
+Not only were there some overview (summarising and orientaton) aspects lacking, I uncovered problems with what _had_ stuck from the design efforts too.  These proved far harder to resolve.
 
-As I investigated, I slowly uncovered a few core tenents which had embedded themselves in the minds of everyone on the project. 
+As I investigated, I slowly uncovered a few core beliefs which had embedded themselves in the minds of everyone on the project. 
 
 The most prevalent was a oft-repeated phrase that "a case is a case (is a case)".  
 
 
-This had been interpreted to mean there should be a single representation of a case that made its way through the criminal justice system. 
+This had been interpreted to mean there should be a single representation of a case, manifest as a single model, that made its way through the criminal justice system. 
 
 It had also been decided that this Case representation be handled via a single "Case" microservice / datastore. 
 
@@ -195,20 +189,13 @@ Further investigation revealed that this had come into being via a (noble) desir
 The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
 
 
-Despite this being a CQRS shop, these didn't even really manifest in domain events.
-
-(The domain events, such as they were weren't even very fleshed out, having mainly fallen back into the realm of CRUD operations.)
-
-This wasn't evident in itself specifically - there was simply a lot of the former, and a significant absense of the latter. 
-
-
 What did this mean? 
 
-Most fundamentally, this core tenent had subtly given teams and domain experts the signal to look for _commonality and overlaps in the data_, and to de-prioritise the _differences in the ownership, processing and behaviour_.  This wasn't just confined to Cases either.
+Most fundamentally, this conceptual mis-step had subtly given both teams and domain experts the signal to look for _commonality and overlaps in the data_, and to de-prioritise the _differences in the ownership, processing and behaviour_.  This wasn't just confined to Cases either.
 
 PROBLEM: 
 - "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP,
-- BOURNE OF A DESIRE NOT TO DUPLICATE DATA.
+- BOURNE OF A VALID DESIRE NOT TO DUPLICATE DATA.
 - CONSEQUENTLY DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DOMAIN INFORMATION.
 
 NEAR ENEMY: Domain Driven Design is about the data, and not the behaviour, or if it is both, then the data has more weight, and the behaviour is of secondary importance.  (I actually think it's the other way around.)
@@ -220,7 +207,7 @@ NEAR ENEMY: Domain Driven Design is about the data, and not the behaviour, or if
 
 ### Data Focused [GT]
 
-// @gaythu-rajan - this is nice, and gives more detail to the general point I make half way down the slide above.  I suggest we split that slide in two, and move this up into the gapo between them.
+// @andrewharmellaw - this is nice, and gives more detail to the general point I make half way down the slide above.  I suggest we split that slide in two, and move this up into the gap between them.
 
 As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object-centric split leads to data centered archtecture.
 
