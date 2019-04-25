@@ -122,14 +122,19 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 ---
 	
-## BIG PICTURE: GROKK-ABILITY, END-TO-END-VIEW - ("Where is the big picture?") INTRO TO THIS PART
+## BIG PICTURE: 
+
+Note:
+GROKK-ABILITY, 
+END-TO-END-VIEW 
+"Where is the big picture?" [AHL] - INTRO TO THIS PART
 
 ---
 
 ### Where was the Big Picture? [AHL]
 
 Note:
-I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" approach.
+I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" style of approach to DDD.
 
 When I first started I had to look at what was already there design-wise, including how it had manifest already in the team structures, lines of communication, dependencies (human and code), and codebases and artefacts.  
 
@@ -161,7 +166,13 @@ NEAR ENEMY: Design had been done. A lot of it in fact.  But it hadn't been laid 
 
 ---
 	
-## CORE MODEL: DATA-NOT-PROCESS, MODELS - ("one model to rule them all", "data focussed")
+## CORE MODEL: 
+
+Note:
+DATA-NOT-PROCESS, 
+MODELS
+"one model to rule them all", [AHL]
+"data focussed" [GT]
 
 ### "One Model to Rule Them All" [AHL]
 
@@ -237,7 +248,11 @@ We had to "modernise justice" as we did it, within a publicly funded program of 
 
 ---
 	
-## OWNERSHIP - (Alone doing...), ("Ownership")
+## OWNERSHIP
+
+Note: 
+Alone,  "Doing the DDD" [AHL]
+"Ownership" [GT]
 
 ---
 
@@ -280,7 +295,10 @@ Architects wanted to not only 'own' the model, they also wanted to be its gateke
 
 ---
 
-## GROKK-ABILITY (Perception @Scale) 
+## GROKK-ABILITY 
+
+Note:
+Perception @Scale [GT]
 
 ---
 
@@ -300,11 +318,11 @@ We will see again and again that people are the making or breaking factor for an
 
 ## BCs (Naming Teams) [GT]
 
+@andrewharmellaw - I think we'd need to give too much context to the audience to make this point in the time we have.  What do you reckon?
+
 Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. 
 
 Wrong names/contexts were used by the wrong teams. Scheduling was something used by ATCM which created SJP session.
-
-@andrewharmellaw - I think we'd need to give too much context to the audience to make this point in the time we have.  What do you reckon?
 
 ---
 
@@ -339,7 +357,12 @@ ALL IN ALL, THEY MAKE FOR AN EXCELLENT SET OF CIRCUMSTANCES TO EMPLOY THE TECHNI
 
 ---
 
-## GROKK-ABILITY / END-TO-END-VIEW - if we can't grokk it, how can anyone else?
+## GROKK-ABILITY / END-TO-END-VIEW
+
+Note:
+If we can't grokk it, how can anyone else?
+"How do the Key Pieces Fit Together?" [AHL]
+
 
 ---
 
@@ -373,7 +396,12 @@ NEAR ENEMY: When modelling, don't lose the bigger picture.
 
 ---
 
-## DATA-NOT-PROCESS, CORE-DOMAIN - (Case is a case is a case, Shared Kernels and the Abstract Core, Mind the Gap)
+## DATA-NOT-PROCESS, CORE-DOMAIN
+
+Note:
+"A Case is a case is a case" [AHL]
+"Shared Kernels and the Abstract Core" [AHL], 
+"Mind the Gap" [GT]
 
 ---
 
@@ -434,6 +462,7 @@ There is space at this point to bring in one more concept. Beneath everything, t
 ---
 
 ### Mind the Gap [GT] <<<<<< TO COME from @gaythu-rajan
+
 When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation in code. 
 
 First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
@@ -452,7 +481,12 @@ Incremental changes towards the final model; and while incrementing constantly v
 
 ---
 
-## END-TO-END-VIEW - "()->|()->()", "Visualisation", 
+## THE END-TO-END-VIEW 
+
+Note: 
+"()->|()->()" [AHL]
+"The Domain is Talking to You"  [AHL] 
+"Visualisation" [GT]
 
 
 ### ()->|()->() [AHL]
@@ -518,11 +552,16 @@ NEAR ENEMY: Purity in delivery of DDD artefacts can make them difficult to consu
 
 ---
 
-## BCs - ("Icebergs and Icecubes", "splits vs silos")
+## Bounded Contexts
+
+Note:
+"Icebergs and Icecubes" [GT], 
+"Splits vs Silos" [GT]
 
 ---
 
 ### Icebergs and Icecubes [GT] <<<<<< TO COME from @gaythu-rajan
+
 At the code level, all this combined to create a significant set of problems - complexities had been created where there needn't be any (significant amounts of complex shared code, lack of domain understanding - in both breadth and depth - in the devs) and over-simplifications where the domain actually needed to be far richer. We came to refer to these as the "icebergs".
 
 (To illustrate this we need to provide a lightning intro to the dynamics of the domain we're talking about.) - TODO - Simplified pictorial rep of domain here?
@@ -555,11 +594,15 @@ So my job was to make sure that the teams were made aware that this is not the c
 
 ---
 	
-## MODELS->CODE - ("Looking through the crystal ball", "shortsight vs longsight", "[Generic Sub Domain]")
+## MODELS->CODE - 
+
+Note: "Looking through the crystal ball" [GT], 
+"Shortsight vs longsight" [GT],
+"[Generic Sub Domain]" [AHL]
 
 ---
 
-### Looking through the crystal ball [GT] <<<<<< TO COME from @gaythu-rajan
+### Looking through the crystal ball [GT]
 
 There are many ways to skin a cat - what you build may not be the perfect way of building, but as long it is one of the ways that is based on a domain model, then it is unlikely to fall over design wise. It is a WIN! 
 
@@ -569,7 +612,7 @@ It is worth remembering that real world != software application. Software world 
 
 ---
 
-### Shortsight vs longsight [GT] <<<<<< TO COME from @gaythu-rajan
+### Shortsight vs longsight [GT] 
 
 Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
 
@@ -577,13 +620,18 @@ Another sign of failure is failing to realise the difference between learning th
 
 ### When is Something NOT a Generic (Technical) Subdomain? [AHL]
 
-I THINK WE CAN DROP THIS TO SAVE TIME. WE MIGHT WANT TO PULL SOME SPECIFIC BITS OUT OF IT HOWEVER.  
+@andrewharmellaw - I THINK WE CAN DROP THIS TO SAVE TIME. WE MIGHT WANT TO PULL SOME SPECIFIC BITS OUT OF IT HOWEVER.  
 
 (Such as the bits for "Domain Experts - Good" below)
 
 ---
 
-## DOMAIN EXPERTS (good - ("[Andrew]") and bad -  "Distill... the noise", "driver for change")
+## DOMAIN EXPERTS
+
+Note:
+Good - ( from "When is Something NOT a Generic (Technical) Subdomain?") [AHL]
+and Bad -  "Distill... the noise" [GT], 
+"Driver for change" [GT]
 
 ---
 
@@ -599,7 +647,7 @@ NEAR ENEMIES: Think you know better than a Domain Expert.  Thinking that all Dom
 
 ---
 
-### Distill... the noise [GT] <<<<<< TO COME from @gaythu-rajan
+### Distill... the noise [GT]
 
 Learning to recognise what is core to your domain, to your business context, to your aggregate is important.
 
@@ -607,7 +655,7 @@ Domain distillation e.g. ATCM - overly complex solution of what is supposed to b
 
 ---
 
-### Driver for change [GT] <<<<<< TO COME from @gaythu-rajan
+### Driver for change [GT]
 
 A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
 
@@ -640,6 +688,8 @@ At a meta level, it was exciting to come at DDD from another angle. It meant I h
 ---
 
 ## IDEAS LEGACY - (DOMAIN VISION STATEMENT++, multiple models of the same thing, actors coming together, process-centric, etc.) 
+
+@andrewharmellaw - It feels like we could drop this entire section to save time.  If any elements are key points we don't want to drop we could re-home them.
 
 ---
 
@@ -727,7 +777,7 @@ There was a problem however. In many teams, the domain experts weren't being use
 
 ### _Loads_ of Lovely Domain Experts - Listen [AHL]
 
-PROBLEM: 
+NEAR ENEMIES: 
 - NOT _LISTENING_ TO THE DOMAIN EXPERTS. 
 - UNWRITTEN TENET: DOMAIN EXPERTS **DON'T** KNOW BEST.
 
@@ -745,20 +795,23 @@ Worse still, it was stopping developers playing with the language of the domain 
 
 ---
 
-### Process
+### Process [GT]
 
-#### Before
+---
+
+#### Before [GT]
 
 Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
+---
 
-#### After
+#### After [GT]
 
 Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
 
 ---
 
-### Tools
+### Tools [GT]
 
 @andrewharmellaw - we talk about this earlier, but I think it's better dealt with in this section.
 
@@ -771,16 +824,18 @@ I also had smaller versions for the core teams made out which showed their BC at
 
 ---
 
-### Methods
+### Methods [GT]
 
 ---
 
-#### Modelling Whirlpool
+#### Modelling Whirlpool [GT]
+
 Where a strawman model is just what everyone needs to get things kicked off instead of a blank wall. Remember the cost as well, can you afford to coup people in a room for the whole day? How can you make things go faster.
 
 ---
 
-#### Event Storming 
+#### Event Storming [GT]
+
 By far the best method to find aggregates and document events. It doesn't have to be a day long full blown exercise. Small, iterative sessions are helpful for solutioning too. It is a good method to document event driven contexts too.
 
 ---
