@@ -439,33 +439,40 @@ At this level of detail, there were quite clearly many types of case, which were
 This is where the tensions arose.  How to square the circle? How could I reconcile the pull in these two opposed directions?  To keep the shared concept (which at some level wa correct - a case was a case from some perspectives) but balance it with the need for explicit differences.
 
 
-NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all tensions, and use the tools of DDD to make them and the solution to reconciling them explicit.
+NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all the important tensions, and use the tools of DDD to make them and the solution to reconciling them explicit.
 
 
-I went back to DDD; and there was something to help me out: Shared Kernels and the Core Domain.
+I went back to DDD; and there was something to help me out: (Shared Kernels and the) Abstract Core.
 
 ---
 
-### Shared Kernels and the Abstract Core [AHL]
+### (Shared Kernels and the) An Abstract Core [AHL]
 
 Note:
-While I disagreed that "a case was always a case" because this lost too much detail in abstraction, it was also the signal that there was highly likely to be a common core - in DDD parlance a shared kernel.  
+While I disagreed that "a case was always a case" because this either lost too much detail in abstraction, or became all things to everyone, it _was_ a strong signal from the past that there was highly likely to be a common core - in DDD parlance a shared kernel.  
 
 [BRING IN THE DDD DIAGRAM AND DEFINITIONS HERE]
 
 The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways for cases to come into being, and there is a very strict set of protocols governing how they change from one type to another.  
 
-There is space at this point to bring in one more concept. Beneath everything, there was something which, on it's own was never enough to be a case in its own right, but that could be considered an "Abstract Case" from which all concrete types of case could inherit.
+However, by again listening to the language of the domain experts it became clear that this shared kernel consisted of things which when shared across bounded context made little sense on their own - they were never enough to constitute a case in their own right - they were _abstract_.  This "Abstract Case" represented the fundamental elements and the relationships between them.  The final clue to it being abstract was that it contained little to no behavior, only placeholders for context-specific behavior which came from the concrete implementations.
+
 
 (Example: Go into this with an example of A PCD Case and a MagistratesCourtCase - showing the example of Suspects and Defendants.)
 
+(Mention how naming is hard in abstract core - esp. in modernisation when you might literally be cutting a new path.)
+
 ---
 
-### Mind the Gap [GT] <<<<<< TO COME from @gaythu-rajan
+### Mind the Gap [GT]
 
 When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation in code. 
 
+NEAR ENEMY: Watch out for modelling in the abstract getting too far ahead of the delivered code.
+
 First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
+
+NEAR ENEMY: Abstract concepts mean little if they cannot be implemented by the team.
 
 At that point we still had the big 'Case' model Andrew mentioned, and the teams had realised they needed to split it out. 
 
@@ -473,7 +480,7 @@ Andrew had identified at least three different models for a case. So they roughl
 
 Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure.
 
-@andrewharmellaw - the above paragraph jumps in out of nowhere.  How does it link into what goes before it?
+!!!!!! @andrewharmellaw - the above paragraph jumps in out of nowhere.  How does it link into what goes before it? !!!!!!
 
 I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. 
 
@@ -498,13 +505,13 @@ This one *isn't* explicitly brought out in the (Blue) DDD book.
 
 Alberto Brandolini had however identified it, and if I'd know that when I started I might have been a lot more confident in what I uncovered.
 
-Having pulled out the shared kernel of cases, and having identified how this was manifest in various contexts to solve various problems and support various activities the question of how these were related could no longer be avoided.  
+Having pulled out the Abstract Core case model, and having identified how this was manifest in various ways in various contexts to solve various problems and support various activities, the question of how these concrete manifestations of the various forms of Case were related could no longer be avoided.  
 
 It was clear that not only did each distinct case model exist within its own bounded context, but also that there was a clear flow from one manifestation to another:
 
 ()->|()->()
 
-But despite this breakthrough, I was nervous.  I was nervous about the nature of the relationships between these contexts.  
+But despite this seemingly solid conclusion, I was nervous.  I was nervous about the nature of the relationships between these contexts.  
 
 I knew relationships between bounded contexts was significant - I am a big fan of the strategic design patterns and the clarity they gave - but what I had here felt like a different form.  
 
@@ -517,6 +524,8 @@ It seemed like I'd come across something fundamental.
 With hindsight this seems obvious, but which made me nervous at the time, 
 
 @gaythu-rajan to provide the sketch of this
+
+NEAR ENEMY: The DDD patterns and techniques are there to help, but the domain experts are your real guide.
 
 ### The Domain is Talking to You  [AHL] 
 
@@ -540,7 +549,7 @@ NEAR ENEMY: The greatest modelling breakthroughs are worthless if they don't end
 
 ---
 
-### Visualisation [GT] <<<<<< TO COME from @gaythu-rajan
+### Visualisation [GT] 
 
 @andrewharmellaw - I think this could actually go _after_ the "Icebergs and Icecubes" slide.
 
@@ -548,7 +557,7 @@ Context maps can be drawn in various ways - I used them to even show the end to 
 
 These modelling sessions brought out new bounded contexts like Defence into the picture, merged contexts such as Mags and crown which were separate legacy systems but nonethless the same business process. Because of the two legacy system they had pretty much diverged in the real world as well (but no reason why they should be different in fact). Potential to change the real business process as a result.
 
-NEAR ENEMY: Purity in delivery of DDD artefacts can make them difficult to consume for teams.  They are just tools - the code is the real model, so work to make it 
+NEAR ENEMY: Purity in delivery of DDD artefacts can make them difficult to consume for teams.  They are just tools - the code is the real model, so work on it.
 
 ---
 
@@ -580,7 +589,7 @@ Access control is another example - of course it is important but delineation of
 
 ---
 
-### Splits vs Silos [GT] <<<<<< TO COME from @gaythu-rajan
+### Splits vs Silos [GT]
 
 One of the teams were dying to split off and be able to do things on their own. This new-found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate.
 
@@ -594,7 +603,7 @@ So my job was to make sure that the teams were made aware that this is not the c
 
 ---
 	
-## MODELS->CODE - 
+## MODELS->CODE 
 
 Note: "Looking through the crystal ball" [GT], 
 "Shortsight vs longsight" [GT],
@@ -840,7 +849,7 @@ By far the best method to find aggregates and document events. It doesn't have t
 
 ---
 
-# Complicated Bits [GT] <<<<<< TO COME from @gaythu-rajan
+# Complicated Bits [GT]
 
 ---
 	
