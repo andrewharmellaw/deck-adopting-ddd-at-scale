@@ -499,11 +499,15 @@ This one *isn't* explicitly brought out in the (Blue) DDD book.
 
 Alberto Brandolini had however identified it, and if I'd know that when I started I might have been a lot more confident in what I uncovered.
 
+
 Having pulled out the Abstract Core case model, and having identified how this was manifest in various ways in various contexts to solve various problems and support various activities, the question of how these concrete manifestations of the various forms of Case were related could no longer be avoided.  
+
 
 It was clear that not only did each distinct case model exist within its own bounded context, but also that there was a clear flow from one manifestation to another:
 
+
 ()->|()->()
+
 
 But despite this seemingly solid conclusion, I was nervous.  I was nervous about the nature of the relationships between these contexts.  
 
@@ -515,37 +519,41 @@ These relationships between bounded contexts represented a flow of execution and
 
 It seemed like I'd come across something fundamental.
 
-With hindsight this seems obvious, but which made me nervous at the time, 
+With hindsight this seems obvious, but which made me nervous at the time. 
 
-@gaythu-rajan to provide the sketch of this
+@gaythu-rajan - provide the sketch of this
 
-NEAR ENEMY: The DDD patterns and techniques are there to help, but the domain experts are your real guide.
+NEAR ENEMY: The DDD patterns and techniques are there to help, but don't become beholden to the Blue Tome and ignore your strongest signals just because they aren't what you expect.
 
-### The Domain is Talking to You  [AHL] 
+---
 
-!!!!!! ADDED THIS AS IT FELT LIKE A LEAP WITHOUT IT !!!!!!!
+### The Domain is Talking to You; Listen  [AHL] 
 
 I went back to the domain experts.  What I thought I could see in the model was right there in the domain in their heads. 
+
 
 It was clear very rapidly that there were business-level processes (ceremonies even) involved in moving cases from one context to the next.  These moves involved significant conceptual (and data-level) changes.  They had specific criteria, and ownership was typically transferred from one organisation or body to another.
 
 This discovery felt good, a real modelling breakthrough, mainly because it was corellated strongly to the domain reality. 
 
-A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.  
+
+(A year or so later, in a workshop with Alberto Brandolini, he introduced his archetype.  When I saw it I could immediately recognise it for what it was, and realised there were *many* manifestations.  I felt satisfied.) 
+
 
 There were relationships - and they were creation-level ones. One model could pass control onto a downstream model, and create that downstream model in the process.
 
 I turns out that this is entirely valid.
 
-It also turned out that I'd not brought the development teams along with me.
+It also turned out that I'd yet again failed to bring the development teams along with me.
 
-NEAR ENEMY: The greatest modelling breakthroughs are worthless if they don't end up down in the code.
+
+NEAR ENEMY: )_Your_ domain experts are your real guide. Favour them over your pre-conceived ideas from the Blue Book (or elsewhere).
 
 ---
 
 ### Visualisation [GT] 
 
-@andrewharmellaw - I think this could actually go _after_ the "Icebergs and Icecubes" slide.
+@andrewharmellaw - I think this should actually go _after_ the "Icebergs and Icecubes" slide.  @gaythu-rajan, what do you think?
 
 Context maps can be drawn in various ways - I used them to even show the end to end process flow with the bounded contexts clearly marking the point where the responsibility is handed over to another party. This made it easier for the teams to undestand to see where they are in the big picture.
 
@@ -581,9 +589,14 @@ It actually turned out to be a design smell by not defining the boundaries betwe
 
 Access control is another example - of course it is important but delineation of models particularly multiple models of the same entity in their own bounded context and operated on by corresponding actors provides out of the box access control at the very basic level.
 
+
+NEAR ENEMY: @gaythu-rajan - can you add this (it looks like its called out earlier in the slide.  It actually seems like there is too...)
+
 ---
 
 ### Splits vs Silos [GT]
+
+@gaythu-rajan pull this slide to the place where @andrew talks about independent teams
 
 One of the teams were dying to split off and be able to do things on their own. This new-found freedom was even more dangerous as there was the risk of the models diverging irrevocably. There was a need to distinguish this from the freedom to work independantly make changes, release and operate.
 
@@ -593,7 +606,6 @@ Not realising this was a big failure. I.e. Even though teams should have the fre
 
 So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. The other danger was from avoiding Silos forming from these splits.
 
-@gaythu-rajan pull this to the place where @andrew talks about independant teams
 
 ---
 	
