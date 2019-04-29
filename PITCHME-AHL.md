@@ -640,6 +640,11 @@ Good - ( from "When is Something NOT a Generic (Technical) Subdomain?") [AHL]
 and Bad -  "Distill... the noise" [GT], 
 "Driver for change" [GT]
 
+
+We've talked a few times already about how the domain, and the experts who who know about it, are sovreign.  
+
+But we felt the need to talk a little more about things and to raise a few other _key_ points.
+
 ---
 
 ### Domain Experts - Good [AHL]. (from "When is Something NOT a Generic (Technical) Subdomain?") 
@@ -650,11 +655,15 @@ The seam I mined was based around the edge cases - when the scheduling was a com
 
 Along the way we'd discovered that there were individuals who had this scheduling task as their sole responsibility, and that there was frequently a great deal of intuition, insight, and discretion that they applied.  This was beyond mere slot-filling.  These people were applying a great deal of local knowledge, and awareness of many upstream feeding-factors about which they could only have learned through experience.
 
-NEAR ENEMIES: Think you know better than a Domain Expert.  Thinking that all Domain Experts are the same and will all agree all the time.
+NEAR ENEMIES: Think you know better than a Domain Expert.  
+
+NEAR ENEMIES: Thinking that all Domain Experts are the same and will all agree all the time.
 
 ---
 
 ### Distill... the noise [GT]
+
+@andrewharmellaw - @gaythu-rajan, this is good, better than my example above.  Do you want to collapse this slide and the one above? (I'm happy if either you or I then take it at presentation time.)
 
 Learning to recognise what is core to your domain, to your business context, to your aggregate is important.
 
