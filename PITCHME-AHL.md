@@ -569,6 +569,8 @@ Note:
 "Icebergs and Icecubes" [GT], 
 "Splits vs Silos" [GT]
 
+@andrewharmellaw - this is now a bad section heading (though the section is great).  We should rename (@gaythu-rajan, can you do this?) based on the content below.  
+
 ---
 
 ### Icebergs and Icecubes [GT]
@@ -606,7 +608,6 @@ Not realising this was a big failure. I.e. Even though teams should have the fre
 
 So my job was to make sure that the teams were made aware that this is not the chance to break free. This is when I realised that the teams were not aware of the business process outside of their domain - Team building Pre-Charge were not aware of the next stage and so on. The other danger was from avoiding Silos forming from these splits.
 
-
 ---
 	
 ## MODELS->CODE 
@@ -640,6 +641,7 @@ Good - ( from "When is Something NOT a Generic (Technical) Subdomain?") [AHL]
 and Bad -  "Distill... the noise" [GT], 
 "Driver for change" [GT]
 
+@andrewharmellaw - this section is distinct from another section not far below it which talks in more detail about Domain Experts.  We shoudl merge them (and put the result here, or down there. I think we can decide that once we do run-throughs.)
 
 We've talked a few times already about how the domain, and the experts who who know about it, are sovreign.  
 
@@ -673,7 +675,11 @@ Domain distillation e.g. ATCM - overly complex solution of what is supposed to b
 
 ### Driver for change [GT]
 
-A lot of people needed to let go of things, but without knowing exactly where we were going. Domain experts or in this case end users needed to unlearn a lot of things that they is ingrained in them throughlegacy systems. Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
+A lot of people needed to let go of things, but without knowing exactly where we were going. 
+
+Domain experts or in this case end users needed to unlearn a lot of things that was ingrained in them through years of wrestling with legacy systems. 
+
+Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
 
 ---
 
@@ -734,7 +740,7 @@ I think these are all yours @gaythu-rajan. Right?
 
 Note:
 
-@andrewharmellaw - this next para is a repeat.  Also you talk about Context Maps higher up.
+@andrewharmellaw - THIS IS THE PLACE WHERE ALL THE BOUNDED CONTEXT STUFF SHOULD GO.
 
 I used to think you only discovered Bounded Contexts from modelling lower-level concerns and then using the concept to split your models.  We had in some respects short-circuited this.  We did it by paying attention to Conways Law and studying organisations, departments, actors and jobs-to-be-done.
 
