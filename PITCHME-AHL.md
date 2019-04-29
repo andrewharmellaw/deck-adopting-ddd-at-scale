@@ -240,7 +240,7 @@ That's when I really started to get worried.
 
 It was clear that there was not only a general awareness of my arrival, but also an expectation that I would be able to solve a lot of problems; and that DDD would be my tool for doing so.  
 
-However, rather than everyone looking for a more general adoption of DDD as an approach / set of skills, I was there to take things off people's hands.
+However, rather than everyone looking for a more general adoption of DDD as an approach and a set of skills, I was there to take things off people's hands.
 
 Worst of all, I wasn't there to deliver any code - I was an "Architect" purest sense.  It seemed as if people expected me to be there to do diagrams and definitely NOT write code.
 
@@ -266,17 +266,14 @@ Architects wanted to not only 'own' the model, they also wanted to be its gateke
 ### Conclusions / summary from above
 
 PROBLEMS: 
-- I WAS THERE TO SOLVE ALL THE PROBLEMS,
-- AND I OWNED THE DESIGN. 
-- DOMAIN EXPERTS AND DEVELOPERS WERE EXCLUDED. 
-- I WAS GOING TO TELL EVERYONE WHAT TO DO,
+- DDD EXPERTS (US) WERE THERE TO SOLVE ALL THE PROBLEMS,
+- AND WE (THE DDD EXPERTS) OWNED THE DESIGN AND THE APPLICATION OF THE METHODOLOGY. (When it wasn't "us" it was a group of "Architects")
+- EXCLUDING DOMAIN EXPERTS AND DEVELOPERS. 
+- WE WERE GOING TO TELL EVERYONE WHAT TO DO,
 - BUT WITHOUT HANDS ON.
-- When it wasn;t "me" it was a grouyp of "Architects"
-
-@andrewharmellaw - to make this fit both of us
 
 NEAR ENEMIES: 
-- Domain Driven Design isn't done "to" teams, it's done "by" teams.  Ubiquitous language needs to be _ubiquitous_.  
+- Domain Driven Design isn't done "to" teams, it's done "by" teams.  (The Ubiquitous language for example needs to be _ubiquitous_.)
 - Hands on modellers need to be _hands on_.  
 - Domain Driven Design isn't for governance and _control_, it's a tool to _enable_.  People need to be trusted and helped to use it.
 
