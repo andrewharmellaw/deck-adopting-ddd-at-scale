@@ -26,7 +26,7 @@
 Note:
 
 @gaythu-rajan, we can strip this down.
-@andrewharmellaw - agreed. Lets do it once we do some read-throughs.
+@andrewharmellaw - agreed.
 
 Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
@@ -169,14 +169,14 @@ I could see where it had come from; remember: our prime directive was to "modern
 
 One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there had been a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
 
+For example, as the case goes through the juctice system, there are several pleas that could potentially be made by the defendant. During initial stages of prosecution, prosecutors anticipate a plea from the suspect and it is only shared with police. Later, there is the indicated plea taken at mags (if GT can remember the values) which is not legally binding but decides the next course of action through the courts. Finally there is THE plea - which is guilty or not guilty. Again, not to be confused with verdict which bears the same value but infact part of the results of the case and not the case itself. 
+
+(@andrew -> use this example to elaborate the point above)
+(@gai -> insert code/model) 
 
 Matthias Verraes: “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
 
-
 Further investigation revealed that this had come into being via a noble desire to reduce data duplication and copying, and to therefore hold central case records.  In itself, no bad thing.  
-
-The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
-
 
 NEAR ENEMY: When exploring the domain, listen for difference, rather than look for similarity.  Don't abstract too early.
 
@@ -184,20 +184,26 @@ NEAR ENEMY: When exploring the domain, listen for difference, rather than look f
 
 ### Data Focused [GT]
 
-As Andrew just mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object-centric split leads to data centered archtecture.
+The issue was, this had accidentally pushed a object based view, at the expense of a process / behavioural one.
 
-@gaythu-rajan - change example to be case and not defendant (e.g. plea)
-To give an example - A Case is not a case without someone being prosecuted. That someone could be a "Suspect" at the beginning of a case and then become a "Defendant" when the case is brought to the court. This is when the offence is indictable (you could go to prison for it). 
+This brought everything centered around the data. Object-centric split leads to data centered archtecture.
+
+There were several examples of this
+A Case is not a case without someone being prosecuted. That someone could be a "Suspect" at the beginning of a case and then become a "Defendant" when the case is brought to the court. This is when the offence is indictable (you could go to prison for it). 
 
 In contrast, in a "summary only" offence, you _enter_ the system as a Defendant. 
 
 As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts.
 
+Another example of this is material of a case -> this is another core entity of a case, evidence, statements which back the case. Ofcourse there is abstraction of the physical storage of the case material in document storage but fundamental association of case material to people on the case- victims, defendants, witness, police officer, evidence (different for different suspects/defendants) should be part of the core model.
+
+(@gai -> insert code/model)
+
 What's wrong with that? 
 
- a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. 
+ a. First the realisation that Defendant/Suspect/material, are THE CORE of a case. They should live where the case model lives. 
  b. Reconciling the states in times of failure becomes easier. 
- c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). 
+ c. There is no access control concerns over the data - who is able to access suspect information within the bounded context (very limited number of people). 
  d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model.
 
 ---
