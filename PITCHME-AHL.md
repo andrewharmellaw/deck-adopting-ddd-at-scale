@@ -117,7 +117,7 @@ With all this in mind it is no surprise that things had got complicated prior to
 
 ---
 	
-## BIG PICTURE: 
+## THE BIG PICTURE: 
 
 Note:
 GROKK-ABILITY, 
@@ -136,19 +136,18 @@ I needed to reverse engineer a big picture from the pieces I found.
  
 As I did this I tried to make sure I didn't get sucked into too much detail in any one area.  At this stage I needed to avoid getting overwhelmed by any one thing.
 
-I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the Scottish Legal system.  
+I began by setting off a number of lines of enquiry - I had a vague idea of the domain, having spent a long time delivering software in the another countries Legal system.  
 
 I take a very "I'm the noob and I'm keeping the beginners mind as long as I can to get as deep an understanding as possible" style of approach to DDD.
 
-As Scots will remind you, things there are distinctly different, but it allowed me to compare things and ask "North of the border they have to do this?  Is there an equivalent?" or question "In Scotland this is owned by a person who works for department X, is something similar needed here, and if so, who does it?"
+As legal experts will remind you, things in different countries systems are distinctly different, but it allowed me to compare things and ask "over there they have to do this?  Is there an equivalent?" or question "In country X this is owned by a person who works for department X, is something similar needed here, and if so, who does it?"
 
 I pulled in as many info sources as I could, official and unofficial, trying to avoid value judgements, and always looking for the edges. I wanted to know the full extent of where we found ourselves.
 
 Given what I found, what was lacking? 
 
 LACKING: 
-- THERE WAS NO WAY IN. 
-- THERE WAS NO BIG PICTURE WITHIN WHICH TO LOCATE YOUR MORE DETAILED WORLD.  
+- THERE WAS NO OBVIOUS "BIG PICTURE" WITHIN WHICH A TEAM COULD LOCATE YOUR MORE DETAILED WORLD.  
 - CONSEQUENTLY THE COGNITIVE LOAD WAS TOO HIGH ON INDIVIDUAL TEAM MEMBERS.  
 - THERE WASN'T EVEN A SINGLE DOMAIN EXPERT WITH AN END-TO-END VIEW.
 
