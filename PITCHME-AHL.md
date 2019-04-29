@@ -24,6 +24,10 @@
   "The near enemy is a [...] counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us[...], the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
 Note:
+
+@gaythu-rajan, we can strip this down.
+@andrewharmellaw - agreed.
+
 Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
 We've often been heard to say "people still don't get DDD". What do we mean?  With the rise of microservices it's being used everywhere right?  
@@ -41,8 +45,6 @@ Typically this is because they ignore the core, fundamental aspects; which are a
 We want to use this lens to present a collection of challenges and failure patterns we experienced when using DDD on a large scale.  It's ideal for these purposes (we could argue essential if you want in any way to succeed) but when things get complicated people can easily forget about the core concepts, and that causes problems.  
 
 Hopefully this story will help you avoid falling into that trap.
-
-@gaythu-rajan, we can strip this down.
 
 ---
 
