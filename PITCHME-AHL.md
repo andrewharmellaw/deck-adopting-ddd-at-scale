@@ -830,6 +830,11 @@ By far the best method to find aggregates and document events. It doesn't have t
 
 @andrewharmellaw - I can put some things in here...
 
+CQRS has a lot going for it as a design approach.  Not least because it is has both time as a primary citizen and the concept of eventual consistency baked into it.
+
+It also plays _very nicely_ when you tackle things from an event-based perspective.  In fact you NEED to consider things from this perspective in order to get things to work.
+
+
 ---
 
 ## CQRS bad - end-to-end!!! devs don't think like this
