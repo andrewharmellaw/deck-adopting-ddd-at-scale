@@ -467,9 +467,12 @@ At that point we still had the big 'Case' model Andrew mentioned, and the teams 
 
 Andrew had identified at least three different models for a case. So they roughly went about hacking the case into 3 pieces.
 
+
+@andrewharmellaw - @gaythu-rajan, the next paragraph jumps in out of nowhere.  How does it link into what goes before it?
+
 Beware the pseduo DDD experts. Advocating for a literal translation of real world paper based process to software. This brings service orchestration into the equation and thus single point of failure.
 
-!!!!!! @andrewharmellaw - the above paragraph jumps in out of nowhere.  How does it link into what goes before it? !!!!!!
+
 
 I mentioned the implementation of the new models before - it was not an easy job. There already was an implementation which cannot be changed in a big-bang approach even within a single BC. 
 
@@ -484,7 +487,7 @@ Note:
 "The Domain is Talking to You"  [AHL] 
 "Visualisation" [GT]
 
-@gaythu-rajan - grokkability stuff from above should come in here.
+@gaythu-rajan - grokkability stuff from above should come in here. Gayathri to move them.
 
 
 ### ()->|()->() [AHL]
