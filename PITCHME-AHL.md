@@ -184,6 +184,9 @@ I could see where it had come from; remember: our prime directive was to "modern
 One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there had been a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
 
 
+Matthias Verraes: “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
+
+
 Further investigation revealed that this had come into being via a noble desire to reduce data duplication and copying, and to therefore hold central case records.  In itself, no bad thing.  
 
 The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
@@ -776,13 +779,17 @@ Worse still, it was stopping developers playing with the language of the domain 
 
 #### Before [GT]
 
-Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
+Governance - the G word; architects love it; engineers hate it! But there is some advantages to it. At such a scale it brings consistency and discipline across board, if it doesn't look like it is going to emerge organically, then a bit of process helps you get there. 
+
+So we introduced a process by which when the increments go for gate review (for approval to resource, time and money) the teams present the outcome of modelling and if applicable the domain mdoel & add the models to the design document - model thus presented is not set in stone, could continue to evolve as increment goes on but this made sure that there was some modelling discussion that happened before the work kicked off and there was a good justification for the time and money being requested.
 
 ---
 
 #### After [GT]
 
-Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
+Design Retro - Find out the good, bad and the ugly. Make sure it is incorporated in the subsequent design sessions. 
+
+One of the best retro feedback for myself was to pay extra attention to multi-step process which could seemingly look like a single step. E.g. Case Material and IDPC - I failed to realise early on that this is a two step process particularly for CPS where in step 1-> they get ALL the material from police, sort it according to each defendant AND step 2 -> then put them together in IDPC. we did not model the first step in code meaning, when the sort and allocatino process happens we were not storing the association of materials to defendant (only at the case level) but jumped straight into IDPC bundling process. WE COULD GET INTO TROUBLE IF I SAID THIS, I AM SURE)
 
 ---
 
@@ -831,7 +838,7 @@ Challenge in documenting a CQRS architecture.
 
 CQRS is a paradox of DDD
 
-CQRS uses the term Aggregate. IMHO, CQRS aggregates are similar but not the same as a DDD aggregate. Often, I have found that one muddles the implementation of the other. CQRS ofcourse made the DDD aggregates famous.
+CQRS uses the term Aggregate. IMHO, CQRS aggregates are similar but not the same as a DDD aggregate. Often, I have found that one muddles the implementation of the other. CQRS of course made the DDD aggregates famous.
 
 DDD is all about explicit modelling - In CQRS aggregates, apart from the root entity, the model is not visible. It is in pieces within the events. Although strictly events themselves are not domain models, they are BASED on your domain model (they are too denormalised to be a model - they just capture facts)
 
@@ -860,10 +867,4 @@ One practical challenge at this scale was the cost. Cost of failing - yes (@Andr
 ## As-is / to-be vicious circle [GT]
 
 Obtain knowledge of the domain from the As-Is state. Model the To-Be state. Domain changes more slowly than the system that we are building. Beware the legacy systems - they don't exactly reflect the domain knowledge.
-
----
-
-## You _can_ copy data - look to the Process
-
-Matthias Verraes: “Don’t Repeat Yourself” was never about code. It’s about knowledge. It’s about cohesion. If two pieces of code represent the exact same knowledge, they will always change together. Having to change them both is risky: you might forget one of them. On the other hand, if two identical pieces of code represent different knowledge, they will change independently. De-duplicating them introduces risk, because changing the knowledge for one object, might accidentally change it for the other object.
 
