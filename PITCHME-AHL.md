@@ -63,7 +63,7 @@ We've seen in detail how pseudo-DDD is the near enemy of real DDD, and that when
 
 In this story it's important to note that, while we worked on the same project, we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
-Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and challenging the assumptions he had made).
+Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (changing and challenging the assumptions he had made as more domain insight was unearthed).
 
 So what was the project? It was the transformation and modernisation of some core public systems within a Judicial system.
  
@@ -79,31 +79,17 @@ Note:
 
 1. Our "domain" was co-owned: we were tasked with building a collection of systems which met the needs of two different stakeholder organisations - the State Prosecutor, and the Courts System - AND the END-TO-END-PROCESSES spanned even more client organisations. 
 
-@gayathu-rajan - put the below paragraph into the slide which deals with it in detail.
-Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are wrtiting the code. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
-
 2. When I (Andrew) joined the project this massive piece of work was being tackled head on. 
 
 Software delivery was already up and running; the work for (7 or more) feature teams had been allocated and lots of code had already been cut. 
 
 Consequently some DDD "ideas" had already become entrenched. (We'll get to them in turn later.)
 
-@andrewharmellaw - @gaythu-rajan, I think we remove the next comment as we cover it in detail in a later slide - this is an intro slide.
-@gaythu-rajan made further changes as it was still more object based split.
-
 3. Some complex architectural choices had been made (e.g. CQRS for everything) and devs were struggling with them. 
 
 At the time I (Andrew) arrived it was still proving an impediment rather than a boost to productivity.  The benefits had very much still to pay off. 
 
 (We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
-
-
-@gayathu-rajan - move this following paragraph down to the detail slide section where it belongs.
-We had to "modernise justice" as we delivered things. 
-This meant we had to push back against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
-
-@andrewharmellaw - move this down too.
-Finally it's useful to raise the issue that Domain experts were stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and the expectation was to translate that literally onto the software application. 
 
 ---
 
@@ -633,7 +619,10 @@ It is worth remembering that real world != software application. Software world 
 
 ### Shortsight vs longsight [GT] 
 
-Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. Constantly having to battle with businesss quick wins and resulting tactical solutions incurred so much debt in code.
+Another sign of failure is failing to realise the difference between learning the domain beyond what the 'requirements' captured vs future proofing. The former means due to the deeper insights gained from the domain the model will be more robust and less likely to fall over because the real world seldom changes at the same pace as the requirements on which a software application is built. While the latter means, you are anticipating these requirements to come up later and building it in advance. 
+
+We had to "modernise justice" as we delivered things. 
+This meant we had to push back against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
 ---
 
@@ -674,13 +663,15 @@ Learning to recognise what is core to your domain, to your business context, to 
 
 Domain distillation e.g. ATCM - overly complex solution of what is supposed to be a simple process. this is because the team had no visibility beyond their part of the process. This is because they implemented what turned out to be a typical Process Manger's job into their core process. It became very difficult to untangle from it, at one point we even considered scrapping the whole thing and build it from the start.
 
+No one domain expert had the end-end view, but even when they did it was never communicated to the those who are wrtiting the code. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
+
 ---
 
 ### Driver for change [GT]
 
 A lot of people needed to let go of things, but without knowing exactly where we were going. 
 
-Domain experts or in this case end users needed to unlearn a lot of things that was ingrained in them through years of wrestling with legacy systems. 
+Domain experts or in this case end users needed to unlearn a lot of things that was ingrained in them through years of wrestling with legacy systems. They were stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and there was a misconception that this will translate literally onto the software application. 
 
 Our application is not going to be around for years, it will be legacy one day but as long as it had managed to capture the essence of the actual business process which doesn't change, the future is safe.
 
