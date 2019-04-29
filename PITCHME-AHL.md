@@ -387,25 +387,28 @@ Note:
 
 ### "A Case is a Case is a Case" [AHL]
 
-@andrewharmellaw - check we're not repeating ourselves from above. Extract some good points from here and put them above.  (THis is how we slay the enemy.)
+@andrewharmellaw - I checked we're not repeating ourselves from above. Extract some good points from here and put them above.  This is all about how we slay the enemy. (I'm making it crystal clear too that we're not blaming, and rather building on the lessons learned from those who went before us.)
 
 
 Note:
-The route into everything was to try and tackle the "case is a case (is a case)" issue.
+The route into everything was to try and tackle the "case is a case (is a case)" issue, and to do so by finding a more useful core domain.
 
-I could see where it had come from; the idea was to modernise the criminal justice system, and to remove some of the unnecessary complexity.  
+I could see where it had come from; remember: our prime directive was to "modernise the criminal justice system", and by implication to remove unnecessary complexity as we went.
 
-One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there was a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
+One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there had been a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
 
 
 NEAR ENEMY: When exploring the domain, listen for difference, rather than look for similarity.  Don't abstract too early.
 
 
-How to prove one way was right, and the other wrong however?
+But; how were we to prove one way was right, and the other wrong? We took a multi-pronged approach.
 
-The problem became painfully evident when looking at the existing Case Aggregate - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
+Firstly, we could see how the "one case to rule them all" had worked out in the code base. The problem became painfully evident when looking at the existing Case Aggregate - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
 
-I began by apportioning each of the attributes and functions to the team which had added them. Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.
+I began to sift through it - I wasn't there to find blame, PLUS this low level detail was super-useful - and by apportioning each of the attributes and functions to the team which had added them. 
+
+Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.  Unfortunately this wasn't the case.
+
 
 In parallel I went out to sit with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  
 
@@ -415,13 +418,11 @@ But not only that, they were owned by different stakeholders, meeting differing 
 
 At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
 
-This is where the tensions arose.  How to square the circle? How could I reconcile the pull in these two opposed directions?  To keep the shared concept (which at some level wa correct - a case was a case from some perspectives) but balance it with the need for explicit differences.
+
+This is where the tensions arose.  How to square the circle? How could I reconcile the pull in these two opposed directions?  To keep the shared concept (which at some level was correct - a case was a case from some perspectives) but balance it with the need for explicit differences.
 
 
 NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all the important tensions, and use the tools of DDD to make them and the solution to reconciling them explicit.
-
-
-I went back to DDD; and there was something to help me out: (Shared Kernels and the) Abstract Core.
 
 ---
 
