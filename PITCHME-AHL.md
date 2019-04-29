@@ -171,17 +171,25 @@ Not only were there some overview (summarising and orientaton) aspects lacking, 
 
 As I investigated, I slowly uncovered a few core beliefs which had embedded themselves in the minds of everyone on the project. 
 
-The most prevalent was a oft-repeated phrase that "a case is a case (is a case)".  
+The most prevalent was an oft-repeated phrase that "a case is a case (is a case)".  
 
 
-This had been interpreted to mean there should be a single representation of a case, manifest as a single model, and that this single model made it's way right through the criminal justice system. 
+This phrase had been interpreted to mean there should be a single representation of a Case, manifest as a single model, and that this single model made it's way right through the criminal justice system. 
 
 It had consequently been decided that this Case representation be handled via a single "Case" microservice / datastore. 
 
 
-Further investigation revealed that this had come into being via a noble desire to reduce data copying and hold central case records.  In itself, no bad thing.  
+I could see where it had come from; remember: our prime directive was to "modernise the criminal justice system", and by implication to remove unnecessary complexity as we went.
+
+One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there had been a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
+
+
+Further investigation revealed that this had come into being via a noble desire to reduce data duplication and copying, and to therefore hold central case records.  In itself, no bad thing.  
 
 The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
+
+
+NEAR ENEMY: When exploring the domain, listen for difference, rather than look for similarity.  Don't abstract too early.
 
 ---
 
@@ -385,41 +393,35 @@ Note:
 
 ---
 
-### "A Case is a Case is a Case" [AHL]
-
-@andrewharmellaw - I checked we're not repeating ourselves from above. Extract some good points from here and put them above.  This is all about how we slay the enemy. (I'm making it crystal clear too that we're not blaming, and rather building on the lessons learned from those who went before us.)
-
+### Tackling "A Case is a Case is a Case" [AHL]
 
 Note:
+@andrewharmellaw - @gaythu-rajan - you were right, there was a bunch in here which belonged higher up. (I realised as I walked to work.)  I just moved it.
+
+
 The route into everything was to try and tackle the "case is a case (is a case)" issue, and to do so by finding a more useful core domain.
-
-I could see where it had come from; remember: our prime directive was to "modernise the criminal justice system", and by implication to remove unnecessary complexity as we went.
-
-One way to do this was to find things which where similar and to treat them in the same way.  From some angles, there had been a lot to suggest that fundamentally, cases were a candidate for this.  The problem was, the simlarities were less than anticipated, and the differences were critical - mainly in the regards to who owned the cases and how they were handled as they made their way through the system.
-
-
-NEAR ENEMY: When exploring the domain, listen for difference, rather than look for similarity.  Don't abstract too early.
 
 
 But; how were we to prove one way was right, and the other wrong? We took a multi-pronged approach.
 
-Firstly, we could see how the "one case to rule them all" had worked out in the code base. The problem became painfully evident when looking at the existing Case Aggregate - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
 
-I began to sift through it - I wasn't there to find blame, PLUS this low level detail was super-useful - and by apportioning each of the attributes and functions to the team which had added them. 
+It was easy to see how the "one case to rule them all" had worked out in the code base. The problem became painfully evident when looking at the existing Case Aggregate - it was *massive* and had tons of attributes.  It also had a significant amount of contributors - it was a *very* hot piece of code. Everyone wanted to add their stuff to it.  
 
-Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.  Unfortunately this wasn't the case.
+I began to sift through it - I wasn't there to find blame - this low level detail was super-useful. By doing this I could see each of the attributes and functions and attribute them to the team which had added them. 
+
+Perhaps they'd just failed to communicate about what they needed and ended up duplicating things?  It's a common problem.  Unfortunately this wasn't the case here. (Sorry.)
 
 
-In parallel I went out to sit with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  
+In parallel I'd also gone out and sat with the teams themselves, predominantly their domain experts;  They would be the ones who knew what was needed, and more importantly, the activities and business processes that the concept of a "Case" would need to support in their area.  
 
-It was abundantly clear very early on, that there were many types of case, which served different purposes in the criminal justice system.  
+It was clear early on, that there were many types of case, which served different purposes in the criminal justice system.  
 
 But not only that, they were owned by different stakeholders, meeting differing purposes, and undergoing very different lifecycles.  
 
 At this level of detail, there were quite clearly many types of case, which were related (more on that later) but were also very different.
 
 
-This is where the tensions arose.  How to square the circle? How could I reconcile the pull in these two opposed directions?  To keep the shared concept (which at some level was correct - a case was a case from some perspectives) but balance it with the need for explicit differences.
+This is where the tensions arose.  How to square the circle? How could I reconcile the pulls in these two opposed directions?  How to keep the "shared" concept (which at some level was correct - a case was a case from some perspectives) but balance it with the need for explicit differences?
 
 
 NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all the important tensions, and use the tools of DDD to make them and the solution to reconciling them explicit.
