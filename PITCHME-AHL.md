@@ -357,7 +357,6 @@ Note:
 If we can't grokk it, how can anyone else?
 "How do the Key Pieces Fit Together?" [AHL]
 
-
 ---
 
 ### How do the Key Pieces Fit Together? [AHL]
@@ -431,28 +430,34 @@ NEAR ENEMY: Don't solve one problem at the expense of another.  Embrace all the 
 ### (Shared Kernels and the) An Abstract Core [AHL]
 
 Note:
-While I disagreed that "a case was always a case" because this either lost too much detail in abstraction, or became all things to everyone, it _was_ a strong signal from the past that there was highly likely to be a common core - in DDD parlance a shared kernel.  
+While I felt that "a case was always a case" was a bad solution because ythe only way it could be delivered was to lose too much detail in abstraction, or became all things to everyone, it _was_ a strong signal from the past.  
 
-[BRING IN THE DDD DIAGRAM AND DEFINITIONS HERE]
+It also contained within it the clue to something which would work far better - an abstract case, and associated entities.  
+
+[BRING IN THE DDD DIAGRAM AND DEFINITIONS HERE?]
 
 The flow of cases through the criminal justice system _is_ a collaborative one. There is a fixed number of ways for cases to come into being, and there is a very strict set of protocols governing how they change from one type to another.  
 
-However, by again listening to the language of the domain experts it became clear that this shared kernel consisted of things which when shared across bounded context made little sense on their own - they were never enough to constitute a case in their own right - they were _abstract_.  This "Abstract Case" represented the fundamental elements and the relationships between them.  The final clue to it being abstract was that it contained little to no behavior, only placeholders for context-specific behavior which came from the concrete implementations.
+However, it became clear from listening to the language of the domain experts that if there was an abstract core, finding names for the things which it constituted would be hard.
+
+This is kind of the point, because by definition it sits _outside_ any one specific context and serves to represent the _fundamental_ elements of _all_ cases, and the relationships between them.  It also was largelty behaviour-free, but it did have placeholders for context-specific implementations).
+
+But how to arrive at this abstraction, and avoid falling into the previous trap?  The way to do this is _always_ via the detail of the domain, and the various context-specific implementations.
 
 
-(Example: Go into this with an example of A PCD Case and a MagistratesCourtCase - showing the example of Suspects and Defendants.)
+@gaythu-rajan - to pull the defendant-specific stuff down here.
 
-@gaythu-rajan - pull the defendant-specific stuff down here.
+@andrewharmellaw - then to make this into an example: A PCD Case and a MagistratesCourtCase - showing the example of Suspects and Defendants.
 
-(Mention how naming is hard in abstract core - esp. in modernisation when you might literally be cutting a new path.)
+NEAR ENEMY: Don't jump to abstraction. Distill it from the detail of specific contexts. (Thats the name of the section for a reason.)
 
 ---
 
 ### Mind the Gap [GT]
 
-When I took over from Andrew, I realised that there was a chasm between the models he had identified and their implementation in code. 
+When I took over from Andrew there was still a BIUG PROBLEM; I realised that there was a chasm between the models he had identified and their implementation in code. 
 
-NEAR ENEMY: Watch out for modelling in the abstract getting too far ahead of the delivered code.
+PROBLEM: Watch out for modelling in the abstract getting too far ahead of the delivered code.
 
 First and foremost, very few realised that the model had to be translated into code, and even fewer had any idea how to go from there.
 
