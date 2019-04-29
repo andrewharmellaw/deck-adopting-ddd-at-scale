@@ -174,37 +174,32 @@ As I investigated, I slowly uncovered a few core beliefs which had embedded them
 The most prevalent was a oft-repeated phrase that "a case is a case (is a case)".  
 
 
-This had been interpreted to mean there should be a single representation of a case, manifest as a single model, that made its way through the criminal justice system. 
+This had been interpreted to mean there should be a single representation of a case, manifest as a single model, and that this single model made it's way right through the criminal justice system. 
 
-It had also been decided that this Case representation be handled via a single "Case" microservice / datastore. 
+It had consequently been decided that this Case representation be handled via a single "Case" microservice / datastore. 
 
 
-Further investigation revealed that this had come into being via a (noble) desire to reduce data copying and hold central case records.  In itself, no bad thing.  
+Further investigation revealed that this had come into being via a noble desire to reduce data copying and hold central case records.  In itself, no bad thing.  
 
 The issue was, this had accidentally pushed a data-centric view, at the expense of a process / behavioural one.  
-
-
-
-What did this mean? 
-
-Most fundamentally, this conceptual mis-step had subtly given both teams and domain experts the signal to look for _commonality and overlaps in the data_, and to de-prioritise the _differences in the ownership, processing and behaviour_.  This wasn't just confined to Cases either.
 
 ---
 
 ### Data Focused [GT]
 
-// @andrewharmellaw - this is nice, and gives more detail to the general point I make half way down the slide above.  I suggest we split that slide in two, and move this up into the gap between them.
-
-As mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object-centric split leads to data centered archtecture.
-
-To give an example - A Case is not a case without someone being prosecuted. That someone could be a suspect at the beginning of a case and then become a defendant when the case is brought to the court. This is when the offence is indictable (you could go to prison for). In summary only offence, you enter the system as a defendant. As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts.
+As Andrew just mentioned the models were identified not based on behaviour/actors but purely object based which brought everything centered around the data. Object-centric split leads to data centered archtecture.
 
 @gaythu-rajan - change example to be case and not defendant (e.g. plea)
+To give an example - A Case is not a case without someone being prosecuted. That someone could be a "Suspect" at the beginning of a case and then become a "Defendant" when the case is brought to the court. This is when the offence is indictable (you could go to prison for it). 
+
+In contrast, in a "summary only" offence, you _enter_ the system as a Defendant. 
+
+As objects, these must have started as a suspect or defendant but there are other actors in a case such as police, victims, witnesses. This gave away to a more genric "catch-all" object called "People" - and the data captured in this object lived in a single place outside of the core contexts.
 
 What's wrong with that? 
 
  a. First the realisation that Defendant/Suspect, are THE CORE of a case. They should live where the case model lives. 
- b. Reconciling the states in case of failures becomes easier. 
+ b. Reconciling the states in times of failure becomes easier. 
  c. There is no access control concerns over the data - who is able to access suspect information (very limited number of people). 
  d. Freedom to add richness to your own model of defendant depending on the context. No corruption of your model.
 
@@ -212,12 +207,17 @@ What's wrong with that?
 
 ### Conclusions / summary from above
 
+Note:
+What did this mean? 
+
+Most fundamentally, this conceptual mis-step had subtly given both teams and domain experts the signal to look for _commonality and overlaps in the data_, and to de-prioritise the _differences in the ownership, processing and behaviour_.  This wasn't just confined to Cases either.
+
 PROBLEMS: 
 - "ONE MODEL TO RULE THEM ALL" THINKING HAD BUBBLED UP,
 - BOURNE OF A VALID DESIRE NOT TO DUPLICATE DATA.
 - CONSEQUENTLY DESIGN DECISIONS / TRADE-OFFS HAD BEEN MADE WITH ONLY A SUB-SET OF THE DOMAIN INFORMATION.
 
-NEAR ENEMY: Domain Driven Design is about the data, and not the behaviour, or if it is both, then the data has more weight, and the behaviour is of secondary importance.  (I actually think it's the other way around.)
+NEAR ENEMY: Domain Driven Design is about the data, and not the behaviour, or if it is both, then the data has more weight, and the behaviour is of secondary importance.  (It's really the other way around.)
 
 ---
 	
