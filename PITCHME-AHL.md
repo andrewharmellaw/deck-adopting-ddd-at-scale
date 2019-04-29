@@ -633,14 +633,6 @@ Another sign of failure is failing to realise the difference between learning th
 
 ---
 
-### When is Something NOT a Generic (Technical) Subdomain? [AHL]
-
-@andrewharmellaw - I THINK WE CAN DROP THIS TO SAVE TIME. WE MIGHT WANT TO PULL SOME SPECIFIC BITS OUT OF IT HOWEVER.  
-
-(Such as the bits for "Domain Experts - Good" below)
-
----
-
 ## DOMAIN EXPERTS
 
 Note:
