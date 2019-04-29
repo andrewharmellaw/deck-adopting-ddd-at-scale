@@ -26,7 +26,7 @@
 Note:
 
 @gaythu-rajan, we can strip this down.
-@andrewharmellaw - agreed.
+@andrewharmellaw - agreed. Lets do it once we do some read-throughs.
 
 Quote: "The traditional term “near enemy” points to some spiritually unhelpful quality or experience that can be mistaken for a helpful quality or experience. The near enemy is a kind of counterfeit of what we’re actually aiming for, and it’s unhelpful because while the genuine article helps free us from suffering, the counterfeit doesn’t." from https://www.wildmind.org/tag/near-enemy
 
