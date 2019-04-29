@@ -319,9 +319,9 @@ Wrong names/contexts were used by the wrong teams. Scheduling was something used
 ## Legal Systems are **Complex** [BOTH]
 
 Note:
-We need to pause a few seconds and state what might be obvious.
+We need to pause a few seconds and state what might be obvious - just in case anyone is drawing a different conclusion from the ones we want you to take.
 
-It's no wonder that things had got confused in the places they had in the ways that they had.
+It's no wonder that things had got confused in the places they had, in the ways that they had.
 
 Legal systems are complex.  
 
@@ -357,26 +357,26 @@ If we can't grokk it, how can anyone else?
 Note:
 Knowing about all the various models is one thing. 
 
-When you're doing work this complex, at this scale, knowing how they inter-relate, interact, and (possibly) overlap is the _big_ thing.  
+When you're doing any software development work this complex, at this scale and in aprallel, knowing how they inter-relate, interact, and (possibly) overlap is the _big_ thing.  
 
-We've discussed a little about the unsuccessful attempt to distill out a core - the case of Case.
+We already discussed the unsuccessful attempt to distill out a core - the case of "a Case is a Case".
 
-
-Remember; this was a very process-intensive environment, where our things (Cases) pass through a lot of organisations and hands.
-
-Discovering the spine / the armature of the domain as a whole turns out to be fundamental in this. 
+What might be a better solution? How might we find it?
 
 
-Going *end-to-end* helped us _a lot_.  
+Remember; this was a very process-intensive environment, where our things (Cases) pass through multiple organisations and hands.
+
+Discovering the spine or the "armature" of our solutionvas a whole turned out to be fundamental in this. 
 
 
-NEAR ENEMY: When modelling, don't lose the bigger picture. 
+And the way to find it? Going *end-to-end* helped us _a lot_.  
 
-@andrewharmelaw - how did we solve the problems / defeat the enemy?
+
+NEAR ENEMY: Just because one big-idea is wrong, doesn't mean you can get away without one.
 
 ---
 
-## PROCESS0-NOT-DATA, CORE-DOMAIN
+## PROCESS-NOT-DATA, CORE-DOMAIN
 
 Note:
 "A Case is a case is a case" [AHL]
