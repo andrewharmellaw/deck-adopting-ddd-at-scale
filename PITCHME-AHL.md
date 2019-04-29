@@ -50,7 +50,7 @@ Hopefully this story will help you avoid falling into that trap.
 
 ## Modernising a Criminal Justice System
 
-@andrew
+@andrewharmellaw to provide a timelines image
 
 Note:
 We're going to share the story of our most recent project together.
@@ -61,7 +61,7 @@ We've seen in detail how pseudo-DDD is the near enemy of real DDD, and that when
 
 [PICTURE OF OUR NOT-VERY-OVERLAPPING TIMELINES]
 
-In this story it's important to note that while we worked on the same project, we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
+In this story it's important to note that, while we worked on the same project, we overlapped very little.  I (Andrew) inherited a bunch of early artefacts from another DDD expert whom I never met, and mainly handled the discovery of the domain.
 
 Just as Andrew had inherited a legacy from those who went before him, I (Gayathri) inherited from him (with all the good and bad that that brings).  I (Gayathri) was largely focussed on delivering what Andrew had found (and challenging the assumptions he had made).
 
