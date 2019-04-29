@@ -71,49 +71,38 @@ So what was the project? It was the transformation and modernisation of some cor
 
 ## Our Constraints
 
+  * We were supporting the modernisation of full justice-lifecycle, end to end, across multiple organisations
   * Lots of code had already been cut and teams had already been split out
-  * Significant scale - many teams, already working in parallel
-  * We were supporting the full justice-lifecycle, end to end, across multiple organisations
   * CQRS _everywhere_
-  * There was an efficiency-finding "modernising" agenda to serve
-  * Existing tech legacy cast a _long_ shadow over domain experts
 
 Note: 
-When I (Andrew) joined the project things were already up and running and lots of code had already been cut and the teams allocated. 
 
+1. Our "domain" was co-owned: we were tasked with building a collection of systems which met the needs of two different stakeholder organisations - the State Prosecutor, and the Courts System - AND the END-TO-END-PROCESSES spanned even more client organisations. 
 
-This massive piece of work was being tackled head on. 
-
-When I (Andrew) started, software was being built by multiple (7?) teams in parallel - 
-
-
-Consequently some DDD "ideas" had already become entrenched. 
-
-@gaythu-rajan made further changes as it was still more object based split.
-
-
-We had to support a full-lifecycle view - justice end-to-end. 
-
-Not only that, the "domain" was co-owned: we were tasked with building a collection of systems which met the needs of two different stakeholder organisations - the State Prosecutor, and the Courts System - AND the END-TO-END-PROCESSES spanned even more client organisations. 
-
-@gayathu-rajan - put this paragraph into the slide which deals with it in detail.
+@gayathu-rajan - put the below paragraph into the slide which deals with it in detail.
 Note: @andrew mentions "No one domain expert had the end-end view", but even when they did it was never communicated to the those who are wrtiting the code. Head of BPOs was brought in but still that end-end view was stuck within a group of domain experts.
 
+2. When I (Andrew) joined the project this massive piece of work was being tackled head on. 
 
-Complex Architectural choices had been made (e.g. CQRS for everything) and devs were struggling with them. 
+Software delivery was already up and running; the work for (7 or more) feature teams had been allocated and lots of code had already been cut. 
 
-At the time I (Andrew) arrived it was almost always an impediment rather than a boost 
+Consequently some DDD "ideas" had already become entrenched. (We'll get to them in turn later.)
+
+@andrewharmellaw - @gaythu-rajan, I think we remove the next comment as we cover it in detail in a later slide - this is an intro slide.
+@gaythu-rajan made further changes as it was still more object based split.
+
+3. Some complex architectural choices had been made (e.g. CQRS for everything) and devs were struggling with them. 
+
+At the time I (Andrew) arrived it was still proving an impediment rather than a boost to productivity.  The benefits had very much still to pay off. 
 
 (We'll come back to this in the final section. For now, suffice it to say that it made the adoption of the DDD even harder)
 
 
+@gayathu-rajan - move this following paragraph down to the detail slide section where it belongs.
 We had to "modernise justice" as we delivered things. 
-
-
-@gayathu-rajan - move this down to the detail slide section where it belongs.
 This meant we had to push back against "quick" wins (from which the resulting tactical solutions had incurred a great deal of debt in the code) and instead efficiently find the "real" wins.
 
-@andrewharmellaw - move this down too. (and tidy up the side bullets)
+@andrewharmellaw - move this down too.
 Finally it's useful to raise the issue that Domain experts were stuck in the legacy way of thinking or worse paper based. In courts, traditionally, the prosecutors, defence and courts will fill in the same form alternately and the expectation was to translate that literally onto the software application. 
 
 ---
