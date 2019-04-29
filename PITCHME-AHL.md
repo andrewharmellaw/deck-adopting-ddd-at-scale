@@ -283,6 +283,8 @@ NEAR ENEMIES:
 
 ## GROKK-ABILITY 
 
+@andrewharmellaw - looking at our notes, we're going to take the contents of this whole section (2 slides) and distribute them across the rest of the deck.  I'm happy with that.
+
 Note:
 Perception @Scale [GT]
 
@@ -290,7 +292,7 @@ Perception @Scale [GT]
 
 ### Perception @ Scale [GT]
 
-@gaythu-rajan - re-home these two paragraphs further down the deck
+@gaythu-rajan - re-home these two paragraphs into slides further down the deck
 
 Having burnt their hand once, everyone was keen not to repeat the same mistake again. Which is all good only they didn't realise what the mistake was (not doing modelling enough and not iterating on it). Everyone now wanted to get it right and get it right the first time (well second time, anyway). So the business architects were constantly at me asking about the governance (i.e ring fence the model with tight governance so that noone can mess around with it!) and also expecting guarantees from me that this is the "correct" model!
 
@@ -300,9 +302,9 @@ We will see again and again that people are the making or breaking factor for an
 
 ## BCs (Naming Teams) [GT]
 
-@gaythu-rajan - can we re-home this to the BC slide?
+@gaythu-rajan - Re-home this to the BC slide
 
-@andrewharmellaw - I think we'd need to give too much context to the audience to make this point in the time we have.  What do you reckon?
+@andrewharmellaw - We agreed we'd need to give too much context to the audience to make this point in the time we have.  If there are bits we can keep we're going to put them in the BC slide.
 
 Teams named after the part of business process they were working on (which would change and grow) like C2I, I2T etc. rather than named from contexts - Prosecution/Defence/Courts/SJP etc. which would create teams specialised in that part of the legal system. 
 
