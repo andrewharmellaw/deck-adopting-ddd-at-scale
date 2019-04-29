@@ -685,24 +685,6 @@ A lot of people needed to let go of things, but without knowing exactly where we
 
 ---
 
-### Method: Model -> Share -> Question -> Repeat [AHL]
-
-@andrewharmellaw - DID WE WANT THIS ONE HERE? (I'M HAPPY TO DROP IT)  We could put any bits we want to keep up in other slides.
-YOU HAD SOMETHING ABOUT THE MODELLING WHIRLPOOL.
-
-Note:
-Draw lots of pictures - try and find what is "comfortable". Being able to draw something on a sheet of A3, or a standard whiteboard is a good sign that the level of detail is correct.
-
-Go back to the book. The "pattern style" that it is written in means it is very easy to find your problem already described.  Then simply follow the solution.  
-
-Find the *armature* - it sometimes seems to me that this part of the process is a lot like discovering the model's armature.
-
-Share these pictures constantly.  Adopt a beginners mind.  Articulate when something doesnt feel comfortable (though be willing to accept a minor amount of discomfort, not everything will fit elegantly into the model you need.)  Get the help of others - specifically the domain experts.  Gather round the board and ask questions of your models and see when they break.
-
-At a meta level, it was exciting to come at DDD from another angle. It meant I had to re-read Eric's book, and find value in other parts which I'd previously skimmed. I was amazed (yet again) at how relevant and applicable and valuable these concepts were.
-
----
-
 ## IDEAS LEGACY - (DOMAIN VISION STATEMENT++, multiple models of the same thing, actors coming together, process-centric, etc.) 
 
 @andrewharmellaw - It feels like we could drop this entire section to save time.  If any elements are key points we don't want to drop we could re-home them.
