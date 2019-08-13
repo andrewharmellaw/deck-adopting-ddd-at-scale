@@ -16,7 +16,13 @@ When asked 'Share one thing you liked about this talk' they said:
  * Emerging implementation and model the to-be state
  
 ## Social Media 
-(TBC - see tweets from @al94781 and @gaythu-rajan during the 29th and 30th May, 2019)
+ * [Ruth Malan liking a closing comment](https://twitter.com/ruthmalan/status/1133761361195016192)
+ * [Vladik Kononov](https://twitter.com/vladikk/status/1133682526634020864)
+ * [Daniel Bryant](https://twitter.com/danielbryantuk/status/1133674867843321856), and [again](https://twitter.com/danielbryantuk/status/1133678017828536320)
+ * [Cyrille Martraire](https://twitter.com/cyriux/status/1133675487627292672)
+ * [Ed Blackburn](https://twitter.com/ejblackburn/status/1133683149182050306)
+ * [Sketch Notes by Guideo Deschamps](https://twitter.com/dechampsgu/status/1133690291209297920)
+
 
 ## Considered improvements
 ### Words:
